@@ -1,0 +1,32 @@
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.deps.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.runtimeconfig.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.runtimeconfig.dev.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.pdb
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.Views.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\bin\Debug\netcoreapp2.1\Seminar Web API Test Docker.Views.pdb
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.csprojAssemblyReference.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.RazorAssemblyInfo.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.RazorAssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.AssemblyInfoInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.AssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.TagHelpers.input.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.TagHelpers.output.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.RazorCoreGenerate.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\About.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Contact.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Privacy.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewStart.g.cshtml.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.RazorTargetAssemblyInfo.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.RazorTargetAssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.Views.pdb
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.pdb
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Seminar Web API Test Docker\Seminar Web API Test Docker\obj\Debug\netcoreapp2.1\Seminar Web API Test Docker.csproj.CopyComplete

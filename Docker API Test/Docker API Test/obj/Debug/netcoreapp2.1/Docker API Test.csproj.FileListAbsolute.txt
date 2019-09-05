@@ -1,0 +1,13 @@
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\bin\Debug\netcoreapp2.1\Docker API Test.deps.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\bin\Debug\netcoreapp2.1\Docker API Test.runtimeconfig.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\bin\Debug\netcoreapp2.1\Docker API Test.runtimeconfig.dev.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\bin\Debug\netcoreapp2.1\Docker API Test.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\bin\Debug\netcoreapp2.1\Docker API Test.pdb
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.RazorAssemblyInfo.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.RazorAssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.AssemblyInfoInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.AssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.RazorTargetAssemblyInfo.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\Docker API Test\Docker API Test\obj\Debug\netcoreapp2.1\Docker API Test.pdb

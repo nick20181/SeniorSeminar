@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seminar Web API Test Docker", "Seminar Web API Test Docker\Seminar Web API Test Docker.csproj", "{DA675E45-A9A9-4F17-BA99-23B7EED5B6ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA675E45-A9A9-4F17-BA99-23B7EED5B6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA675E45-A9A9-4F17-BA99-23B7EED5B6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA675E45-A9A9-4F17-BA99-23B7EED5B6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA675E45-A9A9-4F17-BA99-23B7EED5B6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6F76516-8FBF-45EE-944F-02F3F686F778}
+	EndGlobalSection
+EndGlobal
