@@ -1,0 +1,15 @@
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\bin\Debug\netcoreapp2.1\DockerTakeThree.deps.json
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\bin\Debug\netcoreapp2.1\DockerTakeThree.runtimeconfig.json
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\bin\Debug\netcoreapp2.1\DockerTakeThree.runtimeconfig.dev.json
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\bin\Debug\netcoreapp2.1\DockerTakeThree.dll
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.csprojAssemblyReference.cache
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.RazorAssemblyInfo.cache
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.RazorAssemblyInfo.cs
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.AssemblyInfoInputs.cache
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.AssemblyInfo.cs
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.RazorTargetAssemblyInfo.cache
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\bin\Debug\netcoreapp2.1\DockerTakeThree.pdb
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.dll
+C:\Users\nicholas.bohm\source\repos\DockerTakeThree\DockerTakeThree\obj\Debug\netcoreapp2.1\DockerTakeThree.pdb
