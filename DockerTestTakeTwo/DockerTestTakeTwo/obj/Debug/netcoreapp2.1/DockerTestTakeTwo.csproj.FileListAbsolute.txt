@@ -1,0 +1,10 @@
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\bin\Debug\netcoreapp2.1\DockerTestTakeTwo.deps.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\bin\Debug\netcoreapp2.1\DockerTestTakeTwo.runtimeconfig.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\bin\Debug\netcoreapp2.1\DockerTestTakeTwo.runtimeconfig.dev.json
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\bin\Debug\netcoreapp2.1\DockerTestTakeTwo.dll
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.RazorAssemblyInfo.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.RazorAssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.AssemblyInfoInputs.cache
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.AssemblyInfo.cs
+C:\Users\nicholas.bohm\Documents\GitHub\SeniorSeminar\DockerTestTakeTwo\DockerTestTakeTwo\obj\Debug\netcoreapp2.1\DockerTestTakeTwo.RazorTargetAssemblyInfo.cache

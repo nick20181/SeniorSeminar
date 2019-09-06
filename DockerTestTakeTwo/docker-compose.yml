@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dockertesttaketwo:
+    image: ${DOCKER_REGISTRY-}dockertesttaketwo
+    build:
+      context: .
+      dockerfile: DockerTestTakeTwo/Dockerfile
