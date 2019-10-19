@@ -8,18 +8,48 @@ namespace Campus.Custodial.Chemicals
     public class Chemical : IChemical
     {
         public IDatabase DB { get; set; }
-        public string id { get; set; }
-        public string name { get; set; }
+        public string id;
+        public string name;
         public bool deleted = false;
 
-        public IChemical DeleteChemical()
+        public void DeleteChemical()
         {
-            throw new NotImplementedException();
+            UpdateChemical(new Chemical()
+            {
+                id = id,
+                DB = DB,
+                name = name,
+                deleted = true
+            });
         }
 
-        public IChemical UpdateChemical(IChemical updatedChemical)
+        public void UpdateChemical(IChemical updatedChemical)
         {
-            throw new NotImplementedException();
+            id = updatedChemical.getID();
+            name = updatedChemical.getName();
+            deleted = updatedChemical.getDeletedStatus();
+            DB.UpdateChemical(updatedChemical, id);
+        }
+
+        override
+        public string ToString()
+        {
+            return $"{id}, {name}";
+        }
+
+        public string getID()
+        {
+            return id;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public bool getDeletedStatus()
+        {
+            return deleted;
         }
     }
 }

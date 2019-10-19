@@ -19,14 +19,16 @@ namespace Campus.Custodial.Chemicals
             return DB.ReadChemical(id);
         }
 
-        IChemical IChemicalFactory.CreateChemical(string id, string name)
+        public IChemical CreateChemical(string id, string name)
         {
-            return new Chemical()
+            Chemical chemical = new Chemical()
             {
                 id = id,
                 name = name,
                 DB = DB
             };
+            DB.CreateChemical(chemical);
+            return chemical;
         }
     }
 }
