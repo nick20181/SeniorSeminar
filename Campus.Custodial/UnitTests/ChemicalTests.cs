@@ -14,13 +14,11 @@ namespace UnitTests
             IDatabase DB = new InMemoryDatabase();
             Chemical chemOne = new Chemical()
             {
-                id = "1",
                 name = "ChemicalGeneric",
                 DB = DB
             };
             Chemical chemOneUpdated = new Chemical()
             {
-                id = chemOne.id,
                 name = "Chem One Updated",
                 DB = chemOne.DB,
                 deleted = chemOne.deleted
@@ -35,12 +33,11 @@ namespace UnitTests
             IDatabase DB = new InMemoryDatabase();
             Chemical chemOne = new Chemical()
             {
-                id = "1",
                 name = "ChemicalGeneric",
                 DB = DB
             };
             chemOne.DeleteChemical();
-            Assert.True(chemOne.getDeletedStatus());
+            Assert.True(chemOne.GetDeletedStatus());
         }
     }
 }

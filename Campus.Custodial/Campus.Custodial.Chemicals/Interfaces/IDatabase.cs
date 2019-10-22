@@ -8,8 +8,8 @@ namespace Campus.Custodial.Chemicals
     public interface IDatabase
     {
         public IChemical ReadChemical(string id);
+        public List<IChemical> ReadAllChemical();
         public IChemical CreateChemical(IChemical newChemical);
         public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalID);
-        public IChemical DeleteChemical(IChemical targetChemical);
     }
 }

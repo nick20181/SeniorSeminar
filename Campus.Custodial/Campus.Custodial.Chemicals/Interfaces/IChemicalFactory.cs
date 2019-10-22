@@ -7,7 +7,9 @@ namespace Campus.Custodial.Chemicals
 {
     public interface IChemicalFactory
     {
-        public IChemical ReadChemical(string id);
-        public IChemical CreateChemical(string id, string name);
+        public IChemical ReadChemical(string name);
+        public List<IChemical> ReadAllChemicals();
+        public IChemical CreateChemical(string name);
+        public IDatabase getDB();
     }
 }

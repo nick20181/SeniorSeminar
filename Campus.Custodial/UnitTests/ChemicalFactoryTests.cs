@@ -14,14 +14,13 @@ namespace UnitTests
             IDatabase DB = new InMemoryDatabase();
             Chemical chemOne = new Chemical()
             {
-                id = "1",
                 name = "One",
                 DB = DB
             };
             DB.CreateChemical(chemOne);
             ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            Assert.Equal(ChemFactory.ReadChemical("1").ToString(), chemOne.ToString());
-
+            Assert.Equal(ChemFactory.ReadChemical("One").ToString(), chemOne.ToString());
+            Assert.Null(ChemFactory.ReadChemical("Two").ToString());
         }
 
         [Fact]
@@ -29,9 +28,8 @@ namespace UnitTests
         {
             IDatabase DB = new InMemoryDatabase();
             ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            IChemical created = ChemFactory.CreateChemical("1", "One");
-            Assert.Equal("1", created.getID());
-            Assert.Equal("One", created.getName());
+            IChemical created = ChemFactory.CreateChemical("One");
+            Assert.Equal("One", created.GetName());
         }
     }
 }

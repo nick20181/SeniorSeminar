@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,49 +8,59 @@ namespace Campus.Custodial.Chemicals
 {
     public class Chemical : IChemical
     {
+        [JsonIgnore]
         public IDatabase DB { get; set; }
-        public string id;
         public string name;
         public bool deleted = false;
 
-        public void DeleteChemical()
+        public IChemical DeleteChemical()
         {
-            UpdateChemical(new Chemical()
+            return UpdateChemical(new Chemical()
             {
-                id = id,
                 DB = DB,
                 name = name,
                 deleted = true
             });
         }
 
-        public void UpdateChemical(IChemical updatedChemical)
+        public IChemical UpdateChemical(IChemical updatedChemical)
         {
-            id = updatedChemical.getID();
-            name = updatedChemical.getName();
-            deleted = updatedChemical.getDeletedStatus();
-            DB.UpdateChemical(updatedChemical, id);
+            string oldName = name;
+            name = updatedChemical.GetName();
+            deleted = updatedChemical.GetDeletedStatus();
+            return DB.UpdateChemical(updatedChemical, oldName);
         }
 
         override
         public string ToString()
         {
-            return $"{id}, {name}";
+            if (string.IsNullOrEmpty(name))
+            {
+                return null;
+            } else
+            {
+                return $"{name}";
+            }
         }
 
-        public string getID()
-        {
-            return id;
-        }
-
-        public string getName()
+        public string GetName()
         {
             return name;
         }
 
-        public bool getDeletedStatus()
+        public bool GetDeletedStatus()
         {
             return deleted;
+        }
+
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(new Chemical()
+            {
+                name = name,
+                DB = DB,
+                deleted = deleted
+            });
         }
     }
 }

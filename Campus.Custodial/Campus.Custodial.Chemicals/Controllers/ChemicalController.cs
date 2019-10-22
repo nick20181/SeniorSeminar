@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 
 namespace Campus.Custodial.Chemicals.Controllers
 {
@@ -11,28 +17,137 @@ namespace Campus.Custodial.Chemicals.Controllers
     [ApiController]
     public class ChemicalController : ControllerBase
     {
-        [HttpGet]
-        public Chemical Get()
+        static private IDatabase datebase = new InMemoryDatabase();
+        private IChemicalFactory ChemFactory = new ChemicalFactory(datebase);
+
+        [Route("Get")]
+        public string GetAll()
         {
-            throw new NotImplementedException();
+            List<IChemical> temp = ChemFactory.ReadAllChemicals();
+            List<IChemical> toReturn = new List<IChemical>();
+            foreach (var x in temp)
+            {
+                if (!x.GetDeletedStatus())
+                {
+                    toReturn.Add(x);
+                }
+            }
+            return JsonConvert.SerializeObject(toReturn);
         }
 
-        [HttpPost]
-        public Chemical Post()
+        [Route("Get/{name}")]
+        public string Get(string name)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(name))
+            {
+                return new Chemical()
+                {
+                    name = null,
+                    DB = datebase,
+                    deleted = false
+                }.ToJson();
+            }
+            IChemical chemicalToGet = ChemFactory.ReadChemical(name);
+            if (chemicalToGet == null)
+            {
+                return new Chemical()
+                {
+                    name = null,
+                    DB = datebase,
+                    deleted = false
+                }.ToJson();
+            } else
+            {
+                return chemicalToGet.ToJson();
+            }
         }
 
-        [HttpPut]
-        public Chemical Put()
+        [Route("Post/{name}")]
+        public string Post(string name)
         {
-            throw new NotImplementedException();
+            string result = ChemFactory.CreateChemical(name).ToJson();
+            if (result.Contains($"null"))
+            {
+                return $"Failed to Post";
+            }
+            return result;
+
         }
 
-        [HttpDelete]
-        public Chemical Delete()
+        [Route("Put/{nameOriginal}/{nameUpdated}")]
+        public string Put(string nameOriginal, string nameUpdated)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(nameOriginal) && string.IsNullOrEmpty(nameUpdated))
+            {
+                return $"Failed to update {nameOriginal} to {nameUpdated}";
+            } else
+            {
+                return ChemFactory.ReadChemical(nameOriginal).UpdateChemical(new Chemical()
+                {
+                    name = nameUpdated,
+                    DB = ChemFactory.getDB()
+                }).ToJson();
+            }
+        }
+
+        [Route("Delete/{name}")]
+        public string Delete(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return $"Failed to delete {name}";
+            } else
+            {
+                return ChemFactory.ReadChemical(name).DeleteChemical().ToJson();
+            }
+        }
+
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

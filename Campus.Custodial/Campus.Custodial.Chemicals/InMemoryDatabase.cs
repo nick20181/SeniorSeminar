@@ -16,27 +16,25 @@ namespace Campus.Custodial.Chemicals
         /// <returns>the created chemical</returns>
         public IChemical CreateChemical(IChemical newChemical)
         {
-            DB.Add(newChemical.getID(), newChemical);
-            return newChemical;
-        }
-        /// <summary>
-        /// Deletes the Chemical from the Database
-        /// Might not update the stored item in the Dictionary.
-        /// </summary>
-        /// <param name="targetChemical">Chemical to delete from the database</param>
-        /// <returns>the deleted chemical</returns>
-        public IChemical DeleteChemical(IChemical targetChemical)
-        {
-            IChemical target;
-            if(DB.TryGetValue(targetChemical.getID(), out target))
+            IChemical temp;
+            if (DB.TryGetValue(newChemical.GetName(), out temp))
             {
-                DB.Remove(target.getID());
-                return target;
-            } else
-            {
-                //Throw not found exception
                 return null;
             }
+            DB.Add(newChemical.GetName(), newChemical);
+            return newChemical;
+        }
+
+        public List<IChemical> ReadAllChemical()
+        {
+            List<IChemical> toreturn = new List<IChemical>();
+            foreach(var x in DB.Keys)
+            {
+                IChemical toAdd;
+                DB.TryGetValue(x, out toAdd);
+                toreturn.Add(toAdd);
+            }
+            return toreturn;
         }
 
         /// <summary>
@@ -53,8 +51,11 @@ namespace Campus.Custodial.Chemicals
             }
             else
             {
-                //Throw not found exception
-                return null;
+                return new Chemical()
+                {
+                    name = null,
+                    deleted = true
+                };
             }
         }
 
@@ -64,14 +65,14 @@ namespace Campus.Custodial.Chemicals
         /// <param name="updatedChemical">The updated Chemical</param>
         /// <param name="targetChemical">The target Chemical</param>
         /// <returns>the updated chemical</returns>
-        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalId)
+        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemical)
         {
             IChemical removed;
-            if (DB.TryGetValue(targetChemicalId, out removed))
+            if (DB.TryGetValue(targetChemical, out removed))
             {
-                DB.Remove(updatedChemical.getID());
+                DB.Remove(targetChemical);
             }
-            DB.Add(targetChemicalId, updatedChemical);
+            DB.Add(updatedChemical.GetName(), updatedChemical);
             return updatedChemical;
         }
     }

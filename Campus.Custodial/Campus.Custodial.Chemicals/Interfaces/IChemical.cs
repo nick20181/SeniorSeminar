@@ -8,10 +8,10 @@ namespace Campus.Custodial.Chemicals
     public interface IChemical
     {
         public string ToString();
-        public void UpdateChemical(IChemical updatedChemical);
-        public void DeleteChemical();
-        public string getID();
-        public string getName();
-        public bool getDeletedStatus();
+        public IChemical UpdateChemical(IChemical updatedChemical);
+        public IChemical DeleteChemical();
+        public string GetName();
+        public bool GetDeletedStatus();
+        public string ToJson();
     }
 }
