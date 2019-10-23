@@ -49,7 +49,7 @@ namespace UnitTests
                     Assert.True(false, $"{x} result is {result}");
                 } 
             }
-            Assert.Equal($"{{\"name\":null,\"deleted\":true}}", controller.Get("x"));
+            Assert.Equal(new Chemical().NullChemical().ToJson(), controller.Get("x"));
         }
 
         [Fact]

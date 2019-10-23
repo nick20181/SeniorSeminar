@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Campus.Custodial.Chemicals.Chemical;
 
 namespace Campus.Custodial.Chemicals
 {
@@ -19,21 +20,25 @@ namespace Campus.Custodial.Chemicals
             return DB.ReadChemical(id);
         }
 
-        public IChemical CreateChemical(string name)
+        public IChemical CreateChemical(string chemName, Manufacturer manufacturer, string productIdentifier,
+            List<signalWords> sigWords, List<string> hazardStatements, List<string> precautionStatements)
         {
             Chemical chemical = new Chemical()
             {
-                name = name,
-                DB = DB
+                name = chemName,
+                DB = DB,
+                deleted = false,
+                manufacturer = manufacturer,
+                productIdentifier = productIdentifier,
+                sigWords = sigWords,
+                hazardStatements = hazardStatements,
+                precautionStatements = precautionStatements
+
             };
             IChemical result = DB.CreateChemical(chemical);
             if (result == null)
             {
-                return new Chemical()
-                {
-                    name = null,
-                    deleted = true
-                };
+                return new Chemical().NullChemical();
             }
             return result;
         }

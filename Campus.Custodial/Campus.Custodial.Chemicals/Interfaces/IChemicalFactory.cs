@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Campus.Custodial.Chemicals.Chemical;
 
 namespace Campus.Custodial.Chemicals
 {
@@ -9,7 +10,8 @@ namespace Campus.Custodial.Chemicals
     {
         public IChemical ReadChemical(string name);
         public List<IChemical> ReadAllChemicals();
-        public IChemical CreateChemical(string name);
+        public IChemical CreateChemical(string chemName, Manufacturer manufacturer, string productIdentifier,
+            List<signalWords> sigWords, List<string> hazardStatements, List<string> precautionStatements);
         public IDatabase getDB();
     }
 }

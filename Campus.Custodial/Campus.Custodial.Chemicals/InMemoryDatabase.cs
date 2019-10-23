@@ -51,11 +51,7 @@ namespace Campus.Custodial.Chemicals
             }
             else
             {
-                return new Chemical()
-                {
-                    name = null,
-                    deleted = true
-                };
+                return new Chemical().NullChemical();
             }
         }
 

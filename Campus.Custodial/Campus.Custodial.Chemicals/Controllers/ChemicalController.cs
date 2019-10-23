@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using static Campus.Custodial.Chemicals.Chemical;
 
 namespace Campus.Custodial.Chemicals.Controllers
 {
@@ -65,7 +66,23 @@ namespace Campus.Custodial.Chemicals.Controllers
         [Route("Post/{name}")]
         public string Post(string name)
         {
-            string result = ChemFactory.CreateChemical(name).ToJson();
+            List<string> hazardStatements = new List<string>()
+            {
+                $"Place Holder"
+            };
+            List<string> precautionStatements = new List<string>()
+            {
+                $"Place Holder"
+            };
+            List<signalWords> sigWords = new List<signalWords>();
+            String productIdentifier = $"Place Holder";
+            Manufacturer manufacturer = new Manufacturer()
+            {
+                name = $"place Holder",
+                address = $"place Holder",
+                phoneNumber = $"place Holder"
+            };
+            string result = ChemFactory.CreateChemical(name, manufacturer, productIdentifier, sigWords, hazardStatements, precautionStatements).ToJson();
             if (result.Contains($"null"))
             {
                 return $"Failed to Post";
