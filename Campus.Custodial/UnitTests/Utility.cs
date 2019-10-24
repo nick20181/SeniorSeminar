@@ -15,7 +15,7 @@ namespace UnitTests
             {
                 return new Chemical()
                 {
-                    name = name,
+                    chemicalName = name,
                     DB = db,
                     manufacturer = createManufactuerer(RandomString(10), RandomString(10), RandomString(5)),
                     hazardStatements = generateStringList(3),
@@ -25,7 +25,7 @@ namespace UnitTests
             }
             return new Chemical()
             {
-                name = name,
+                chemicalName = name,
                 DB = db,
                 manufacturer = manu,
                 hazardStatements = generateStringList(3),

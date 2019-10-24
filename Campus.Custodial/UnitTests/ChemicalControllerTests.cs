@@ -23,48 +23,47 @@ namespace UnitTests
         }
 
         [Fact]
-        public void ReadChemical()
+        public async System.Threading.Tasks.Task ReadChemicalAsync()
         {
             ChemicalController controller = new ChemicalController();
             List<string> ListOfStrings = populateListWith(10);
             foreach (var x in ListOfStrings)
             {
-                controller.Post(x);
+                await controller.PostAsync(x);
             }
-            foreach ( var x in ListOfStrings)
+            foreach ( var x in ListOfStrings.ToArray())
             {
-                var result = controller.Get(x);
-                Chemical jsonResult = JsonConvert.DeserializeObject<Chemical>(result);
-                if (!string.IsNullOrEmpty(result))
+                var result = await controller.GetAsync(x);
+                List<Chemical> chems = new List<Chemical>();
+                foreach (var chem in result)
                 {
-                    if (!string.IsNullOrEmpty(jsonResult.GetName()))
+                    chems.Add(JsonConvert.DeserializeObject<Chemical>(chem));
+                }
+                Assert.True(chems.Count != 0);
+                foreach (var chem in chems.ToArray())
+                {
+                    if (chem.GetName().Equals(x))
                     {
-                        Assert.Equal(x, jsonResult.GetName());
+                        ListOfStrings.Remove(x);
                     }
-                    else
-                    {
-                        Assert.True(false, $"{x} jsonResult is {jsonResult.GetName()}");
-                    }
-                } else {
-                    Assert.True(false, $"{x} result is {result}");
-                } 
+                }
             }
-            Assert.Equal(new Chemical().NullChemical().ToJson(), controller.Get("x"));
+            Assert.True(ListOfStrings.Count == 0);
         }
 
         [Fact]
-        public void ReadAllChemical()
+        public async System.Threading.Tasks.Task ReadAllChemicalAsync()
         {
             ChemicalController controller = new ChemicalController();
             List<string> ListOfStrings = populateListWith(10);
             List<string> ListToRemove = new List<string>();
             foreach (var x in ListOfStrings)
             {
-                controller.Post(x);
+                await controller.PostAsync(x);
                 ListToRemove.Add(x);
             }
 
-            string json = controller.GetAll();
+            string json = await controller.GetAllAsync();
             List<Chemical> fromJson = JsonConvert.DeserializeObject<List<Chemical>>(json);
             foreach (var x in fromJson)
             {
@@ -88,31 +87,42 @@ namespace UnitTests
         }
 
         [Fact]
-        public void DeleteChemical()
+        public async System.Threading.Tasks.Task DeleteChemicalAsync()
         {
             ChemicalController controller = new ChemicalController();
             List<string> ListOfStrings = populateListWith(10);
             List<string> ListToRemove = new List<string>();
             foreach (var x in ListOfStrings)
             {
-                controller.Post(x);
+                await controller.PostAsync(x);
                 ListToRemove.Add(x);
-                controller.Delete(x);
+                await controller.DeleteAsync(x);
             }
-            foreach ( var x in ListOfStrings)
+            foreach (var x in ListOfStrings)
             {
-                string jsonRaw = controller.Get(x);
-                IChemical jsonResult = JsonConvert.DeserializeObject<Chemical>(jsonRaw);
-                Assert.Equal(x, jsonResult.GetName());
-                Assert.True(true == jsonResult.GetDeletedStatus());
-                ListToRemove.Remove(x);
+                List<string> result = await controller.GetAsync(x);
+                List<Chemical> chems = new List<Chemical>();
+                foreach (var s in result)
+                {
+                    chems.Add(JsonConvert.DeserializeObject<Chemical>(s));
+                }
+                foreach (var s in result.ToArray())
+                {
+                    foreach (var chem in chems.ToArray())
+                    {
+                        if (chem.ToJson().Equals(s))
+                        {
+                            result.Remove(s);
+                        }
+                    }
+                }
+                Assert.True(result.Count == 0);
             }
-            Assert.True(ListToRemove.Count == 0);
 
         }
 
         [Fact]
-        public void PutChemical()
+        public async System.Threading.Tasks.Task PutChemicalAsync()
         {
             ChemicalController controller = new ChemicalController();
             List<string> ListOfStrings = populateListWith(10);
@@ -131,17 +141,29 @@ namespace UnitTests
             {
                 string temp;
                 updatedStrings.TryGetValue(x, out temp);
-                controller.Post(x);
+                await controller.PostAsync(x);
                 ListToRemove.Add(temp);
-                controller.Put(x, temp);
+                await controller.PutAsync(x, temp);
             }
-
             foreach (var x in ListOfUpdatedStrings)
             {
-                string jsonRaw = controller.Get(x);
-                IChemical jsonResult = JsonConvert.DeserializeObject<Chemical>(jsonRaw);
-                Assert.Equal(x, jsonResult.GetName());
-                ListToRemove.Remove(x);
+                List<string> result = await controller.GetAsync(x);
+                List<Chemical> chems = new List<Chemical>();
+                foreach (var s in result)
+                {
+                    chems.Add(JsonConvert.DeserializeObject<Chemical>(s));
+                }
+                foreach (var s in result.ToArray())
+                {
+                    foreach (var chem in chems.ToArray())
+                    {
+                        if (chem.ToJson().Equals(s))
+                        {
+                            result.Remove(s);
+                        }
+                    }
+                }
+                Assert.True(result.Count == 0);
             }
 
         }

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MongoDB.Bson.Serialization;
 using Newtonsoft.Json;
 using static Campus.Custodial.Chemicals.Chemical;
 
@@ -18,13 +19,13 @@ namespace Campus.Custodial.Chemicals.Controllers
     [ApiController]
     public class ChemicalController : ControllerBase
     {
-        static private IDatabase datebase = new InMemoryDatabase();
+        static private IDatabase datebase = new MongoDatabase();
         private IChemicalFactory ChemFactory = new ChemicalFactory(datebase);
 
         [Route("Get")]
-        public string GetAll()
+        public async Task<string> GetAllAsync()
         {
-            List<IChemical> temp = ChemFactory.ReadAllChemicals();
+            List<IChemical> temp = await ChemFactory.ReadAllChemicalsAsync();
             List<IChemical> toReturn = new List<IChemical>();
             foreach (var x in temp)
             {
@@ -37,34 +38,30 @@ namespace Campus.Custodial.Chemicals.Controllers
         }
 
         [Route("Get/{name}")]
-        public string Get(string name)
+        public async Task<List<string>> GetAsync(string name)
         {
+            List<string> toReturn = new List<string>();
             if (string.IsNullOrEmpty(name))
             {
-                return new Chemical()
-                {
-                    name = null,
-                    DB = datebase,
-                    deleted = false
-                }.ToJson();
+                toReturn.Add(new Chemical().NullChemical().ToJson());
             }
-            IChemical chemicalToGet = ChemFactory.ReadChemical(name);
-            if (chemicalToGet == null)
+            List<IChemical> chemicalToGet = await ChemFactory.ReadChemicalAsync(name);
+            foreach (var chemical in chemicalToGet)
             {
-                return new Chemical()
+                if (chemicalToGet == null)
                 {
-                    name = null,
-                    DB = datebase,
-                    deleted = false
-                }.ToJson();
-            } else
-            {
-                return chemicalToGet.ToJson();
+                    toReturn.Add(new Chemical().NullChemical().ToJson());
+                }
+                else
+                {
+                    toReturn.Add(chemical.ToJson());
+                }
             }
+            return toReturn;
         }
 
         [Route("Post/{name}")]
-        public string Post(string name)
+        public async Task<string> PostAsync(string name)
         {
             List<string> hazardStatements = new List<string>()
             {
@@ -82,7 +79,7 @@ namespace Campus.Custodial.Chemicals.Controllers
                 address = $"place Holder",
                 phoneNumber = $"place Holder"
             };
-            string result = ChemFactory.CreateChemical(name, manufacturer, productIdentifier, sigWords, hazardStatements, precautionStatements).ToJson();
+            string result = (await ChemFactory.CreateChemicalAsync(name, manufacturer, productIdentifier, sigWords, hazardStatements, precautionStatements)).ToJson();
             if (result.Contains($"null"))
             {
                 return $"Failed to Post";
@@ -92,36 +89,51 @@ namespace Campus.Custodial.Chemicals.Controllers
         }
 
         [Route("Put/{nameOriginal}/{nameUpdated}")]
-        public string Put(string nameOriginal, string nameUpdated)
+        public async Task<string> PutAsync(string nameOriginal, string nameUpdated)
         {
             if (string.IsNullOrEmpty(nameOriginal) && string.IsNullOrEmpty(nameUpdated))
             {
                 return $"Failed to update {nameOriginal} to {nameUpdated}";
             } else
             {
-                return ChemFactory.ReadChemical(nameOriginal).UpdateChemical(new Chemical()
+                string toReturn = "";
+                List<IChemical> results = await ChemFactory.ReadChemicalAsync(nameOriginal);
+                foreach (var chemical in results)
                 {
-                    name = nameUpdated,
-                    DB = ChemFactory.getDB()
-                }).ToJson();
+                    toReturn = $"{toReturn}" + chemical.UpdateChemicalAsync(new Chemical()
+                    {
+                        chemicalName = nameUpdated,
+                        DB = ChemFactory.getDB()
+                    }).ToJson();
+                }
+                return toReturn;
             }
         }
 
         [Route("Delete/{name}")]
-        public string Delete(string name)
+        public async Task<string> DeleteAsync(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return $"Failed to delete {name}";
             } else
             {
-                return ChemFactory.ReadChemical(name).DeleteChemical().ToJson();
+                string toReturn = "";
+                List<IChemical> results = await ChemFactory.ReadChemicalAsync(name);
+                foreach (var chemical in results)
+                {
+                    toReturn = $"{toReturn}" + chemical.ToJson();
+                }
+                return toReturn;
             }
         }
 
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+
+            BsonClassMap.RegisterClassMap<Manufacturer>();
+            BsonClassMap.RegisterClassMap<Chemical>();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

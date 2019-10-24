@@ -14,7 +14,7 @@ namespace Campus.Custodial.Chemicals
         /// </summary>
         /// <param name="newChemical"> Chemical to add to the Database</param>
         /// <returns>the created chemical</returns>
-        public IChemical CreateChemical(IChemical newChemical)
+        public async Task<IChemical> CreateChemicalAsync(IChemical newChemical)
         {
             IChemical temp;
             if (DB.TryGetValue(newChemical.GetName(), out temp))
@@ -22,10 +22,10 @@ namespace Campus.Custodial.Chemicals
                 return null;
             }
             DB.Add(newChemical.GetName(), newChemical);
-            return newChemical;
+            return  Task.FromResult(newChemical).Result;
         }
 
-        public List<IChemical> ReadAllChemical()
+        public async Task<List<IChemical>> ReadAllChemicalAsync()
         {
             List<IChemical> toreturn = new List<IChemical>();
             foreach(var x in DB.Keys)
@@ -34,7 +34,7 @@ namespace Campus.Custodial.Chemicals
                 DB.TryGetValue(x, out toAdd);
                 toreturn.Add(toAdd);
             }
-            return toreturn;
+            return Task.FromResult(toreturn).Result;
         }
 
         /// <summary>
@@ -42,16 +42,19 @@ namespace Campus.Custodial.Chemicals
         /// </summary>
         /// <param name="id">id of the chemical requested</param>
         /// <returns>the requested chemical</returns>
-        public IChemical ReadChemical(string id)
+        public async Task<List<IChemical>> ReadChemicalAsync(string id)
         {
+            List<IChemical> toReturn = new List<IChemical>();
             IChemical target;
             if (DB.TryGetValue(id, out target))
             {
-                return target;
+                toReturn.Add(target);
+                return toReturn;
             }
             else
             {
-                return new Chemical().NullChemical();
+                toReturn.Add(new Chemical().NullChemical());
+                return Task.FromResult(toReturn).Result;
             }
         }
 

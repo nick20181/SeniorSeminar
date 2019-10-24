@@ -7,9 +7,9 @@ namespace Campus.Custodial.Chemicals
 {
     public interface IDatabase
     {
-        public IChemical ReadChemical(string id);
-        public List<IChemical> ReadAllChemical();
-        public IChemical CreateChemical(IChemical newChemical);
+        public Task<List<IChemical>> ReadChemicalAsync(string id);
+        public Task<List<IChemical>> ReadAllChemicalAsync();
+        public Task<IChemical> CreateChemicalAsync(IChemical newChemical);
         public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalID);
     }
 }

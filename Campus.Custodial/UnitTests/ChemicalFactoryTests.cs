@@ -11,23 +11,53 @@ namespace UnitTests
         private Utility util = new Utility();
      
         [Fact]
-        public void ReadChemicalTest()
+        public async System.Threading.Tasks.Task ReadChemicalTestAsync()
         {
-            IDatabase DB = new InMemoryDatabase();
+            IDatabase DB = new MongoDatabase();
             Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
-            DB.CreateChemical(chemOne);
+            await DB.CreateChemicalAsync(chemOne);
             ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            Assert.Equal(ChemFactory.ReadChemical(chemOne.GetName()).ToJson(), chemOne.ToJson());
-            Assert.Equal(ChemFactory.ReadChemical($"").ToJson(), new Chemical().NullChemical().ToJson());
+            List<IChemical> result = await DB.ReadChemicalAsync(chemOne.chemicalName);
+            List<IChemical> temp = new List<IChemical>();
+            foreach (var x in result)
+            {
+                if (chemOne.ToJson().Equals(x.ToJson()))
+                {
+                    Assert.Equal(chemOne.ToJson(), x.ToJson());
+                    temp.Add(x);
+                }
+                else
+                {
+                    result.Remove(x);
+                }
+
+            }
+            Assert.True(temp.Count != 0, $"Count of the results that matched the requested Chemical was {temp.Count}");
+            List<IChemical> resultTwo = await DB.ReadChemicalAsync($"");
+            List<IChemical> tempTwo = new List<IChemical>();
+            foreach (var x in resultTwo.ToArray())
+            {
+                if (new Chemical().NullChemical().ToJson().Equals(x.ToJson()))
+                {
+                    Assert.Equal(new Chemical().NullChemical().ToJson(), x.ToJson());
+                    tempTwo.Add(x);
+                }
+                else
+                {
+                    resultTwo.Remove(x);
+                }
+
+            }
+            Assert.True(tempTwo.Count != 0, $"Count of the results that matched the requested Chemical was {tempTwo.Count}");
         }
 
         [Fact]
-        public void CreateChemicalTest()
+        public async System.Threading.Tasks.Task CreateChemicalTestAsync()
         {
-            IDatabase DB = new InMemoryDatabase();
+            IDatabase DB = new MongoDatabase();
             Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
             ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            IChemical created = ChemFactory.CreateChemical(chemOne.GetName(), chemOne.GetManufacturer(), chemOne.GetProductIdentifier(), 
+            IChemical created = await ChemFactory.CreateChemicalAsync(chemOne.GetName(), chemOne.GetManufacturer(), chemOne.GetProductIdentifier(),
                 chemOne.GetSignalWords(), chemOne.GetHazardStatements(), chemOne.GetPrecautionStatements());
             Assert.Equal(chemOne.ToJson(), created.ToJson());
         }

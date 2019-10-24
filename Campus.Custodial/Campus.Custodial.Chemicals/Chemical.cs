@@ -1,4 +1,6 @@
 ﻿using Campus.Custodial.Chemicals.Interfaces;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,22 +13,31 @@ namespace Campus.Custodial.Chemicals
     {
         [JsonIgnore]
         public IDatabase DB { get; set; }
-        public string name;
+        [BsonElement("Chemical Name")]
+        public string chemicalName;
+        [BsonElement("Deleted Status")]
         public bool deleted = false;
-        public string id = $"Not Set";
+        [BsonElement("_id")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id = $"Not Set";
+        [BsonElement("Manufacturer")]
         public Manufacturer manufacturer;
+        [BsonElement("Product Identifier")]
         public string productIdentifier;
+        [BsonElement("Signal Words")]
         public List<signalWords> sigWords = new List<signalWords>();
+        [BsonElement("Hazard Statements")]
         public List<string> hazardStatements = new List<string>();
+        [BsonElement("Precaution Statements")]
         public List<string> precautionStatements = new List<string>();
 
-        public IChemical DeleteChemical()
+        public async Task<IChemical> DeleteChemicalAsync()
         {
-            return UpdateChemical(new Chemical()
+            return await UpdateChemicalAsync(new Chemical()
             {
                 DB = DB,
-                name = name,
-                id = id,
+                chemicalName = chemicalName,
+                _id = _id,
                 deleted = true,
                 manufacturer = manufacturer,
                 productIdentifier = productIdentifier,
@@ -36,24 +47,25 @@ namespace Campus.Custodial.Chemicals
             });
         }
 
-        public IChemical UpdateChemical(IChemical updatedChemical)
+        public async Task<IChemical> UpdateChemicalAsync(IChemical updatedChemical)
         {
-            string oldName = name;
-            name = updatedChemical.GetName();
+            string oldName = chemicalName;
+            chemicalName = updatedChemical.GetName();
             deleted = updatedChemical.GetDeletedStatus();
-            return DB.UpdateChemical(updatedChemical, oldName);
+            return null;
+            //return await DB.UpdateChemical(updatedChemical, oldName);
         }
 
         override
         public string ToString()
         {
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(chemicalName))
             {
                 return null;
             }
             else
             {
-                return $"{name}";
+                return $"{chemicalName}";
             }
         }
 
@@ -61,7 +73,7 @@ namespace Campus.Custodial.Chemicals
         {
             return JsonConvert.SerializeObject(new Chemical()
             {
-                name = name,
+                chemicalName = chemicalName,
                 DB = DB,
                 deleted = deleted
             });
@@ -74,7 +86,7 @@ namespace Campus.Custodial.Chemicals
 
         public string GetName()
         {
-            return name;
+            return chemicalName;
         }
 
         public bool GetDeletedStatus()
@@ -116,9 +128,9 @@ namespace Campus.Custodial.Chemicals
         {
             return new Chemical()
             {
-                name = null,
+                chemicalName = null,
                 manufacturer = null,
-                id = null,
+                _id = null,
                 deleted = true,
                 DB = null,
                 productIdentifier = null,

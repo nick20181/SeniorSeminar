@@ -15,17 +15,17 @@ namespace Campus.Custodial.Chemicals
             this.DB = db;
         }
 
-        public IChemical ReadChemical(string id)
+        public async Task<List<IChemical>> ReadChemicalAsync(string id)
         {
-            return DB.ReadChemical(id);
+            return await DB.ReadChemicalAsync(id);
         }
 
-        public IChemical CreateChemical(string chemName, Manufacturer manufacturer, string productIdentifier,
+        public async Task<IChemical> CreateChemicalAsync(string chemName, Manufacturer manufacturer, string productIdentifier,
             List<signalWords> sigWords, List<string> hazardStatements, List<string> precautionStatements)
         {
             Chemical chemical = new Chemical()
             {
-                name = chemName,
+                chemicalName = chemName,
                 DB = DB,
                 deleted = false,
                 manufacturer = manufacturer,
@@ -35,7 +35,7 @@ namespace Campus.Custodial.Chemicals
                 precautionStatements = precautionStatements
 
             };
-            IChemical result = DB.CreateChemical(chemical);
+            IChemical result = await DB.CreateChemicalAsync(chemical);
             if (result == null)
             {
                 return new Chemical().NullChemical();
@@ -43,9 +43,9 @@ namespace Campus.Custodial.Chemicals
             return result;
         }
 
-        public List<IChemical> ReadAllChemicals()
+        public async Task<List<IChemical>> ReadAllChemicalsAsync()
         {
-            return DB.ReadAllChemical();
+            return await DB.ReadAllChemicalAsync();
         }
 
         public IDatabase getDB()

@@ -15,19 +15,19 @@ namespace UnitTests
         [Fact]
         public void UpdateChemicalTest()
         {
-            IDatabase DB = new InMemoryDatabase();
+            IDatabase DB = new MongoDatabase();
             Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
             Chemical chemOneUpdated = util.createChemical($"Generic Chemical Updated", 1, DB);
-            chemOne.UpdateChemical(chemOneUpdated);
+            chemOne.UpdateChemicalAsync(chemOneUpdated);
             Assert.Equal(chemOne.ToJson(), chemOneUpdated.ToJson());
         }
 
         [Fact]
         public void DeleteChemicalTest()
         {
-            IDatabase DB = new InMemoryDatabase();
+            IDatabase DB = new MongoDatabase();
             Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
-            chemOne.DeleteChemical();
+            chemOne.DeleteChemicalAsync();
             Assert.True(chemOne.GetDeletedStatus());
         }
     }

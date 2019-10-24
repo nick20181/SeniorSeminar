@@ -482,3 +482,8 @@ C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\Renci.SshNet.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\SshNet.Security.Cryptography.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\System.Resources.Extensions.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\DnsClient.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Bson.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.Core.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\SharpCompress.dll

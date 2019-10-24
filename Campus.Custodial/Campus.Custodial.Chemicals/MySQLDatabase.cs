@@ -3,61 +3,24 @@ using MySql.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Campus.Custodial.Chemicals
 {
     public class MySQLDatabase : IDatabase
     {
-        private MySQLDatabase()
-        {
-
-        }
-
-        public string databaseName = $"";
-        public string pass = $"";
-        public string userName = $"";
-        public string serverLocation = $"";
-        public MySqlConnection connection = null;
-
-        private string makeConnectionString()
-        {
-            return $"server={serverLocation};userid={userName};password={pass};database={databaseName}";
-        }
-
-        public IChemical ReadChemical(string id)
+        public Task<IChemical> CreateChemicalAsync(IChemical newChemical)
         {
             throw new NotImplementedException();
         }
 
-        public List<IChemical> ReadAllChemical()
+        public Task<List<IChemical>> ReadAllChemicalAsync()
         {
             throw new NotImplementedException();
         }
 
-        public IChemical CreateChemical(IChemical newChemical)
+        public Task<List<IChemical>> ReadChemicalAsync(string id)
         {
-            try
-            {
-                if (connection == null)
-                {
-                    connection = new MySqlConnection(makeConnectionString());
-                }
-                connection.OpenAsync();
-                //log
-                //do actual stuff here
-
-            }
-            catch (MySqlException ex)
-            {
-                //errors
-            }
-            finally
-            {
-                if(connection != null)
-                {
-                    connection = null;
-                }
-            }
             throw new NotImplementedException();
         }
 
