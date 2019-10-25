@@ -31,14 +31,14 @@ namespace Campus.Custodial.Chemicals.Controllers
         
         public ChemicalController()
         {
-            Console.WriteLine($"MongoDB connection address: ");
-            mongoConnectionip = Console.ReadLine();
+            //Console.WriteLine($"MongoDB connection address: ");
+            //mongoConnectionip = Console.ReadLine();
             if (!string.IsNullOrWhiteSpace(mongoConnectionip))
             {
                 datebase = new MongoDatabase(mongoConnectionip);
             } else
             {
-                datebase = new MongoDatabase();
+                datebase = new MongoDatabase($"10.100.128.135");
             }
             var x = (MongoDatabase) datebase;
             Console.WriteLine($"Mongo connected at {x.GetMongoConnection()}");
