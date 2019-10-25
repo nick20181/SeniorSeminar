@@ -122,6 +122,11 @@ namespace Campus.Custodial.Chemicals
             return true;
         }
 
+        public string GetMongoConnection()
+        {
+            return connectionString;
+        }
+
         private BsonDocument convertChemicalToBson(IChemical chem)
         {
             BsonArray hazardStatements = new BsonArray(chem.GetHazardStatements());

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,14 +18,33 @@ using MongoDB.Bson.Serialization;
 using Newtonsoft.Json;
 using static Campus.Custodial.Chemicals.Chemical;
 
+//+
 namespace Campus.Custodial.Chemicals.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ChemicalController : ControllerBase
     {
-        static private IDatabase datebase = new MongoDatabase();
-        private IChemicalFactory ChemFactory = new ChemicalFactory(datebase);
+        private string mongoConnectionip = "";
+        private IDatabase datebase;
+        private IChemicalFactory ChemFactory;
+        
+        public ChemicalController()
+        {
+            Console.WriteLine($"MongoDB connection address: ");
+            mongoConnectionip = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(mongoConnectionip))
+            {
+                datebase = new MongoDatabase(mongoConnectionip);
+            } else
+            {
+                datebase = new MongoDatabase();
+            }
+            var x = (MongoDatabase) datebase;
+            Console.WriteLine($"Mongo connected at {x.GetMongoConnection()}");
+            ChemFactory = new ChemicalFactory(datebase);
+        }
+
 
         [Route("Get")]
         public async Task<string> GetAllAsync()
@@ -90,7 +112,7 @@ namespace Campus.Custodial.Chemicals.Controllers
                 productIdentifier = productIdentifier,
                 manufacturer = manufacturer
             })).ToJson());
-            if (result.Contains($"null"))
+            if (result.Contains(new Chemical().NullChemical().ToJson()))
             {
                 return $"Failed to Post";
             }
@@ -141,10 +163,29 @@ namespace Campus.Custodial.Chemicals.Controllers
             }
         }
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            string internalIP = $"http://localhost5000";
+            IPAddress[] localIPs = await Dns.GetHostAddressesAsync(Dns.GetHostName());
+            foreach (var addr in localIPs)
+            {
+                if (addr.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    internalIP = $"{internalIP};http://{addr}:5000";
+                }
+            }
 
+            //CreateHostBuilder(args).Build().Run();
+            Console.WriteLine($"Starting on addresses{internalIP}");
+            var host = new WebHostBuilder()
+                    .UseKestrel()
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseIISIntegration()
+                    .UseStartup<Startup>()
+                    .UseUrls($"http://10.100.128.135:5000;http://localhost:5000")
+                    .Build();
+
+            host.Run();
             BsonClassMap.RegisterClassMap<Manufacturer>();
             BsonClassMap.RegisterClassMap<Chemical>();
         }
@@ -179,7 +220,6 @@ namespace Campus.Custodial.Chemicals.Controllers
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
 
             app.UseRouting();

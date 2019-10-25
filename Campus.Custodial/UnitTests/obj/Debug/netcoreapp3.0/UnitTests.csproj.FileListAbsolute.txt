@@ -487,3 +487,6 @@ C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.Core.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\SharpCompress.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\Microsoft.Owin.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\Microsoft.Owin.Hosting.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Custodial\UnitTests\bin\Debug\netcoreapp3.0\Owin.dll
