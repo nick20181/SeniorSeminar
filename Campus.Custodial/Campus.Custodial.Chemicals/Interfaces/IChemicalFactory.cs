@@ -8,10 +8,9 @@ namespace Campus.Custodial.Chemicals
 {
     public interface IChemicalFactory
     {
-        public Task<List<IChemical>> ReadChemicalAsync(string name);
+        public Task<IChemical> ReadChemicalAsync(IChemical chem);
         public Task<List<IChemical>> ReadAllChemicalsAsync();
-        public Task<IChemical> CreateChemicalAsync(string chemName, Manufacturer manufacturer, string productIdentifier,
-            List<signalWords> sigWords, List<string> hazardStatements, List<string> precautionStatements);
+        public Task<IChemical> CreateChemicalAsync(IChemical chem);
         public IDatabase getDB();
     }
 }

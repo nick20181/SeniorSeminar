@@ -58,21 +58,32 @@ namespace Campus.Custodial.Chemicals
             }
         }
 
+        public Task<IChemical> RemoveChemicalAsync(IChemical toRemove)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Updates the chemical
         /// </summary>
         /// <param name="updatedChemical">The updated Chemical</param>
         /// <param name="targetChemical">The target Chemical</param>
         /// <returns>the updated chemical</returns>
-        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemical)
+        public Task<List<IChemical>> UpdateChemical(IChemical updatedChemical, IChemical targetChemical)
         {
-            IChemical removed;
-            if (DB.TryGetValue(targetChemical, out removed))
-            {
-                DB.Remove(targetChemical);
-            }
-            DB.Add(updatedChemical.GetName(), updatedChemical);
-            return updatedChemical;
+            throw new NotImplementedException();
+        //    IChemical removed;
+        //    if (DB.TryGetValue(targetChemical, out removed))
+        //    {
+        //        DB.Remove(targetChemical);
+        //    }
+        //    DB.Add(updatedChemical.GetName(), updatedChemical);
+        //    return updatedChemical;
+        }
+
+        Task<List<IChemical>> IDatabase.CreateChemicalAsync(IChemical newChemical)
+        {
+            throw new NotImplementedException();
         }
     }
 }

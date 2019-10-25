@@ -9,57 +9,105 @@ namespace UnitTests
     public class ChemicalFactoryTests
     {
         private Utility util = new Utility();
+        private static IDatabase db = new MongoDatabase();
+        private IChemicalFactory chemFactory = new ChemicalFactory(db);
      
         [Fact]
         public async System.Threading.Tasks.Task ReadChemicalTestAsync()
         {
-            IDatabase DB = new MongoDatabase();
-            Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
-            await DB.CreateChemicalAsync(chemOne);
-            ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            List<IChemical> result = await DB.ReadChemicalAsync(chemOne.chemicalName);
-            List<IChemical> temp = new List<IChemical>();
-            foreach (var x in result)
-            {
-                if (chemOne.ToJson().Equals(x.ToJson()))
-                {
-                    Assert.Equal(chemOne.ToJson(), x.ToJson());
-                    temp.Add(x);
-                }
-                else
-                {
-                    result.Remove(x);
-                }
+            IChemical chemOne = util.createChemical($"Bleach", 1, db);
+            var resultChemOne = await db.CreateChemicalAsync(chemOne);
+            IChemical chemOneFactory = await chemFactory.ReadChemicalAsync(chemOne);
+            IChemical resultChemOneFinal = util.findChemFromResult(chemOne.ToJson(), resultChemOne);
+            Assert.Equal(chemOne.ToJson(), resultChemOneFinal.ToJson());
+            Assert.Equal(chemOne.ToJson(), chemOneFactory.ToJson());
 
-            }
-            Assert.True(temp.Count != 0, $"Count of the results that matched the requested Chemical was {temp.Count}");
-            List<IChemical> resultTwo = await DB.ReadChemicalAsync($"");
+            IChemical chemTwo = util.createChemical($"Clorax Bleach", 1, db);
+            var resultChemTwo = await db.CreateChemicalAsync(chemTwo);
+            IChemical chemTwoFactory = await chemFactory.ReadChemicalAsync(chemTwo);
+            IChemical resultChemTwoFinal = util.findChemFromResult(chemTwo.ToJson(), resultChemTwo);
+            Assert.Equal(chemTwo.ToJson(), resultChemTwoFinal.ToJson());
+            Assert.Equal(chemTwo.ToJson(), chemTwoFactory.ToJson());
+
+            IChemical chemThree = util.createChemical($"Agent Orange", 1, db);
+            var resultChemThree = await db.CreateChemicalAsync(chemThree);
+            IChemical chemThreeFactory = await chemFactory.ReadChemicalAsync(chemThree);
+            IChemical resultChemThreeFinal = util.findChemFromResult(chemThree.ToJson(), resultChemThree);
+            Assert.Equal(chemThree.ToJson(), resultChemThreeFinal.ToJson());
+            Assert.Equal(chemThree.ToJson(), chemThreeFactory.ToJson());
+
+            await util.DeleteAllDBAsync(db);
+        }
+
+        [Fact]
+        public async System.Threading.Tasks.Task ReadAllChemicalTestAsync()
+        {
+            IChemical chemOne = util.createChemical($"Bleach", 1, db);
+            var resultChemOne = await db.CreateChemicalAsync(chemOne);
+            IChemical chemOneFactory = await chemFactory.ReadChemicalAsync(chemOne);
+            IChemical resultChemOneFinal = util.findChemFromResult(chemOne.ToJson(), resultChemOne);
+            Assert.Equal(chemOne.ToJson(), resultChemOneFinal.ToJson());
+            Assert.Equal(chemOne.ToJson(), chemOneFactory.ToJson());
+
+            IChemical chemTwo = util.createChemical($"Clorax Bleach", 1, db);
+            var resultChemTwo = await db.CreateChemicalAsync(chemTwo);
+            IChemical chemTwoFactory = await chemFactory.ReadChemicalAsync(chemTwo);
+            IChemical resultChemTwoFinal = util.findChemFromResult(chemTwo.ToJson(), resultChemTwo);
+            Assert.Equal(chemTwo.ToJson(), resultChemTwoFinal.ToJson());
+            Assert.Equal(chemTwo.ToJson(), chemTwoFactory.ToJson());
+
+            IChemical chemThree = util.createChemical($"Agent Orange", 1, db);
+            var resultChemThree = await db.CreateChemicalAsync(chemThree);
+            IChemical chemThreeFactory = await chemFactory.ReadChemicalAsync(chemThree);
+            IChemical resultChemThreeFinal = util.findChemFromResult(chemThree.ToJson(), resultChemThree);
+            Assert.Equal(chemThree.ToJson(), resultChemThreeFinal.ToJson());
+            Assert.Equal(chemThree.ToJson(), chemThreeFactory.ToJson());
+
             List<IChemical> tempTwo = new List<IChemical>();
-            foreach (var x in resultTwo.ToArray())
-            {
-                if (new Chemical().NullChemical().ToJson().Equals(x.ToJson()))
-                {
-                    Assert.Equal(new Chemical().NullChemical().ToJson(), x.ToJson());
-                    tempTwo.Add(x);
-                }
-                else
-                {
-                    resultTwo.Remove(x);
-                }
+            List<IChemical> check = new List<IChemical>();
+            check.Add(chemOne);
+            check.Add(chemTwo);
+            check.Add(chemThree);
 
+            List<IChemical> temp = await chemFactory.ReadAllChemicalsAsync();
+            foreach (var x in check.ToArray())
+            {
+                foreach (var y in temp.ToArray())
+                {
+                    if (x.GetName().Equals(y.GetName()))
+                    {
+                        tempTwo.Add(y);
+                    }
+                }
             }
-            Assert.True(tempTwo.Count != 0, $"Count of the results that matched the requested Chemical was {tempTwo.Count}");
+            Assert.True(tempTwo.Count == 3, $"Count: {check.Count}");
+            await util.DeleteAllDBAsync(db);
+
         }
 
         [Fact]
         public async System.Threading.Tasks.Task CreateChemicalTestAsync()
         {
-            IDatabase DB = new MongoDatabase();
-            Chemical chemOne = util.createChemical($"Generic Chemical", 1, DB);
-            ChemicalFactory ChemFactory = new ChemicalFactory(DB);
-            IChemical created = await ChemFactory.CreateChemicalAsync(chemOne.GetName(), chemOne.GetManufacturer(), chemOne.GetProductIdentifier(),
-                chemOne.GetSignalWords(), chemOne.GetHazardStatements(), chemOne.GetPrecautionStatements());
-            Assert.Equal(chemOne.ToJson(), created.ToJson());
+
+            IChemical chemOne = util.createChemical($"Bleach", 1, db);
+            IChemical resultChemOne = await chemFactory.CreateChemicalAsync(chemOne);
+            IChemical chemOneFactory = await chemFactory.ReadChemicalAsync(chemOne);
+            Assert.Equal(chemOne.ToJson(), chemOneFactory.ToJson());
+            Assert.Equal(chemOne.ToJson(), chemOneFactory.ToJson());
+
+            IChemical chemTwo = util.createChemical($"Clorax Bleach", 1, db);
+            IChemical resultChemTwo = await chemFactory.CreateChemicalAsync(chemTwo);
+            IChemical chemTwoFactory = await chemFactory.ReadChemicalAsync(chemTwo);
+            Assert.Equal(chemTwo.ToJson(), chemTwoFactory.ToJson());
+            Assert.Equal(chemTwo.ToJson(), chemTwoFactory.ToJson());
+
+            IChemical chemThree = util.createChemical($"Agent Orange", 1, db);
+            IChemical resultChemThree = await chemFactory.CreateChemicalAsync(chemThree);
+            IChemical chemThreeFactory = await chemFactory.ReadChemicalAsync(chemThree);
+            Assert.Equal(chemThree.ToJson(), chemThreeFactory.ToJson());
+            Assert.Equal(chemThree.ToJson(), chemThreeFactory.ToJson());
+
+            await util.DeleteAllDBAsync(db);
         }
 
 

@@ -15,32 +15,30 @@ namespace Campus.Custodial.Chemicals
             this.DB = db;
         }
 
-        public async Task<List<IChemical>> ReadChemicalAsync(string id)
+        public async Task<IChemical> ReadChemicalAsync(IChemical chem)
         {
-            return await DB.ReadChemicalAsync(id);
+            var temp = await DB.ReadChemicalAsync(chem.GetName());
+            foreach(var x in temp)
+            {
+                if (x.GetName().Equals(chem.GetName()))
+                {
+                    return x;
+                }
+            }
+            return new Chemical().NullChemical();
         }
 
-        public async Task<IChemical> CreateChemicalAsync(string chemName, Manufacturer manufacturer, string productIdentifier,
-            List<signalWords> sigWords, List<string> hazardStatements, List<string> precautionStatements)
+        public async Task<IChemical> CreateChemicalAsync(IChemical chem)
         {
-            Chemical chemical = new Chemical()
+            var x = await DB.CreateChemicalAsync(chem);
+            foreach(var y in x)
             {
-                chemicalName = chemName,
-                DB = DB,
-                deleted = false,
-                manufacturer = manufacturer,
-                productIdentifier = productIdentifier,
-                sigWords = sigWords,
-                hazardStatements = hazardStatements,
-                precautionStatements = precautionStatements
-
-            };
-            IChemical result = await DB.CreateChemicalAsync(chemical);
-            if (result == null)
-            {
-                return new Chemical().NullChemical();
+                if (y.GetName().Equals(chem.GetName()))
+                {
+                    return y;
+                }
             }
-            return result;
+            return new Chemical().NullChemical();
         }
 
         public async Task<List<IChemical>> ReadAllChemicalsAsync()

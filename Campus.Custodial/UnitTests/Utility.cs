@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Xunit;
 using static Campus.Custodial.Chemicals.Chemical;
 
 namespace UnitTests
 {
     public class Utility
     {
-        public  Chemical createChemical(string name, int sigWords, IDatabase db, Manufacturer manu = null)
+        public Chemical createChemical(string name, int sigWords, IDatabase db, Manufacturer manu = null)
         {
             if (manu == null)
             {
@@ -68,6 +69,25 @@ namespace UnitTests
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        public IChemical findChemFromResult(string expected, List<IChemical> results)
+        {
+            foreach (var chem in results)
+            {
+                if (chem.ToJson().Equals(expected))
+                {
+                    return chem;
+                }
+            }
+            return new Chemical().NullChemical();
+        }
+        public async System.Threading.Tasks.Task DeleteAllDBAsync(IDatabase db)
+        {
+            foreach(var y in await db.ReadAllChemicalAsync())
+            {
+                await db.RemoveChemicalAsync(y);
+            }
         }
     }
 }

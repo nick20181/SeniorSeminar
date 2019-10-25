@@ -31,29 +31,35 @@ namespace Campus.Custodial.Chemicals
         [BsonElement("Precaution Statements")]
         public List<string> precautionStatements = new List<string>();
 
-        public async Task<IChemical> DeleteChemicalAsync()
+        public async Task<List<IChemical>> DeleteChemicalAsync()
         {
-            return await UpdateChemicalAsync(new Chemical()
+            ChemicalFactory chemFactory = new ChemicalFactory(DB);
+            Chemical updatedChemical = new Chemical()
             {
-                DB = DB,
                 chemicalName = chemicalName,
+                deleted = deleted,
                 _id = _id,
-                deleted = true,
                 manufacturer = manufacturer,
                 productIdentifier = productIdentifier,
                 sigWords = sigWords,
                 hazardStatements = hazardStatements,
                 precautionStatements = precautionStatements
-            });
+            };
+            return await DB.UpdateChemical(updatedChemical, await chemFactory.ReadChemicalAsync(new Chemical()
+            {
+                _id = _id,
+                chemicalName = chemicalName
+            }));
         }
 
-        public async Task<IChemical> UpdateChemicalAsync(IChemical updatedChemical)
+        public async Task<List<IChemical>> UpdateChemicalAsync(IChemical updatedChemical)
         {
-            string oldName = chemicalName;
-            chemicalName = updatedChemical.GetName();
-            deleted = updatedChemical.GetDeletedStatus();
-            return null;
-            //return await DB.UpdateChemical(updatedChemical, oldName);
+            ChemicalFactory chemFactory = new ChemicalFactory(DB);
+            return await DB.UpdateChemical(updatedChemical, await chemFactory.ReadChemicalAsync(new Chemical()
+            {
+                _id = _id,
+                chemicalName = chemicalName
+            }));
         }
 
         override
@@ -81,12 +87,17 @@ namespace Campus.Custodial.Chemicals
 
         public string GetID()
         {
-            throw new NotImplementedException();
+            return _id;
         }
 
         public string GetName()
         {
             return chemicalName;
+        }
+
+        public void SetID(string id)
+        {
+            _id = id;
         }
 
         public bool GetDeletedStatus()

@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Microsoft.Owin.Hosting": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.0.0, )"

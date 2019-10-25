@@ -9,7 +9,8 @@ namespace Campus.Custodial.Chemicals
     {
         public Task<List<IChemical>> ReadChemicalAsync(string id);
         public Task<List<IChemical>> ReadAllChemicalAsync();
-        public Task<IChemical> CreateChemicalAsync(IChemical newChemical);
-        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalID);
+        public Task<List<IChemical>> UpdateChemical(IChemical updatedChemical, IChemical targetChemicalID);
+        public Task<List<IChemical>> CreateChemicalAsync(IChemical newChemical);
+        public Task<IChemical> RemoveChemicalAsync(IChemical toRemove);
     }
 }

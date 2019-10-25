@@ -11,22 +11,23 @@ namespace Campus.Custodial.Chemicals
 {
     public class MongoDatabase : IDatabase
     {
-        public static string connectionString = $"mongodb://localhost:27017";
+        private string connectionString;
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<BsonDocument> chemicalCollection;
 
-        public MongoDatabase()
+        public MongoDatabase(string conString = "mongodb://localhost:27017")
         {
+            connectionString = conString;
             client = new MongoClient(connectionString);
             db = client.GetDatabase("CampusCustodialChemical");
             chemicalCollection = db.GetCollection<BsonDocument>($"Chemical");
         }
 
-        public async Task<IChemical> CreateChemicalAsync(IChemical newChemical)
+        public async Task<List<IChemical>> CreateChemicalAsync(IChemical newChemical)
         {
             await chemicalCollection.InsertOneAsync(convertChemicalToBson(newChemical));
-            return Task.FromResult(newChemical).Result;
+            return await ReadChemicalAsync(newChemical.GetName());
         }
 
         public async Task<List<IChemical>> ReadAllChemicalAsync()
@@ -71,9 +72,42 @@ namespace Campus.Custodial.Chemicals
             return toReturn;
         }
 
-        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalID)
+        public async Task<List<IChemical>> UpdateChemical(IChemical updatedChemical, IChemical targetChemicalID)
         {
-            throw new NotImplementedException();
+            ObjectId id;
+            if (!ObjectId.TryParse(targetChemicalID.GetID(), out id))
+            {
+                throw new Exception($"Invalid Id in Remove Chemical on Database level");
+            }
+            var temp = await RemoveChemicalAsync(targetChemicalID);
+            updatedChemical.SetID(temp.GetID());
+            return await CreateChemicalAsync(updatedChemical);
+        }
+
+        public async Task<IChemical> RemoveChemicalAsync(IChemical toRemove)
+        {
+            IChemical toReturn = new Chemical().NullChemical();
+            ObjectId id;
+            if (!ObjectId.TryParse(toRemove.GetID(), out id))
+            {
+                throw new Exception($"Invalid Id in Remove Chemical on Database level");
+            }
+            FilterDefinition<BsonDocument> filter = new BsonDocument("_id", id);
+            FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
+            {
+                BatchSize = 10,
+                NoCursorTimeout = false
+            };
+            var result = await ReadChemicalAsync(toRemove.GetName());
+            foreach(var chem in result)
+            {
+                if (chem.GetID().Equals(toRemove.GetID()))
+                {
+                    toReturn = chem;
+                }
+            }
+            await chemicalCollection.DeleteOneAsync(filter);
+            return toReturn;
         }
 
         public async System.Threading.Tasks.Task<bool> testMongoAsync()

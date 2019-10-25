@@ -9,7 +9,7 @@ namespace Campus.Custodial.Chemicals
 {
     public class MySQLDatabase : IDatabase
     {
-        public Task<IChemical> CreateChemicalAsync(IChemical newChemical)
+        public Task<List<IChemical>> CreateChemicalAsync(IChemical newChemical)
         {
             throw new NotImplementedException();
         }
@@ -24,7 +24,12 @@ namespace Campus.Custodial.Chemicals
             throw new NotImplementedException();
         }
 
-        public IChemical UpdateChemical(IChemical updatedChemical, string targetChemicalID)
+        public Task<IChemical> RemoveChemicalAsync(IChemical toRemove)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<IChemical>> UpdateChemical(IChemical updatedChemical, IChemical targetChemicalID)
         {
             throw new NotImplementedException();
         }

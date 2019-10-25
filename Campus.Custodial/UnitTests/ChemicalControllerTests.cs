@@ -11,6 +11,7 @@ namespace UnitTests
 {
     public class ChemicalControllerTests
     {
+        private Utility util = new Utility();
 
         public List<string> populateListWith(int size)
         {
@@ -49,6 +50,7 @@ namespace UnitTests
                 }
             }
             Assert.True(ListOfStrings.Count == 0);
+            await controller.cleanDataBaseAsync();
         }
 
         [Fact]
@@ -84,6 +86,7 @@ namespace UnitTests
             {
                 Assert.True(true);
             }
+            await controller.cleanDataBaseAsync();
         }
 
         [Fact]
@@ -118,7 +121,7 @@ namespace UnitTests
                 }
                 Assert.True(result.Count == 0);
             }
-
+            await controller.cleanDataBaseAsync();
         }
 
         [Fact]
@@ -165,7 +168,7 @@ namespace UnitTests
                 }
                 Assert.True(result.Count == 0);
             }
-
+            await controller.cleanDataBaseAsync();
         }
 
         private Random random = new Random();

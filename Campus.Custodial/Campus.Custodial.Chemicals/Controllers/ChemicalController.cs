@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Owin.Hosting;
 using MongoDB.Bson.Serialization;
 using Newtonsoft.Json;
 using static Campus.Custodial.Chemicals.Chemical;
@@ -45,18 +47,18 @@ namespace Campus.Custodial.Chemicals.Controllers
             {
                 toReturn.Add(new Chemical().NullChemical().ToJson());
             }
-            List<IChemical> chemicalToGet = await ChemFactory.ReadChemicalAsync(name);
-            foreach (var chemical in chemicalToGet)
+            IChemical chemicalToGet = await ChemFactory.ReadChemicalAsync(new Chemical()
             {
-                if (chemicalToGet == null)
+                chemicalName = name
+            });
+                if (chemicalToGet.ToJson().Equals(new Chemical().NullChemical()))
                 {
                     toReturn.Add(new Chemical().NullChemical().ToJson());
                 }
                 else
                 {
-                    toReturn.Add(chemical.ToJson());
+                    toReturn.Add(chemicalToGet.ToJson());
                 }
-            }
             return toReturn;
         }
 
@@ -79,7 +81,15 @@ namespace Campus.Custodial.Chemicals.Controllers
                 address = $"place Holder",
                 phoneNumber = $"place Holder"
             };
-            string result = (await ChemFactory.CreateChemicalAsync(name, manufacturer, productIdentifier, sigWords, hazardStatements, precautionStatements)).ToJson();
+            string result = ((await ChemFactory.CreateChemicalAsync(new Chemical()
+            {
+                chemicalName = name,
+                hazardStatements = hazardStatements,
+                precautionStatements = precautionStatements,
+                sigWords = sigWords,
+                productIdentifier = productIdentifier,
+                manufacturer = manufacturer
+            })).ToJson());
             if (result.Contains($"null"))
             {
                 return $"Failed to Post";
@@ -94,19 +104,14 @@ namespace Campus.Custodial.Chemicals.Controllers
             if (string.IsNullOrEmpty(nameOriginal) && string.IsNullOrEmpty(nameUpdated))
             {
                 return $"Failed to update {nameOriginal} to {nameUpdated}";
-            } else
+            }
+            else
             {
-                string toReturn = "";
-                List<IChemical> results = await ChemFactory.ReadChemicalAsync(nameOriginal);
-                foreach (var chemical in results)
+                IChemical result = await ChemFactory.ReadChemicalAsync(new Chemical() 
                 {
-                    toReturn = $"{toReturn}" + chemical.UpdateChemicalAsync(new Chemical()
-                    {
-                        chemicalName = nameUpdated,
-                        DB = ChemFactory.getDB()
-                    }).ToJson();
-                }
-                return toReturn;
+                    chemicalName = nameUpdated 
+                });
+                return result.ToJson();
             }
         }
 
@@ -116,15 +121,23 @@ namespace Campus.Custodial.Chemicals.Controllers
             if (string.IsNullOrEmpty(name))
             {
                 return $"Failed to delete {name}";
-            } else
+            }
+            else
             {
-                string toReturn = "";
-                List<IChemical> results = await ChemFactory.ReadChemicalAsync(name);
-                foreach (var chemical in results)
+                IChemical results = await ChemFactory.ReadChemicalAsync(new Chemical()
                 {
-                    toReturn = $"{toReturn}" + chemical.ToJson();
-                }
-                return toReturn;
+                    chemicalName = name
+                });
+                return results.ToJson();
+            }
+        }
+
+        public async Task cleanDataBaseAsync()
+        {
+            IDatabase toClean = ChemFactory.getDB();
+            foreach (var y in await toClean.ReadAllChemicalAsync())
+            {
+                await toClean.RemoveChemicalAsync(y);
             }
         }
 
