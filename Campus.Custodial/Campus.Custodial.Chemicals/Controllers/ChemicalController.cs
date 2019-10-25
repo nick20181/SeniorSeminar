@@ -38,7 +38,7 @@ namespace Campus.Custodial.Chemicals.Controllers
                 datebase = new MongoDatabase(mongoConnectionip);
             } else
             {
-                datebase = new MongoDatabase($"10.100.128.135");
+                datebase = new MongoDatabase($"mongodb://10.100.128.135:27017");
             }
             var x = (MongoDatabase) datebase;
             Console.WriteLine($"Mongo connected at {x.GetMongoConnection()}");
