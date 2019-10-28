@@ -167,6 +167,7 @@ namespace Campus.Custodial.Chemicals.Controllers
         {
             string internalIP = $"http://localhost:5000";
             IPAddress[] localIPs = await Dns.GetHostAddressesAsync(Dns.GetHostName());
+            //IPAddress[] localIPs = new IPAddress[0];
             foreach (var addr in localIPs)
             {
                 if (addr.AddressFamily == AddressFamily.InterNetwork)
@@ -182,7 +183,7 @@ namespace Campus.Custodial.Chemicals.Controllers
                     .UseContentRoot(Directory.GetCurrentDirectory())
                     .UseIISIntegration()
                     .UseStartup<Startup>()
-                    .UseUrls($"http://10.100.128.135:5000;http://localhost:5000")
+                    .UseUrls(internalIP)
                     .Build();
 
             host.Run();
