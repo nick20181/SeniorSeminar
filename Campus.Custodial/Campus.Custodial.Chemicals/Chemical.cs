@@ -11,6 +11,7 @@ namespace Campus.Custodial.Chemicals
 {
     public class Chemical : IChemical
     {
+        //comment
         [JsonIgnore]
         public IDatabase DB { get; set; }
         [BsonElement("Chemical Name")]

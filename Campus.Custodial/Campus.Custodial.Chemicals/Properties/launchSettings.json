@@ -1,5 +1,4 @@
-﻿{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -8,6 +7,7 @@
       "sslPort": 44303
     }
   },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -19,13 +19,22 @@
     },
     "Campus.Custodial.Chemicals": {
       "commandName": "Project",
-      "launchBrowser": false,
       "launchUrl": "weatherforecast",
-      "applicationUrl": "http://10.100.128.135:5000",
       "environmentVariables": {
-        //"ASPNETCORE_ENVIRONMENT": "Development"
         "ASPNETCORE_ENVIRONMENT": "Demo"
-      }
+      },
+      "applicationUrl": "http://10.100.128.135:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https://+:443;http://+:80",
+        "ASPNETCORE_HTTPS_PORT": "44304"
+      },
+      "httpPort": 57076,
+      "useSSL": true,
+      "sslPort": 44304
     }
   }
 }
