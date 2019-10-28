@@ -165,7 +165,7 @@ namespace Campus.Custodial.Chemicals.Controllers
 
         public static async Task Main(string[] args)
         {
-            string internalIP = $"http://localhost5000";
+            string internalIP = $"http://localhost:5000";
             IPAddress[] localIPs = await Dns.GetHostAddressesAsync(Dns.GetHostName());
             foreach (var addr in localIPs)
             {
