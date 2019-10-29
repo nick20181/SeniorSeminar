@@ -33,8 +33,8 @@ namespace Campus.Custodial.Chemicals.Controllers
         {
             //Console.WriteLine($"MongoDB connection address: ");
             //mongoConnectionip = Console.ReadLine();
-            //datebase = new MongoDatabase($"mongodb://127.0.0.1:27017");
-            datebase = new MongoDatabase($"mongodb://10.100.128.135:27017");
+            datebase = new MongoDatabase($"mongodb://127.0.0.1:27017");
+            //datebase = new MongoDatabase($"mongodb://10.100.128.135:27017");
             var x = (MongoDatabase) datebase;
             Console.WriteLine($"Mongo connected at {x.GetMongoConnection()}");
             ChemFactory = new ChemicalFactory(datebase);
