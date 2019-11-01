@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj": {}
+    "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj": {
+    "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj",
+        "projectUniqueName": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj",
         "projectName": "Campus.Custodial.Chemicals",
-        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj",
-        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\obj\\",
+        "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj",
+        "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+        "outputPath": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,17 +102,20 @@
         }
       }
     },
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj": {
+    "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\UnitTests\\obj\\",
+        "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+        "outputPath": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -122,8 +128,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj": {
-                "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj"
+              "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj": {
+                "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Custodial\\Campus.Custodial.Chemicals\\Campus.Custodial.Chemicals.csproj"
               }
             }
           }

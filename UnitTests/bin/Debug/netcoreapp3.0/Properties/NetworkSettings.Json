@@ -1,0 +1,5 @@
+﻿{
+  "port": "5000",
+  "databaseAddress": "localhost",
+  "databasePort" :  "27017"
+}
