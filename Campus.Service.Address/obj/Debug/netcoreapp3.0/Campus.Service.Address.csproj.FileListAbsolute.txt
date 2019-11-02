@@ -109,4 +109,10 @@ G:\Github2\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.S
 G:\Github2\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.pdb
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Properties\NetworkSettings.Json
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\ResourceLoader.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Properties\ServiceSettings.json
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\DnsClient.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\MongoDB.Bson.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\MongoDB.Driver.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\MongoDB.Driver.Core.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\SharpCompress.dll
 G:\Github2\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.MvcApplicationPartsAssemblyInfo.cache

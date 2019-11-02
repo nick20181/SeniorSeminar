@@ -189,3 +189,9 @@ G:\Github2\SeniorSeminar\UnitTests\obj\Debug\netcoreapp3.0\UnitTests.csproj.Copy
 G:\Github2\SeniorSeminar\UnitTests\obj\Debug\netcoreapp3.0\UnitTests.dll
 G:\Github2\SeniorSeminar\UnitTests\obj\Debug\netcoreapp3.0\UnitTests.pdb
 G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\ResourceLoader.dll
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\Properties\ServiceSettings.json
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\DnsClient.dll
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Bson.dll
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.dll
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\MongoDB.Driver.Core.dll
+G:\Github2\SeniorSeminar\UnitTests\bin\Debug\netcoreapp3.0\SharpCompress.dll

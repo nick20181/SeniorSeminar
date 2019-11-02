@@ -1,6 +1,10 @@
 using Campus.Service.Address.Implementations;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -9,14 +13,32 @@ namespace UnitTests
     public class ImplementationTests
     {
         [Fact]
-        public async Task NetworkSettingsInitTestsAsync()
+        public async Task ServiceSettingsTestsAsync()
         {
-            NetworkSettings settings = new NetworkSettings();
-            await settings.intilizeSettingsAsync();
-            Assert.Equal("5000", settings.port);
-            Assert.Equal("localhost", settings.databaseAddress);
-            Assert.Equal("27017", settings.databasePort);
+            ServiceSettings ServiceSetting = new ServiceSettings()
+            {
+                networkSettings = new NetworkSettings()
+                {
+                    port = "500",
+                    addresses = new List<string>()
+                    {
+                        $"10.100.128.135"
+                    }
+                },
+                databaseSettings = new DatabaseSettings() {
+                    port = "27017",
+                    address = $"localhost",
+                    collectionNames = new List<string>()
+                    {
+                        "Microservices"
+                    },
+                    databaseName = "ServiceAddressService"
+                }
+            };
+            ServiceSettings toTest = new ServiceSettings();
+            await toTest.intilizeServiceAsync();
 
+            Assert.Equal(JsonConvert.SerializeObject(ServiceSetting), JsonConvert.SerializeObject(toTest));
         }
 
         [Fact]
@@ -24,11 +46,10 @@ namespace UnitTests
         {
             MicroService test = new MicroService()
             {
-                ServiceName = $"Test",
-                discription = $"TestDiscription",
-                ID = $"001"
+                serviceName = $"Test",
+                discription = $"TestDiscription"
             };
-            await test.intilizeSettingsAsync();
+            await test.intilizeServiceAsync();
             MicroService testResult = JsonConvert.DeserializeObject<MicroService>(test.ToJson());
             Assert.Equal(test.ToJson(), testResult.ToJson());
         }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Campus.Service.Address.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,28 +9,26 @@ namespace Campus.Service.Address.Implementations
 {
     public class MicroService : IMicroService
     {
-        public string ServiceName { get; set; }
-
-        public INetworkSettings NetworkSettings { get; set; } = new NetworkSettings();
-
-        public string ID { get; set; }
+        public string serviceName { get; set; }
 
         public string discription { get; set; }
+
+        public string shortName { get; set; }
+        public IServiceSettings settings { get; set; } = new ServiceSettings();
 
         public string ToJson()
         {
             return JsonConvert.SerializeObject(new MicroService()
             {
-                ServiceName = ServiceName,
-                NetworkSettings = NetworkSettings,
-                ID = ID,
+                serviceName = serviceName,
+                settings = settings,
                 discription = discription
             });
         }
 
-        public async Task intilizeSettingsAsync()
+        public async Task intilizeServiceAsync()
         {
-            await NetworkSettings.intilizeSettingsAsync();
+            await settings.intilizeServiceAsync();
         }
     }
 }
