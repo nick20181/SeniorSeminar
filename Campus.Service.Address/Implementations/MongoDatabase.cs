@@ -27,22 +27,91 @@ namespace Campus.Service.Address.Implementations
             {
                 collections.Add(collectionName, database.GetCollection<BsonDocument>(collectionName));
             }
-            BsonClassMap.RegisterClassMap<MicroService>();
-            BsonClassMap.RegisterClassMap<MongoMircoService>();
-            BsonSerializer.RegisterSerializer(typeof(IMicroService), 
-                BsonSerializer.LookupSerializer<MicroService>());
-            
+            bool mongomicroserviceMapped = false;
+            bool microserviceMapped = false;
+            foreach (var map in BsonClassMap.GetRegisteredClassMaps())
+            {
+                if (map.ClassType.Equals(typeof(MongoMicroService)))
+                {
+                    mongomicroserviceMapped = true;
+                }
+                if (map.ClassType.Equals(typeof(MicroService)))
+                {
+                    microserviceMapped = true;
+                }
+            }
+            if (microserviceMapped == false)
+            {
+                BsonClassMap.RegisterClassMap<MicroService>(); 
+                BsonSerializer.RegisterSerializer(typeof(IMicroService),
+                    BsonSerializer.LookupSerializer<MicroService>());
+            }
+            if (mongomicroserviceMapped == false)
+            {
+                BsonClassMap.RegisterClassMap<MongoMicroService>();
+            }
+
         }
 
         public async Task<IMicroService> CreateAsync(IMicroService microservice)
         {
-            IMongoCollection<BsonDocument> collection;
-            collections.TryGetValue("Microservices", out collection);
-            await collection.InsertOneAsync(convertToBson(microservice));
-            return await Task.FromResult(microservice);
+            return (await MongoCreateAsync(microservice)).microservice;
         }
 
-        public async Task<IMicroService> DeleteAsync(IMicroService microservice)
+        private async Task<MongoMicroService> MongoCreateAsync(IMicroService microService)
+        {
+            IMongoCollection<BsonDocument> collection;
+            collections.TryGetValue("Microservices", out collection);
+            await collection.InsertOneAsync(convertToBson(microService));
+            foreach(var mms in await MongoReadAsync(microService))
+            {
+                if (mms.microservice.ToJson().Equals(microService.ToJson()))
+                {
+                    return mms;
+                }
+            }
+            return null;
+        }
+
+        public async Task<IMicroService> DeleteAsync(IMicroService microService)
+        {
+            return (await MongoDeleteAsync(microService)).microservice;
+        }
+
+        private async Task<MongoMicroService> MongoDeleteAsync(IMicroService microService)
+        {
+            foreach (var service in await ReadAsync(microService))
+            {
+                if (service.ToJson().Equals(microService.ToJson()))
+                {
+                    foreach (var mms in await MongoReadAsync(microService))
+                    {
+                        if (mms.microservice.ToJson().Equals(microService.ToJson()))
+                        {
+                            await RemoveAsync(microService);
+                            IMongoCollection<BsonDocument> collection;
+                            collections.TryGetValue("Microservices", out collection);
+                            await collection.InsertOneAsync(new BsonDocument
+                            {
+                                {"timeCreated", BsonValue.Create(mms.timeCreated) },
+                                {"microservice", BsonValue.Create(new BsonDocumentWrapper(microService))},
+                                {"deletedStatus", BsonValue.Create(true) }
+                            });
+                            foreach (var mmsu in await MongoReadAsync(microService))
+                            {
+                                if (mmsu.microservice.ToJson().Equals(microService.ToJson()))
+                                {
+                                    return mmsu;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public async Task RemoveAsync(IMicroService microService)
         {
             IMongoCollection<BsonDocument> collection;
             collections.TryGetValue("Microservices", out collection);
@@ -51,14 +120,32 @@ namespace Campus.Service.Address.Implementations
                 BatchSize = 10,
                 NoCursorTimeout = false
             };
-            var filter = new BsonDocument("microservice", BsonValue.Create(new BsonDocumentWrapper(microservice)));
+            var filter = new BsonDocument("microservice", BsonValue.Create(new BsonDocumentWrapper(microService)));
+            MongoMicroService temp = null;
+            foreach (var mms in await MongoReadAsync(microService))
+            {
+                if (mms.microservice.ToJson().Equals(microService.ToJson()))
+                {
+                    temp =  mms;
+                }
+            }
             await collection.DeleteOneAsync(filter);
-            return microservice;
         }
 
-        public async Task<List<IMicroService>> ReadAsync(IMicroService microservice)
+        public async Task<List<IMicroService>> ReadAsync(IMicroService microService)
         {
             List<IMicroService> toReturn = new List<IMicroService>();
+            var results = await MongoReadAsync(microService);
+            foreach (var mongoMicroService in results)
+            {
+                toReturn.Add(mongoMicroService.microservice);
+            }
+            return toReturn;
+        }
+
+        private async Task<List<MongoMicroService>> MongoReadAsync(IMicroService microService = null)
+        {
+            List<MongoMicroService> toReturn = new List<MongoMicroService>();
             IMongoCollection<BsonDocument> collection;
             collections.TryGetValue("Microservices", out collection);
             FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
@@ -66,28 +153,59 @@ namespace Campus.Service.Address.Implementations
                 BatchSize = 10,
                 NoCursorTimeout = false
             };
-            var filter = new BsonDocument("microservice", BsonValue.Create(new BsonDocumentWrapper(microservice)));
+            BsonDocument filter;
+            if (microService.Equals(null))
+            {
+                filter = new BsonDocument();
+            } else
+            {
+                filter = new BsonDocument("microservice", BsonValue.Create(new BsonDocumentWrapper(microService)));
+            }
             IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(filter);
             while (await cursor.MoveNextAsync())
             {
                 IEnumerable<BsonDocument> batch = cursor.Current;
                 foreach (var doc in batch)
                 {
-                    toReturn.Add(BsonSerializer.Deserialize<MongoMircoService>(doc).microservice);
+                    toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
                 }
             }
             return await Task.FromResult(toReturn);
         }
 
-        public async Task<IMicroService> UpdateAsync(IMicroService microservice, IMicroService updatedMicroservice)
+        public async Task<IMicroService> UpdateAsync(IMicroService microService, IMicroService updatedMicroservice)
         {
-            foreach (var service in await ReadAsync(microservice))
+            return (await MongoUpdateAsync(microService, updatedMicroservice)).microservice;
+        }
+
+        private async Task<MongoMicroService> MongoUpdateAsync(IMicroService microService, IMicroService updatedService)
+        {
+            foreach (var service in await ReadAsync(microService))
             {
-                if (service.ToJson().Equals(microservice.ToJson()))
+                if (service.ToJson().Equals(microService.ToJson()))
                 {
-                    await DeleteAsync(microservice);
-                    await CreateAsync(updatedMicroservice);
-                    return updatedMicroservice;
+                    foreach(var mms in await MongoReadAsync(microService))
+                    {
+                        if (mms.microservice.ToJson().Equals(microService.ToJson()))
+                        {
+                            await RemoveAsync(microService);
+                            IMongoCollection<BsonDocument> collection;
+                            collections.TryGetValue("Microservices", out collection);
+                            await collection.InsertOneAsync(new BsonDocument
+                            {
+                                {"timeCreated", BsonValue.Create(mms.timeCreated) },
+                                {"microservice", BsonValue.Create(new BsonDocumentWrapper(updatedService))},
+                                {"deletedStatus", BsonValue.Create(mms.deletedStatus) }
+                            });
+                            foreach (var mmsu in await MongoReadAsync(updatedService))
+                            {
+                                if (mmsu.microservice.ToJson().Equals(updatedService.ToJson()))
+                                {
+                                    return mmsu;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             return null;
@@ -95,7 +213,7 @@ namespace Campus.Service.Address.Implementations
 
         private BsonDocument convertToBson(IMicroService microService)
         {
-            MongoMircoService mms = new MongoMircoService(microService);
+            MongoMicroService mms = new MongoMicroService(microService);
             return new BsonDocument
             {
                 {"timeCreated", BsonValue.Create(mms.timeCreated) },
@@ -107,7 +225,7 @@ namespace Campus.Service.Address.Implementations
 
     }
 
-    public class MongoMircoService 
+    public class MongoMicroService
     {
         public DateTime timeCreated { get; set; }
         public IMicroService microservice { get; set; } = new MicroService();
@@ -115,7 +233,7 @@ namespace Campus.Service.Address.Implementations
         [BsonRepresentation(BsonType.ObjectId)]
         public string ID { get; }
         public bool deletedStatus { get; set; } = false;
-        public MongoMircoService(IMicroService service)
+        public MongoMicroService(IMicroService service)
         {
             microservice = service;
             timeCreated = System.DateTime.Now;

@@ -10,9 +10,10 @@ namespace Campus.Service.Address.Interfaces
     {
         IDatabaseSettings settings { get; }
 
-        Task<List<IMicroService>> ReadAsync(IMicroService microservice);
+        Task<List<IMicroService>> ReadAsync(IMicroService microservice = null);
         Task<IMicroService> UpdateAsync(IMicroService microservice, IMicroService updatedMicroservice);
         Task<IMicroService> CreateAsync(IMicroService microservice);
         Task<IMicroService> DeleteAsync(IMicroService microservice);
+        Task RemoveAsync(IMicroService microservice);
     }
 }

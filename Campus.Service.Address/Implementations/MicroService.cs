@@ -9,6 +9,8 @@ namespace Campus.Service.Address.Implementations
 {
     public class MicroService : IMicroService
     {
+        [JsonIgnore]
+        public IDatabase database { get; set; }
         public string serviceName { get; set; }
 
         public string discription { get; set; }
@@ -29,6 +31,28 @@ namespace Campus.Service.Address.Implementations
         public async Task intilizeServiceAsync()
         {
             await settings.intilizeServiceAsync();
+        }
+
+        public async Task<IMicroService> UpdateAsync(IMicroService updatedMicroservice)
+        {
+            return await database.UpdateAsync(new MicroService()
+            {
+                serviceName = serviceName,
+                discription = discription,
+                shortName = shortName,
+                settings = settings
+            }, updatedMicroservice);
+        }
+
+        public async Task<IMicroService> DeleteAsync()
+        {
+            return await database.DeleteAsync(new MicroService()
+            {
+                serviceName = serviceName,
+                discription = discription,
+                shortName = shortName,
+                settings = settings
+            });
         }
     }
 }

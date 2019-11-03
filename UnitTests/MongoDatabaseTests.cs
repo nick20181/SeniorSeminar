@@ -1,4 +1,5 @@
-﻿using Campus.Service.Address.Implementations;
+﻿using Campus.Service.Address;
+using Campus.Service.Address.Implementations;
 using Campus.Service.Address.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,16 +9,18 @@ using Xunit;
 
 namespace UnitTests
 {
-    public class MongoDatabaseTests
+    public class MongoDatabaseTests : IDisposable
     {
         private IDatabase database;
         private IServiceSettings settings;
+        Dictionary<string, MicroService> testValueLookup;
 
         public MongoDatabaseTests()
         {
             settings = new ServiceSettings();
             settings.intilizeServiceAsync();
             database = new MongoDatabase(settings.databaseSettings);
+            testValueLookup = new Dictionary<string, MicroService>();
         }
 
         [Fact]
@@ -29,44 +32,53 @@ namespace UnitTests
         [Fact]
         public async Task CreateTestAsync()
         {
-            MicroService SAS = new MicroService()
+            testValueLookup.Add($"CreateTestValue", new MicroService()
             {
-                serviceName = "Service.Address.Service",
-                shortName = "SAS",
-                discription = "Discription of SAS",
+                serviceName = "Create.Test.Value",
+                shortName = "CTV",
+                discription = "Discription of CTV",
                 settings = settings
-            };
-            Assert.Equal(SAS.ToJson(), (await database.CreateAsync(SAS)).ToJson());
+            });
+            MicroService value;
+            testValueLookup.TryGetValue("CreateTestValue", out value);
+
+            Assert.Equal(value.ToJson(), (await database.CreateAsync(value)).ToJson());
         }
 
         [Fact]
         public async  Task DeleteTestAsync()
         {
-            MicroService SAS = new MicroService()
+            testValueLookup.Add($"DeleteTestValue", new MicroService()
             {
-                serviceName = "Service.Address.Service",
-                shortName = "SAS",
-                discription = "Discription of SAS",
+                serviceName = "Delete.Test.Value",
+                shortName = "DTV",
+                discription = "Discription of DTV",
                 settings = settings
-            };
-            Assert.Equal(SAS.ToJson(), (await database.DeleteAsync(SAS)).ToJson());
+            });
+            MicroService value;
+            testValueLookup.TryGetValue("DeleteTestValue", out value);
+            await database.CreateAsync(value);
+            Assert.Equal(value.ToJson(), (await database.DeleteAsync(value)).ToJson());
         }
 
         [Fact]
         public async Task ReadTestAsync()
         {
-            MicroService SAS = new MicroService()
+            testValueLookup.Add($"ReadTestValue", new MicroService()
             {
-                serviceName = "Service.Address.Service",
-                shortName = "SAS",
-                discription = "Discription of SAS",
+                serviceName = "Read.Test.Value",
+                shortName = "RTV",
+                discription = "Discription of RTV",
                 settings = settings
-            };
-            foreach(var x in await database.ReadAsync(SAS))
+            });
+            MicroService value;
+            testValueLookup.TryGetValue("ReadTestValue", out value);
+            await database.CreateAsync(value);
+            foreach (var x in await database.ReadAsync(value))
             {
-                if (x.ToJson().Equals(SAS.ToJson()))
+                if (x.ToJson().Equals(value.ToJson()))
                 {
-                    Assert.Equal(SAS.ToJson(), x.ToJson());
+                    Assert.Equal(value.ToJson(), x.ToJson());
                 }
             }
         }
@@ -74,22 +86,43 @@ namespace UnitTests
         [Fact]
         public async Task UpadteTestAsync()
         {
-            MicroService SAS = new MicroService()
+            testValueLookup.Add($"UpdateTestValueOrginal", new MicroService()
             {
-                serviceName = "Service.Address.Service",
-                shortName = "SAS",
-                discription = "Discription of SAS",
+                serviceName = "Update.Test.Value.Orginal",
+                shortName = "UTVO",
+                discription = "Discription of UTVO",
                 settings = settings
-            };
-            MicroService SASU = new MicroService()
-            {
-                serviceName = "Service.Address.Service.Updated",
-                shortName = "SAS",
-                discription = "Discription of SAS",
-                settings = settings
-            };
+            });
 
-            Assert.Equal (SASU.ToJson(), (await database.UpdateAsync(SAS, SASU)).ToJson());
+            testValueLookup.Add($"UpdateTestValueUpdated", new MicroService()
+            {
+                serviceName = "Update.Test.Value.Updated",
+                shortName = "UTVU",
+                discription = "Discription of UTVU",
+                settings = settings
+            });
+            MicroService valueOrginal;
+            testValueLookup.TryGetValue("UpdateTestValueOrginal", out valueOrginal);
+            await database.CreateAsync(valueOrginal);
+
+            MicroService valueUpdated;
+            testValueLookup.TryGetValue("UpdateTestValueUpdated", out valueUpdated);
+            Assert.Equal (valueUpdated.ToJson(), (await database.UpdateAsync(valueOrginal, valueUpdated)).ToJson());
+        }
+
+        public void Dispose()
+        {
+            foreach(var val in testValueLookup)
+            {
+                try
+                {
+                   database.RemoveAsync(val.Value);
+                }
+                catch (Exception e)
+                {
+
+                }
+            }
         }
     }
 }

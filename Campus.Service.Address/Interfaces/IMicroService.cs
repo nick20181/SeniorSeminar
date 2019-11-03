@@ -13,7 +13,8 @@ namespace Campus.Service.Address
         string discription { get; set; }
         string shortName { get; set; }
         Task intilizeServiceAsync();
-
+        Task<IMicroService> UpdateAsync(IMicroService updatedMicroservice);
+        Task<IMicroService> DeleteAsync();
         string ToJson();
     }
 }
