@@ -9,7 +9,7 @@ namespace Campus.Service.Address.Interfaces
     {
         IDatabase database { get; set; }
         Task<IMicroService> CreateAsync(IMicroService microService);
-        Task<List<IMicroService>> ReadAsync();
-        Task<List<IMicroService>> ReadAllAsync(IMicroService microService);
+        Task<List<IMicroService>> ReadAllAsync();
+        Task<List<IMicroService>> ReadAsync(IMicroService microService);
     }
 }

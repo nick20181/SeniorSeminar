@@ -15,12 +15,12 @@ namespace Campus.Service.Address.Implementations
             return await database.CreateAsync(microService);
         }
 
-        public async Task<List<IMicroService>> ReadAllAsync(IMicroService microService)
+        public async Task<List<IMicroService>> ReadAsync(IMicroService microService)
         {
             return await database.ReadAsync(microService);
         }
 
-        public async Task<List<IMicroService>> ReadAsync()
+        public async Task<List<IMicroService>> ReadAllAsync()
         {
             return await database.ReadAsync();
         }

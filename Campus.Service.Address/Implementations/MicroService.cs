@@ -1,4 +1,5 @@
 ﻿using Campus.Service.Address.Interfaces;
+using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace Campus.Service.Address.Implementations
 {
     public class MicroService : IMicroService
     {
+        [BsonIgnore]
         [JsonIgnore]
         public IDatabase database { get; set; }
         public string serviceName { get; set; }

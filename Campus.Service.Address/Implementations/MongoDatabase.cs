@@ -159,7 +159,7 @@ namespace Campus.Service.Address.Implementations
                 filter = new BsonDocument();
             } else
             {
-                filter = new BsonDocument("microservice", BsonValue.Create(new BsonDocumentWrapper(microService)));
+                filter = new BsonDocument("serviceName", BsonValue.Create(new BsonDocumentWrapper(microService.serviceName)));
             }
             IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(filter);
             while (await cursor.MoveNextAsync())
@@ -167,7 +167,10 @@ namespace Campus.Service.Address.Implementations
                 IEnumerable<BsonDocument> batch = cursor.Current;
                 foreach (var doc in batch)
                 {
-                    toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
+                    if (BsonSerializer.Deserialize<MongoMicroService>(doc).microservice.ToJson().Equals(microService.ToJson()))
+                    {
+                        toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
+                    }
                 }
             }
             return await Task.FromResult(toReturn);
@@ -193,6 +196,7 @@ namespace Campus.Service.Address.Implementations
                             collections.TryGetValue("Microservices", out collection);
                             await collection.InsertOneAsync(new BsonDocument
                             {
+                                {"serviceName", BsonValue.Create(mms.serviceName) },
                                 {"timeCreated", BsonValue.Create(mms.timeCreated) },
                                 {"microservice", BsonValue.Create(new BsonDocumentWrapper(updatedService))},
                                 {"deletedStatus", BsonValue.Create(mms.deletedStatus) }
@@ -216,6 +220,7 @@ namespace Campus.Service.Address.Implementations
             MongoMicroService mms = new MongoMicroService(microService);
             return new BsonDocument
             {
+                {"serviceName", BsonValue.Create(mms.serviceName) },
                 {"timeCreated", BsonValue.Create(mms.timeCreated) },
                 {"microservice", BsonValue.Create(new BsonDocumentWrapper(mms.microservice))},
                 {"deletedStatus", BsonValue.Create(mms.deletedStatus) }
@@ -233,8 +238,10 @@ namespace Campus.Service.Address.Implementations
         [BsonRepresentation(BsonType.ObjectId)]
         public string ID { get; }
         public bool deletedStatus { get; set; } = false;
+        public string serviceName { get; set; }
         public MongoMicroService(IMicroService service)
         {
+            serviceName = service.serviceName;
             microservice = service;
             timeCreated = System.DateTime.Now;
         }
