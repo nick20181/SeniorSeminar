@@ -20,6 +20,7 @@ namespace Campus.Service.Address.Implementations
         public async Task intilizeSettingsAsync()
         {
             addresses = new List<string>();
+            addresses.Add($"localhost");
             foreach (var address in await Dns.GetHostAddressesAsync(Dns.GetHostName()))
             {
                 if (address.AddressFamily == AddressFamily.InterNetwork)

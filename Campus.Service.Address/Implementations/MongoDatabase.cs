@@ -29,6 +29,7 @@ namespace Campus.Service.Address.Implementations
             }
             bool mongomicroserviceMapped = false;
             bool microserviceMapped = false;
+            bool servicesettingsMapped = false;
             foreach (var map in BsonClassMap.GetRegisteredClassMaps())
             {
                 if (map.ClassType.Equals(typeof(MongoMicroService)))
@@ -38,6 +39,10 @@ namespace Campus.Service.Address.Implementations
                 if (map.ClassType.Equals(typeof(MicroService)))
                 {
                     microserviceMapped = true;
+                }
+                if (map.ClassType.Equals(typeof(ServiceSettings)))
+                {
+                    servicesettingsMapped = true;
                 }
             }
             if (microserviceMapped == false)
@@ -49,6 +54,12 @@ namespace Campus.Service.Address.Implementations
             if (mongomicroserviceMapped == false)
             {
                 BsonClassMap.RegisterClassMap<MongoMicroService>();
+            }
+            if (servicesettingsMapped == false)
+            {
+                BsonClassMap.RegisterClassMap<NetworkSettings>();
+                BsonClassMap.RegisterClassMap<DatabaseSettings>();
+                BsonClassMap.RegisterClassMap<ServiceSettings>();
             }
 
         }
@@ -154,7 +165,7 @@ namespace Campus.Service.Address.Implementations
                 NoCursorTimeout = false
             };
             BsonDocument filter;
-            if (microService.Equals(null))
+            if (microService.serviceName == null && microService.settings.networkSettings.addresses == null)
             {
                 filter = new BsonDocument();
             } else
@@ -167,9 +178,18 @@ namespace Campus.Service.Address.Implementations
                 IEnumerable<BsonDocument> batch = cursor.Current;
                 foreach (var doc in batch)
                 {
-                    if (BsonSerializer.Deserialize<MongoMicroService>(doc).microservice.ToJson().Equals(microService.ToJson()))
+
+
+                    if (microService.serviceName == null && microService.settings.networkSettings.addresses == null)
                     {
                         toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
+                    }
+                    else
+                    {
+                        if (BsonSerializer.Deserialize<MongoMicroService>(doc).microservice.serviceName.Equals(microService.serviceName))
+                        {
+                            toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
+                        }
                     }
                 }
             }

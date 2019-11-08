@@ -17,6 +17,12 @@ namespace Campus.Service.Address.Implementations
 
         public IDatabaseSettings databaseSettings { get; set; } = new DatabaseSettings();
 
+        [JsonIgnore]
+        public string certSSL = $"cert";
+
+        [JsonIgnore]
+        public string passwordSSL = $"pass";
+
         public async Task intilizeServiceAsync()
         {
             string embeddedString = resourceLoader.GetEmbeddedResourceString(this.GetType().Assembly, "ServiceSettings.json");

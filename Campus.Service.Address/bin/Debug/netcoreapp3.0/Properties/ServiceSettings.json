@@ -1,7 +1,6 @@
 ﻿{
   "networkSettings": {
-    "port": "500"
-
+    "port": "5000"
   },
   "databaseSettings": {
     "address": "localhost",
