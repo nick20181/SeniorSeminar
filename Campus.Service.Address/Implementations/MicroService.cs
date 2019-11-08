@@ -20,6 +20,18 @@ namespace Campus.Service.Address.Implementations
         public string shortName { get; set; }
         public IServiceSettings settings { get; set; } = new ServiceSettings();
 
+        public MicroService (string serviceName, string discription, string shortName, IServiceSettings settings)
+        {
+            this.serviceName = serviceName;
+            this.settings = settings;
+            this.shortName = shortName;
+            this.discription = discription;
+        }
+
+        public MicroService()
+        {
+        }
+
         public string ToJson()
         {
             return JsonConvert.SerializeObject(new MicroService()

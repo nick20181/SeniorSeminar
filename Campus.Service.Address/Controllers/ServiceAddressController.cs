@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
@@ -12,6 +13,7 @@ using Campus.Service.Address.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json;
 
 namespace Campus.Service.Address.Controllers
 {
@@ -61,21 +63,44 @@ namespace Campus.Service.Address.Controllers
         }
 
         [HttpPost("Post")]
-        public async Task<string> PostAsync(IMicroService service)
+        public async Task<string> PostAsync([FromBody]string service)
         {
-            return (await microServiceFactory.CreateAsync(service)).ToJson();
+            IMicroService microService = JsonConvert.DeserializeObject<MicroService>(service);
+            return (await microServiceFactory.CreateAsync(microService)).ToJson();
         }
 
         [HttpPut("Put/{serviceName}")]
-        public string Put(string serviceName)
+        public async Task<string> PutAsync(string serviceName, [FromBody]string updatedService)
         {
-            throw new NotImplementedException();
+            IMicroService updatedMicroService = JsonConvert.DeserializeObject<MicroService>(updatedService);
+            var temp = (await microServiceFactory.ReadAsync(new MicroService()
+            {
+                serviceName = serviceName
+            }));
+            foreach (var service in temp) {
+                if (service.serviceName.Equals(serviceName))
+                {
+                    return (await service.UpdateAsync(updatedMicroService)).ToJson();
+                }
+            }
+            return $"Could not find {serviceName} in database to update.";
         }
 
         [HttpDelete("Delete/{serviceName}")]
-        public string Delete()
+        public async Task<string> DeleteAsync(string serviceName)
         {
-            throw new NotImplementedException();
+            var temp = (await microServiceFactory.ReadAsync(new MicroService()
+            {
+                serviceName = serviceName
+            }));
+            foreach (var service in temp)
+            {
+                if (service.serviceName.Equals(serviceName))
+                {
+                    return (await service.DeleteAsync()).ToJson();
+                }
+            }
+            return $"Could not find {serviceName} in database to delete.";
         }
 
         public static async Task Main(string[] args)
@@ -94,6 +119,7 @@ namespace Campus.Service.Address.Controllers
                     connectionString = connectionString + $";http://{ip}:{settings.networkSettings.port}";
                 }
             }
+
             Console.WriteLine($"Starting on addresses{connectionString}");
             var host = new WebHostBuilder()
                     .UseKestrel()
