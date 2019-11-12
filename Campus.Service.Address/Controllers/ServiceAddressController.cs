@@ -63,10 +63,10 @@ namespace Campus.Service.Address.Controllers
         }
 
         [HttpPost("Post")]
-        public async Task<string> PostAsync([FromBody]string service)
+        public async Task<string> PostAsync([FromBody] MicroService service)
         {
-            IMicroService microService = JsonConvert.DeserializeObject<MicroService>(service);
-            return (await microServiceFactory.CreateAsync(microService)).ToJson();
+            //IMicroService microService = JsonConvert.DeserializeObject<MicroService>(service);
+            return (await microServiceFactory.CreateAsync(service)).ToJson();
         }
 
         [HttpPut("Put/{serviceName}")]
