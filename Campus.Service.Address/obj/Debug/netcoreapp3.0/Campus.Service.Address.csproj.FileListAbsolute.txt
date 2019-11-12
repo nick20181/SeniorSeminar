@@ -235,4 +235,6 @@ C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\obj
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\System.Web.Http.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.MvcApplicationPartsAssemblyInfo.cache
