@@ -107,7 +107,6 @@ G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Campus.S
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Campus.Service.Address.pdb
 G:\Github2\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.dll
 G:\Github2\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.pdb
-G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Properties\NetworkSettings.Json
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\ResourceLoader.dll
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Properties\ServiceSettings.json
 G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\DnsClient.dll
@@ -238,3 +237,8 @@ C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Campus.Service.Address\obj\Debug\netcoreapp3.0\Campus.Service.Address.MvcApplicationPartsAssemblyInfo.cache
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\System.Web.Http.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+G:\Github2\SeniorSeminar\Campus.Service.Address\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
