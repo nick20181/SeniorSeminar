@@ -277,6 +277,7 @@ namespace Campus.Service.Address.Implementations
                 {
                     if (now.Subtract(service.timeCreated).TotalMilliseconds > timeout)
                     {
+                        Console.WriteLine($"Service {service.serviceName} timed out.");
                         collection.DeleteOne(new BsonDocument
                         {
                             {"serviceName", BsonValue.Create(service.serviceName) }
