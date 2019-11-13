@@ -275,11 +275,8 @@ namespace Campus.Service.Address.Implementations
                 DateTime now = DateTime.Now;
                 foreach (var service in toReturn)
                 {
-                    Console.WriteLine($"Now: {now.AddMilliseconds(timeout)}, Time: {service.timeCreated}");
-                    Console.WriteLine($"{DateTime.Compare(now.AddMilliseconds(timeout), service.timeCreated)}");
-                    if (DateTime.Compare(now.AddMilliseconds(timeout), service.timeCreated) < 0)
+                    if (now.Subtract(service.timeCreated).TotalMilliseconds > timeout)
                     {
-                        Console.WriteLine($"Service: {service.serviceName} has timed out.");
                         collection.DeleteOne(new BsonDocument
                         {
                             {"serviceName", BsonValue.Create(service.serviceName) }
