@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\UnitTests\\UnitTests.csproj": {}
+    "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
+    "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
+        "projectUniqueName": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
         "projectName": "Campus.Service.Address",
-        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
-        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\obj\\",
+        "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
+        "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+        "outputPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,17 +106,20 @@
         }
       }
     },
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\UnitTests\\UnitTests.csproj": {
+    "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\UnitTests\\obj\\",
+        "projectPath": "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+        "outputPath": "G:\\Github2\\SeniorSeminar\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,8 +132,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
-                "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj"
+              "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
+                "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj"
               }
             }
           }

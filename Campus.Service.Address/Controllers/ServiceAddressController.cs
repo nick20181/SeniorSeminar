@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
@@ -65,14 +66,12 @@ namespace Campus.Service.Address.Controllers
         [HttpPost("Post")]
         public async Task<string> PostAsync([FromBody] MicroService service)
         {
-            //IMicroService microService = JsonConvert.DeserializeObject<MicroService>(service);
             return (await microServiceFactory.CreateAsync(service)).ToJson();
         }
 
         [HttpPut("Put/{serviceName}")]
-        public async Task<string> PutAsync(string serviceName, [FromBody]string updatedService)
+        public async Task<string> PutAsync(string serviceName, [FromBody]MicroService updatedService)
         {
-            IMicroService updatedMicroService = JsonConvert.DeserializeObject<MicroService>(updatedService);
             var temp = (await microServiceFactory.ReadAsync(new MicroService()
             {
                 serviceName = serviceName
@@ -80,7 +79,8 @@ namespace Campus.Service.Address.Controllers
             foreach (var service in temp) {
                 if (service.serviceName.Equals(serviceName))
                 {
-                    return (await service.UpdateAsync(updatedMicroService)).ToJson();
+                    ((MicroService) service).database = microServiceFactory.database;
+                    return (await service.UpdateAsync(updatedService)).ToJson();
                 }
             }
             return $"Could not find {serviceName} in database to update.";
@@ -95,6 +95,7 @@ namespace Campus.Service.Address.Controllers
             }));
             foreach (var service in temp)
             {
+                ((MicroService)service).database = microServiceFactory.database;
                 if (service.serviceName.Equals(serviceName))
                 {
                     return (await service.DeleteAsync()).ToJson();
@@ -121,6 +122,9 @@ namespace Campus.Service.Address.Controllers
             }
 
             Console.WriteLine($"Starting on addresses{connectionString}");
+            MongoDatabase db = new MongoDatabase(settings.databaseSettings);
+            Thread thread = new Thread(()=> db.workerThread());
+            thread.Start();
             var host = new WebHostBuilder()
                     .UseKestrel()
                     .UseContentRoot(Directory.GetCurrentDirectory())

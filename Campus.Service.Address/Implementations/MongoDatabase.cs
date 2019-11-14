@@ -104,6 +104,7 @@ namespace Campus.Service.Address.Implementations
                             collections.TryGetValue("Microservices", out collection);
                             await collection.InsertOneAsync(new BsonDocument
                             {
+                                {"serviceName", BsonValue.Create(mms.serviceName) },
                                 {"timeCreated", BsonValue.Create(mms.timeCreated) },
                                 {"microservice", BsonValue.Create(new BsonDocumentWrapper(microService))},
                                 {"deletedStatus", BsonValue.Create(true) }
@@ -216,7 +217,7 @@ namespace Campus.Service.Address.Implementations
                             collections.TryGetValue("Microservices", out collection);
                             await collection.InsertOneAsync(new BsonDocument
                             {
-                                {"serviceName", BsonValue.Create(mms.serviceName) },
+                                {"serviceName", BsonValue.Create(updatedService.serviceName) },
                                 {"timeCreated", BsonValue.Create(mms.timeCreated) },
                                 {"microservice", BsonValue.Create(new BsonDocumentWrapper(updatedService))},
                                 {"deletedStatus", BsonValue.Create(mms.deletedStatus) }
@@ -241,17 +242,56 @@ namespace Campus.Service.Address.Implementations
             return new BsonDocument
             {
                 {"serviceName", BsonValue.Create(mms.serviceName) },
-                {"timeCreated", BsonValue.Create(mms.timeCreated) },
+                {"timeCreated", BsonValue.Create(new BsonDateTime(mms.timeCreated)) },
                 {"microservice", BsonValue.Create(new BsonDocumentWrapper(mms.microservice))},
                 {"deletedStatus", BsonValue.Create(mms.deletedStatus) }
             };
         }
 
 
+        public void workerThread(double timeout = 10000)
+        {
+            while (true)
+            {
+                List<MongoMicroService> toReturn = new List<MongoMicroService>();
+                IMongoCollection<BsonDocument> collection;
+                collections.TryGetValue("Microservices", out collection);
+                FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
+                {
+                    BatchSize = 10,
+                    NoCursorTimeout = false
+                };
+                BsonDocument filter = new BsonDocument();
+                var cursor = (collection.Find(filter)).ToCursor();
+                while (cursor.MoveNext())
+                {
+                    IEnumerable<BsonDocument> batch = cursor.Current;
+                    foreach (var doc in batch)
+                    {
+                            toReturn.Add(BsonSerializer.Deserialize<MongoMicroService>(doc));
+                    }
+                }
+
+                DateTime now = DateTime.Now;
+                foreach (var service in toReturn)
+                {
+                    if (now.Subtract(service.timeCreated).TotalMilliseconds > timeout)
+                    {
+                        Console.WriteLine($"Service {service.serviceName} timed out.");
+                        collection.DeleteOne(new BsonDocument
+                        {
+                            {"serviceName", BsonValue.Create(service.serviceName) }
+                        });
+                    }
+                }
+            }
+        }
+
     }
 
     public class MongoMicroService
     {
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime timeCreated { get; set; }
         public IMicroService microservice { get; set; } = new MicroService();
         [BsonId]
@@ -263,9 +303,9 @@ namespace Campus.Service.Address.Implementations
         {
             serviceName = service.serviceName;
             microservice = service;
-            timeCreated = System.DateTime.Now;
+            timeCreated = DateTime.Now;
+            Console.WriteLine($"Createing MongoObject: Time: {timeCreated}");
         }
-
     }
 }
     
