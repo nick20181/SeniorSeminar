@@ -9196,23 +9196,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nick2\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
+      "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
       "projectName": "Campus.Service.Address",
-      "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
-      "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
-      "outputPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\obj\\",
+      "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj",
+      "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Campus.Service.Address\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
