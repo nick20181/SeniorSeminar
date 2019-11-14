@@ -13,13 +13,11 @@ namespace Campus.Service.Address.Implementations
 {
     public class NetworkSettings : INetworkSettings
     {
-        [JsonIgnore]
         public List<string> addresses { get; set; }
         public string port { get; set; }
 
         public async Task intilizeSettingsAsync()
         {
-            addresses = new List<string>();
             addresses.Add($"localhost");
             foreach (var address in await Dns.GetHostAddressesAsync(Dns.GetHostName()))
             {
