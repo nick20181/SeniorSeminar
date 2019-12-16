@@ -9978,21 +9978,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nick2\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nick2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "G:\\Github2\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
+      "projectPath": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\UnitTests\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
-      "outputPath": "G:\\Github2\\SeniorSeminar\\UnitTests\\obj\\",
+      "outputPath": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -10007,8 +10003,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
-              "projectPath": "G:\\Github2\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj"
+            "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj": {
+              "projectPath": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Campus.Service.Address\\Campus.Service.Address.csproj"
             }
           }
         }
@@ -10049,6 +10045,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10057,7 +10067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
