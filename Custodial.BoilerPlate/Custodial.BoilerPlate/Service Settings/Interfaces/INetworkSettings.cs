@@ -10,6 +10,6 @@ namespace Custodial.BoilerPlate.Service_Settings.Interfaces
         List<string> addresses { get; set; }
         List<string> ports { get; set; }
 
-        void InitNetworkSettingsAsync();
+        Task InitNetworkSettingsAsync();
     }
 }

@@ -17,41 +17,43 @@ namespace Custodial.BoilerPlate.Controllers
     [Route("api/[controller]")]
     public class CustodialServiceController : Controller
     {
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
-    }
-    public static async Task Main(string[] args)
-    {
-        string connectionString = $"";
-        IServiceSettings settings = new ServiceSettings();
-        await settings.InitServiceSettingsAsync();
-        foreach (var ip in settings.networkSettings.addresses)
+
+        public static async Task Main(string[] args)
         {
-            if (connectionString.Equals(""))
+            string connectionString = $"";
+            IServiceSettings settings = new ServiceSettings();
+            await settings.InitServiceSettingsAsync();
+            foreach (var ip in settings.networkSettings.addresses)
             {
-                connectionString = $"http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+                if (connectionString.Equals(""))
+                {
+                    connectionString = $"http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+                }
+                else
+                {
+                    connectionString = connectionString + $";http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+                }
             }
-            else
+
+            Console.WriteLine($"Starting on addresses{connectionString}");
+            IDatabase db = new MongoDatabase()
             {
-                connectionString = connectionString + $";http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
-            }
+                settings = settings.databaseSettings
+            };
+            var host = new WebHostBuilder()
+                    .UseKestrel()
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseIISIntegration()
+                    .UseStartup<Startup>()
+                    .UseUrls(connectionString)
+                    .Build();
+
+            host.Run();
         }
-
-        Console.WriteLine($"Starting on addresses{connectionString}");
-        IMongoDatabase db = new MongoDatabase(settings.databaseSettings);
-        Thread thread = new Thread(() => db.workerThread());
-        thread.Start();
-        var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseUrls(connectionString)
-                .Build();
-
-        host.Run();
     }
 }
+

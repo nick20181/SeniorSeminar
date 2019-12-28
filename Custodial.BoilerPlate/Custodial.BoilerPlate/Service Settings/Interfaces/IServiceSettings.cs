@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Custodial.BoilerPlate.Service_Settings
@@ -10,6 +11,6 @@ namespace Custodial.BoilerPlate.Service_Settings
     {
        INetworkSettings networkSettings { get; }
        IDatabaseSettings databaseSettings { get; }
-       Task InitServiceSettingsAsync();
+       Task InitServiceSettingsAsync(Assembly assembly = null, string resourceFile = "serviceSettings.json");
     }
 }
