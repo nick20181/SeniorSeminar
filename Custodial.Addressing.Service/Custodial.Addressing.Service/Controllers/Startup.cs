@@ -15,12 +15,6 @@ namespace Custodial.Addressing.Service.Controllers
 {
     public class Startup
     {
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
 
         public Startup(IConfiguration configuration)
         {
@@ -42,6 +36,8 @@ namespace Custodial.Addressing.Service.Controllers
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

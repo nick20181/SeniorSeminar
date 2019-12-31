@@ -11,6 +11,7 @@ using Custodial.Addressing.Service.Service_Settings;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -18,7 +19,7 @@ using Newtonsoft.Json;
 namespace Custodial.Addressing.Service.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class CustodialServiceController : Controller
     {
         private IDatabase database;
@@ -161,31 +162,41 @@ namespace Custodial.Addressing.Service.Controllers
 
         public static async Task Main(string[] args)
         {
-            string connectionString = $"";
-            IServiceSettings settings = new ServiceSettings();
-            await settings.InitServiceSettingsAsync();
-            foreach (var ip in settings.networkSettings.addresses)
-            {
-                if (!String.IsNullOrEmpty(ip)) {
-                    if (connectionString.Equals(""))
-                    {
-                        connectionString = $"http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
-                    }
-                    else
-                    {
-                        connectionString = connectionString + $";http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+            if (false) {
+                string connectionString = $"";
+                IServiceSettings settings = new ServiceSettings();
+                await settings.InitServiceSettingsAsync();
+                foreach (var ip in settings.networkSettings.addresses)
+                {
+                    if (!String.IsNullOrEmpty(ip)) {
+                        if (connectionString.Equals(""))
+                        {
+                            connectionString = $"http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+                        }
+                        else
+                        {
+                            connectionString = connectionString + $";http://{ip}:{settings.networkSettings.ports.ElementAt(0)}";
+                        }
                     }
                 }
-            }
-            var host = new WebHostBuilder()
-                    .UseKestrel()
-                    .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseIISIntegration()
-                    .UseStartup<Startup>()
-                    .UseUrls(connectionString)
-                    .Build();
+                var host = new WebHostBuilder()
+                        .UseKestrel()
+                        .UseContentRoot(Directory.GetCurrentDirectory())
+                        .UseIISIntegration()
+                        .UseStartup<Startup>()
+                        .UseUrls(connectionString)
+                        .Build();
 
-            host.Run();
+                host.Run();
+            } 
+            else
+            {
+                Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+            }
         }
     }
 }

@@ -13,11 +13,6 @@ namespace Custodial.Addressing.Service.Service_Settings
         public List<string> addresses { get; set; }
         public List<string> ports { get; set; }
 
-        public NetworkSettings()
-        {
-
-        }
-
         public async Task InitNetworkSettingsAsync()
         {
             addresses.Add($"localhost");
