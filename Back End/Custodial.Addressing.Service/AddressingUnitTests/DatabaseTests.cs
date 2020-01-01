@@ -2,6 +2,7 @@
 using Custodial.Addressing.Service;
 using Custodial.Addressing.Service.Databases;
 using Custodial.Addressing.Service.Interfaces;
+using Custodial.Addressing.Service.Service_Settings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Serilog;
 using System;
@@ -14,8 +15,9 @@ namespace AddressingUnitTests
     [TestClass]
     public class DatabaseTests
     {
+        private IServiceSettings settings = new ServiceSettings();
         private UtilityContainerList testItems = new UtilityContainerList(10);
-        private IDatabase database = new InMemoryDatabase();
+        private IDatabase database;
 
         public DatabaseTests()
         {
@@ -23,140 +25,318 @@ namespace AddressingUnitTests
                 .WriteTo.File("logs\\DatabaseTests")
                 .CreateLogger();
             Log.Logger.Information("\n");
+            settings.InitServiceSettingsAsync(this.GetType().Assembly, "ServiceSettings.json");
+            if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
+            {
+                database = new InMemoryDatabase()
+                {
+                    settings = settings.databaseSettings
+                };
+            } else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+            {
+                database = new MongoDatabase(settings.databaseSettings);
+            } else
+            {
+                database = new MySQLDatabase();
+            }
         }
 
         [TestMethod]
         public async Task CreateTestAsync()
         {
-            Microservice ms = (Microservice)testItems.GetItem();
-            Microservice created = (Microservice)await database.CreateAsync(ms);
-            Assert.AreEqual(ms.ToJson(), created.ToJson());
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
+            List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
+            for (int i = 0; i < 3; i++)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                Microservice ms = (Microservice)testItems.GetItem();
+                Microservice msCreated = (Microservice)await database.CreateAsync(ms);
+                ms.iD = msCreated.iD;
+                listToRemove.Add(ms);
+                assertOutput.Add(ms, msCreated);
+                listOfExpected.Add(ms);
+            }
+            //Geting assert items from readAsync
+            foreach (Microservice actual in await database.ReadAsync())
+            {
+                foreach (Microservice expected in listOfExpected.ToArray())
                 {
-                    Assert.AreEqual(msRecived, ms);
+                    if (actual.ToJson() == expected.ToJson())
+                    {
+                        assertItems.Add(expected, actual);
+
+                    }
                 }
             }
-
-            ms = (Microservice)testItems.GetItem();
-            created = (Microservice)await database.CreateAsync(ms);
-            Assert.AreEqual(ms.ToJson(), created.ToJson());
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            //Cleaning up database
+            foreach (var ms in listToRemove)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
                 {
-                    Assert.AreEqual(msRecived, ms);
+
                 }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                {
+                    MongoDatabase db = (MongoDatabase)database;
+                    await db.RemoveAsync(ms);
+                }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                {
+
+                }
+            }
+            foreach (var expected in listOfExpected)
+            {
+                IDatabaseObject actual;
+                //Testing the item read from the database useing readAsync
+                assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+                //Testing the item returned from update method
+                assertOutput.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }
 
         [TestMethod]
         public async Task ReadTestAsync()
         {
+            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
 
-            Microservice ms = (Microservice)testItems.GetItem();
-            await database.CreateAsync(ms);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
+            for (int i = 0; i < 3; i++)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                Microservice ms = (Microservice)testItems.GetItem();
+                Microservice msCreated = (Microservice)await database.CreateAsync(ms);
+                ms.iD = msCreated.iD;
+                ms.timeCreated = msCreated.timeCreated;
+                listToRemove.Add(ms);
+                listOfExpected.Add(ms);
+            }
+
+            foreach (Microservice toRemove in listToRemove) {
+                foreach (Microservice actual in await database.ReadAsync(toRemove))
                 {
-                    Assert.AreEqual(msRecived, ms);
+                    foreach (Microservice expected in listOfExpected.ToArray())
+                    {
+                        if (actual.ToJson().Equals(expected.ToJson()))
+                        {
+                            assertItems.Add(expected, actual);
+
+                        }
+                    }
                 }
             }
 
-            ms = (Microservice)testItems.GetItem();
-            await database.CreateAsync(ms);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            foreach (var ms in listToRemove)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
                 {
-                    Assert.AreEqual(msRecived.ToJson(), ms.ToJson());
+                    database = new InMemoryDatabase()
+                    {
+                        settings = settings.databaseSettings
+                    };
                 }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                {
+                    MongoDatabase db = (MongoDatabase)database;
+                    await db.RemoveAsync(ms);
+                }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                {
+
+                }
+            }
+            foreach (var expected in listOfExpected)
+            {
+                IDatabaseObject actual;
+                assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }
 
         [TestMethod]
         public async Task DeleteTestAsync()
         {
-            Microservice ms = (Microservice)testItems.GetItem();
-            await database.CreateAsync(ms);
-            await database.DeleteAsync(ms);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
+            List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
+            for (int i = 0; i < 3; i++)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                Microservice ms = (Microservice)testItems.GetItem();
+                Microservice msCreated = (Microservice)await database.CreateAsync(ms);
+                ms.iD = msCreated.iD;
+                listToRemove.Add(ms);
+                assertOutput.Add(ms, await database.DeleteAsync(ms));
+                ms.isDeleted = true;
+                listOfExpected.Add(ms);
+            }
+            //Geting assert items from readAsync
+            foreach (Microservice actual in await database.ReadAsync())
+            {
+                foreach (Microservice expected in listOfExpected.ToArray())
                 {
-                    Assert.IsTrue(msRecived.isDeleted);
+                    if (actual.ToJson() == expected.ToJson())
+                    {
+                        assertItems.Add(expected, actual);
+
+                    }
                 }
             }
-
-            ms = (Microservice)testItems.GetItem();
-            await database.CreateAsync(ms);
-            await database.DeleteAsync(ms);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            //Cleaning up database
+            foreach (var ms in listToRemove)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
                 {
-                    Assert.IsTrue(msRecived.isDeleted);
+                    database = new InMemoryDatabase()
+                    {
+                        settings = settings.databaseSettings
+                    };
+                }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                {
+                    MongoDatabase db = (MongoDatabase)database;
+                    ms.isDeleted = true;
+                    await db.RemoveAsync(ms);
+                }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                {
+
                 }
             }
-
+            foreach (var expected in listOfExpected)
+            {
+                IDatabaseObject actual;
+                //Testing the item read from the database useing readAsync
+                assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+                //Testing the item returned from update method
+                assertOutput.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+            }
         }
 
         [TestMethod]
         public async Task UpdateTestAsync()
         {
-            Microservice ms = (Microservice)testItems.GetItem();
-            Microservice msUpdated = (Microservice)testItems.GetItem();
-            msUpdated.iD = ms.iD;
-            await database.CreateAsync(ms);
-            await database.UpdateAsync(ms, msUpdated);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
+            List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
+            for (int i = 0; i < 3; i++)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                Microservice ms = (Microservice)testItems.GetItem();
+                Microservice msCreated = (Microservice)await database.CreateAsync(ms);
+                ms.iD = msCreated.iD;
+
+                Microservice msUpdated = (Microservice)testItems.GetItem();
+                msUpdated.iD = ms.iD;
+                listToRemove.Add(msUpdated);
+                assertOutput.Add(msUpdated, await database.UpdateAsync(ms, msUpdated));
+                listOfExpected.Add(msUpdated);
+            }
+            //Geting assert items from readAsync
+            foreach (Microservice actual in await database.ReadAsync())
+            {
+                foreach (Microservice expected in listOfExpected.ToArray())
                 {
-                    Assert.AreEqual(msRecived.ToJson(), msUpdated.ToJson());
+                    if (actual.ToJson() == expected.ToJson())
+                    {
+                        assertItems.Add(expected, actual);
+
+                    }
                 }
             }
-
-            ms = (Microservice)testItems.GetItem();
-            msUpdated = (Microservice)testItems.GetItem();
-            msUpdated.iD = ms.iD;
-            await database.CreateAsync(ms);
-            await database.UpdateAsync(ms, msUpdated);
-            Assert.AreEqual((await database.ReadAsync(ms)).Count, 1);
-            foreach (var msRecived in await database.ReadAsync(ms))
+            //Cleaning up database
+            foreach (var ms in listToRemove)
             {
-                if (msRecived.iD.Equals(ms.iD))
+                if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
                 {
-                    Assert.AreEqual(msRecived.ToJson(), msUpdated.ToJson());
+                    database = new InMemoryDatabase()
+                    {
+                        settings = settings.databaseSettings
+                    };
                 }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                {
+                    MongoDatabase db = (MongoDatabase)database;
+                    await db.RemoveAsync(ms);
+                }
+                else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                {
+
+                }
+            }
+            foreach (var expected in listOfExpected)
+            {
+                IDatabaseObject actual;
+                //Testing the item read from the database useing readAsync
+                assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+                //Testing the item returned from update method
+                assertOutput.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }
 
         [TestMethod]
         public async Task ReadAllTestAsync()
         {
-            List<IDatabaseObject> listOfReadDatabaseObjects = new List<IDatabaseObject>();
+            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
+            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
+
+            List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
             {
                 Microservice ms = (Microservice)testItems.GetItem();
-                listOfReadDatabaseObjects.Add(ms);
-                await database.CreateAsync(ms);
+                Microservice msCreated = (Microservice)await database.CreateAsync(ms);
+                ms.iD = msCreated.iD;
+                ms.timeCreated = msCreated.timeCreated;
+                listToRemove.Add(ms);
+                listOfExpected.Add(ms);
             }
-            Assert.AreEqual((await database.ReadAsync()).Count, 3);
-            foreach (var ms in await database.ReadAsync())
+
+            foreach (Microservice actual in await database.ReadAsync())
             {
-                listOfReadDatabaseObjects.Remove(ms);
+                foreach(Microservice expected in listOfExpected.ToArray())
+                {
+                    if (actual.ToJson().Equals(expected.ToJson()))
+                    {
+                        assertItems.Add(expected, actual);
+
+                    }
+                }
             }
-            Assert.AreEqual(listOfReadDatabaseObjects.Count, 0);
+
+            foreach (var ms in listToRemove)
+            {
+                if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
+                {
+                    database = new InMemoryDatabase()
+                    {
+                        settings = settings.databaseSettings
+                    };
+
+                } else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                {
+                    MongoDatabase db = (MongoDatabase)database;
+                    await db.RemoveAsync(ms);
+                } else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                {
+
+                }
+            }
+            foreach (var expected in listOfExpected)
+            {
+                IDatabaseObject actual;
+                assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+            }
         }
     }
 }

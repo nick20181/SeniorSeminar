@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Routing;
+using Custodial.Addressing.Service.Databases;
 using Custodial.Addressing.Service.Interfaces;
 using Custodial.Addressing.Service.Service_Settings;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +24,9 @@ namespace Custodial.Addressing.Service
             string connectionString = $"";
             IServiceSettings settings = new ServiceSettings();
             await settings.InitServiceSettingsAsync();
+            DatabaseWorkerThread worker = new DatabaseWorkerThread();
+            Thread thread = new Thread(() => worker.MainWorkerThreadAsync(3000));
+            thread.Start();
             foreach (var ip in settings.networkSettings.addresses)
             {
                 if (!String.IsNullOrEmpty(ip))

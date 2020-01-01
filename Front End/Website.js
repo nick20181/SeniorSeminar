@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const app = express()
 const dataPost = JSON.stringify({
-  "timeCreated": "2017-01-18T10:45:30Z",
+  "timeCreated": "636203331300000000",
   "iD": "ID",
   "isDeleted": false,
   "serviceName": "TestService",
@@ -24,7 +24,7 @@ const dataPost = JSON.stringify({
 })
 
 const dataGet = JSON.stringify({
-  "timeCreated": "2017-01-18T10:45:30Z",
+  "timeCreated": "636203331300000000",
   "iD": null,
   "isDeleted": false,
   "serviceName": "TestService",

@@ -1,6 +1,7 @@
 ﻿using Custodial.Addressing.Service;
 using Custodial.Addressing.Service.Interfaces;
 using Custodial.Addressing.Service.Service_Settings;
+using Custodial.Addressing.Service.Service_Settings.Utility;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -29,13 +30,16 @@ namespace AddressingUnitTests.Utility
                         {
                             address = RandomString(10),
                             port = RandomString(10),
-                            collectionNames = new List<string>()
+                            databaseItems = new List<DatabaseCollection>()
                             {
-                                RandomString(10), RandomString(10)
-                            },
-                            databaseNames = new List<string>()
-                            {
-                                RandomString(10)
+                                new DatabaseCollection()
+                                {
+                                    databaseName = RandomString(10),
+                                    collectionNames = new List<string>()
+                                    {
+                                        RandomString(10)
+                                    }
+                                }
                             }
                         },
                         networkSettings = new NetworkSettings()
@@ -51,7 +55,7 @@ namespace AddressingUnitTests.Utility
                         }
                     },
                     shortName = RandomString(3),
-                    timeCreated = DateTime.UtcNow.AddDays(rando.NextDouble())
+                    timeCreated = DateTime.UtcNow.AddDays(rando.NextDouble()).Ticks
                 };
                 bool hasId = false;
                 ms.iD = IDGen.GetId(ms, out hasId).ToString();

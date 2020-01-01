@@ -2,3 +2,87 @@
 
 2019-12-30 23:05:12.133 -06:00 [INF] 
 
+2019-12-31 11:38:14.140 -06:00 [INF] 
+
+2019-12-31 11:42:35.415 -06:00 [INF] 
+
+2019-12-31 11:43:24.895 -06:00 [INF] 
+
+2019-12-31 11:43:24.903 -06:00 [INF] Start of ToJsonTest
+2019-12-31 11:43:24.919 -06:00 [INF] Result: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:43:24.927 -06:00 [INF] TestCase: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":null,"typeOfDatabase":0}},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:43:24.928 -06:00 [INF] Test Result: False
+2019-12-31 11:44:19.788 -06:00 [INF] 
+
+2019-12-31 11:44:19.794 -06:00 [INF] Start of ToJsonTest
+2019-12-31 11:44:19.807 -06:00 [INF] Result: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:44:19.815 -06:00 [INF] TestCase: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"testing","collectionNames":["testCollection"]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:44:19.815 -06:00 [INF] Test Result: False
+2019-12-31 11:44:57.544 -06:00 [INF] 
+
+2019-12-31 11:44:57.550 -06:00 [INF] Start of ToJsonTest
+2019-12-31 11:44:57.563 -06:00 [INF] Result: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:44:57.571 -06:00 [INF] TestCase: {"timeCreated":"2017-01-18T10:45:30Z","iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 11:44:57.571 -06:00 [INF] Test Result: True
+2019-12-31 11:44:57.571 -06:00 [INF] 
+
+2019-12-31 14:46:57.907 -06:00 [INF] 
+
+2019-12-31 14:49:52.380 -06:00 [INF] 
+
+2019-12-31 14:49:52.386 -06:00 [INF] Start of ToJsonTest
+2019-12-31 14:49:52.400 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:49:52.406 -06:00 [INF] TestCase: {"timeCreated":1577825333,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:49:52.406 -06:00 [INF] Test Result: False
+2019-12-31 14:50:13.329 -06:00 [INF] 
+
+2019-12-31 14:50:13.335 -06:00 [INF] Start of ToJsonTest
+2019-12-31 14:50:13.348 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:13.353 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:13.354 -06:00 [INF] Test Result: True
+2019-12-31 14:50:13.354 -06:00 [INF] 
+
+2019-12-31 14:50:17.882 -06:00 [INF] 
+
+2019-12-31 14:50:17.889 -06:00 [INF] Start of ToJsonTest
+2019-12-31 14:50:17.903 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:17.909 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:17.909 -06:00 [INF] Test Result: True
+2019-12-31 14:50:17.910 -06:00 [INF] 
+
+2019-12-31 14:50:20.390 -06:00 [INF] 
+
+2019-12-31 14:50:20.396 -06:00 [INF] Start of ToJsonTest
+2019-12-31 14:50:20.409 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:20.414 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"serviceName":"TestService","settings":{"networkSettings":{"addresses":["11.0.0.22"],"ports":["1111","2222"]},"databaseSettings":{"address":"10.0.0.1","port":"1111","databaseItems":[{"databaseName":"","collectionNames":[]}],"typeOfDatabase":0},"discription":"Discription of service","shortName":"Test"}
+2019-12-31 14:50:20.414 -06:00 [INF] Test Result: True
+2019-12-31 14:50:20.415 -06:00 [INF] 
+
+2019-12-31 17:18:12.089 -06:00 [INF] 
+
+2019-12-31 17:20:35.531 -06:00 [INF] 
+
+2019-12-31 17:30:49.555 -06:00 [INF] 
+
+2019-12-31 17:32:17.529 -06:00 [INF] 
+
+2019-12-31 17:32:52.770 -06:00 [INF] 
+
+2019-12-31 17:33:18.997 -06:00 [INF] 
+
+2019-12-31 17:33:42.564 -06:00 [INF] 
+
+2019-12-31 17:33:57.157 -06:00 [INF] 
+
+2019-12-31 17:34:24.045 -06:00 [INF] 
+
+2019-12-31 17:36:59.462 -06:00 [INF] 
+
+2019-12-31 17:39:57.598 -06:00 [INF] 
+
+2019-12-31 17:40:43.405 -06:00 [INF] 
+
+2019-12-31 17:45:51.589 -06:00 [INF] 
+
+2019-12-31 17:54:24.382 -06:00 [INF] 
+

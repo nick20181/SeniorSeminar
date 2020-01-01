@@ -12,6 +12,7 @@ using Custodial.Addressing.Service.Service_Settings;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 
 namespace Custodial.Addressing.Service.Controllers
 {
@@ -20,16 +21,17 @@ namespace Custodial.Addressing.Service.Controllers
     [Route("[controller]")]
     public class AddressingController : Controller
     {
-        private IDatabase database;
-        private IDatabaseObjectFactory factory;
-        private IServiceSettings settings;
+        public IDatabase database;
+        public IDatabaseObjectFactory factory;
+        public IServiceSettings settings;
 
         public AddressingController()
         {
             settings = new ServiceSettings();
+            settings.InitServiceSettingsAsync();
             if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
             {
-                database = new MongoDatabase();
+                database = new MongoDatabase(settings.databaseSettings);
             }
             else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
             {
@@ -48,21 +50,16 @@ namespace Custodial.Addressing.Service.Controllers
         [HttpGet]
         public async Task<string> GetAsync([FromBody] Microservice service = null)
         {
-            if (service == null)
+            if (service == null || service.iD == null)
             {
-                string toReturn = "Start of Microservice list;";
-                foreach (Microservice ms in await factory.ReadAllAsync())
-                {
-                    toReturn = $"{toReturn}\n{ms.ToJson()};";
-                }
-                toReturn = $"{toReturn}\nEnd of Microservice list;";
-                return toReturn;
+                return JsonConvert.SerializeObject(await factory.ReadAllAsync());
             }
             else
             {
                 foreach (Microservice ms in await factory.ReadFilteredAsync(service))
                 {
-                    if (ms.iD.Equals(service.iD) && ms.serviceName.Equals(service.serviceName) && ms.settings.networkSettings.Equals(service.settings.networkSettings))
+                    if (ms.iD.Equals(service.iD) && ms.serviceName.Equals(service.serviceName) && ms.timeCreated.Equals(service.timeCreated)
+                        && ms.shortName.Equals(ms.shortName) && ms.discription.Equals(service.discription))
                     {
                         return ms.ToJson();
                     }
@@ -97,24 +94,21 @@ namespace Custodial.Addressing.Service.Controllers
             return $"Could Not delete {service.ToJson()}";
         }
 
-        [HttpPut("{serviceID}")]
-        public async Task<string> PutAsync(string serviceID, [FromBody] Microservice serviceUpdated)
+        [HttpPut]
+        public async Task<string> PutAsync([FromBody] List<Microservice> serviceList)
         {
-            if (!(serviceID == null))
+            if (serviceList.Count == 2)
             {
-                Microservice service = new Microservice()
+                var service = serviceList.ToArray();
+                foreach (var ms in await factory.ReadFilteredAsync(service[0]))
                 {
-                    iD = serviceID
-                };
-                foreach (var ms in await factory.ReadFilteredAsync(service))
-                {
-                    if (ms.iD.Equals(service.iD))
+                    if (ms.iD.Equals(service[1].iD))
                     {
-                        return (await ms.UpdateAsync(serviceUpdated, database)).ToJson();
+                        return (await ms.UpdateAsync(service[1], database)).ToJson();
                     }
                 }
             }
-            return $"Could Not update {serviceID} to {serviceUpdated.ToJson()}";
+            return $"Could Not update {JsonConvert.SerializeObject(serviceList)}";
         }
 
         public IActionResult Index()

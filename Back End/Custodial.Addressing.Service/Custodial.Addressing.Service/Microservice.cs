@@ -1,6 +1,9 @@
 ﻿using Custodial.Addressing.Service.Converters;
 using Custodial.Addressing.Service.Interfaces;
 using Custodial.Addressing.Service.Service_Settings;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,9 +14,12 @@ namespace Custodial.Addressing.Service
 {
     public class Microservice : IDatabaseObject
     {
+        [BsonIgnore]
         [JsonIgnore]
         public IDatabase database { get; set; }
-        public DateTime timeCreated { get; set; }
+        public long timeCreated { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonId(IdGenerator = typeof(StringObjectIdGenerator))]
         public string iD { get; set; }
         public bool isDeleted { get; set; }
         public string serviceName { get; set; }

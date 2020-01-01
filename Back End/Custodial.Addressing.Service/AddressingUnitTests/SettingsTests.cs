@@ -35,8 +35,6 @@ namespace AddressingUnitTests
             var testCase = JsonConvert.DeserializeObject<ServiceSettings>(embeddedString);
             Assert.AreEqual(serviceSettings.databaseSettings.address, testCase.databaseSettings.address);
             Assert.AreEqual(serviceSettings.databaseSettings.port, testCase.databaseSettings.port);
-            Assert.IsTrue(CompareList(serviceSettings.databaseSettings.collectionNames, testCase.databaseSettings.collectionNames));
-            Assert.IsTrue(CompareList(serviceSettings.databaseSettings.databaseNames, testCase.databaseSettings.databaseNames));
             Assert.IsTrue(CompareList(serviceSettings.networkSettings.ports, testCase.networkSettings.ports));
             Assert.AreEqual(serviceSettings.databaseSettings.typeOfDatabase, testCase.databaseSettings.typeOfDatabase);
             var addresses = new List<string>();
@@ -47,6 +45,7 @@ namespace AddressingUnitTests
                     addresses.Add(address.ToString());
                 }
             }
+
             addresses.Add($"localhost");
             testCase.networkSettings.addresses.AddRange(addresses);
             Assert.IsTrue(CompareList(serviceSettings.networkSettings.addresses, testCase.networkSettings.addresses));
