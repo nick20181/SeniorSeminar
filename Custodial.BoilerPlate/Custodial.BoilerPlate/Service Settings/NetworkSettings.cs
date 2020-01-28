@@ -16,7 +16,8 @@ namespace Custodial.BoilerPlate.Service_Settings
         public async Task InitNetworkSettingsAsync()
         {
             addresses.Add($"localhost");
-            foreach (var address in await Dns.GetHostAddressesAsync(Dns.GetHostName()))
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var address in host.AddressList)
             {
                 if (address.AddressFamily == AddressFamily.InterNetwork)
                 {

@@ -8,8 +8,8 @@ namespace Custodial.BoilerPlate
     public interface IDatabaseObjectFactory
     {
         IDatabase db { get; set; }
-        Task CreateAsync(IDatabaseObject databaseObject);
-        Task ReadAllAsync();
-        Task ReadFilteredAsync(IDatabaseObject databaseObject);
+        Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject);
+        Task<List<IDatabaseObject>> ReadAllAsync();
+        Task<List<IDatabaseObject>> ReadFilteredAsync(IDatabaseObject databaseObject);
     }
 }

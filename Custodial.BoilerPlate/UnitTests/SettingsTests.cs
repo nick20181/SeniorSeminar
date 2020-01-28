@@ -2,6 +2,7 @@ using Custodial.BoilerPlate.Service_Settings;
 using Custodial.BoilerPlate.Service_Settings.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using Serilog;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -14,27 +15,35 @@ namespace UnitTests
     {
         private IResourceLoader resourceLoader = new ResourceLoader();
 
+        public SettingsTests()
+        {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("logs\\SettingsTests")
+                .CreateLogger();
+            Log.Logger.Information("\n");
+        }
+
         [TestMethod]
         public async System.Threading.Tasks.Task ServiceSettingsTestsAsync()
         {
             IServiceSettings serviceSettings = new ServiceSettings();
-            await serviceSettings.InitServiceSettingsAsync(this.GetType().Assembly, "ServiceSettingsTest.json");
+            await serviceSettings.InitServiceSettingsAsync(this.GetType().Assembly, "ServiceSettings.json");
 
-            string embeddedString = resourceLoader.GetEmbeddedResourceString(this.GetType().Assembly, "ServiceSettingsTest.json");
+            string embeddedString = resourceLoader.GetEmbeddedResourceString(this.GetType().Assembly, "ServiceSettings.json");
             var testCase = JsonConvert.DeserializeObject<ServiceSettings>(embeddedString);
             Assert.AreEqual(serviceSettings.databaseSettings.address, testCase.databaseSettings.address);
             Assert.AreEqual(serviceSettings.databaseSettings.port, testCase.databaseSettings.port);
-            Assert.IsTrue(CompareList(serviceSettings.databaseSettings.collectionNames, testCase.databaseSettings.collectionNames));
-            Assert.IsTrue(CompareList(serviceSettings.databaseSettings.databaseNames, testCase.databaseSettings.databaseNames));
             Assert.IsTrue(CompareList(serviceSettings.networkSettings.ports, testCase.networkSettings.ports));
+            Assert.AreEqual(serviceSettings.databaseSettings.typeOfDatabase, testCase.databaseSettings.typeOfDatabase);
             var addresses = new List<string>();
-            foreach(var address in await Dns.GetHostAddressesAsync(Dns.GetHostName()))
+            foreach (var address in await Dns.GetHostAddressesAsync(Dns.GetHostName()))
             {
                 if (address.AddressFamily == AddressFamily.InterNetwork)
                 {
                     addresses.Add(address.ToString());
                 }
             }
+
             addresses.Add($"localhost");
             testCase.networkSettings.addresses.AddRange(addresses);
             Assert.IsTrue(CompareList(serviceSettings.networkSettings.addresses, testCase.networkSettings.addresses));
@@ -61,7 +70,8 @@ namespace UnitTests
             {
                 return true;
             }
-            else {
+            else
+            {
                 return false;
             }
         }

@@ -8,24 +8,24 @@ namespace Custodial.BoilerPlate
 {
     public class MySQLDatabase : IDatabase
     {
-        public IDatabaseSettings settings { get; set; }
+        public IDatabaseSettings settings { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public Task CreateAsync(IDatabaseObject databaseObject)
+        public Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(IDatabaseObject databaseObject)
+        public Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject)
         {
             throw new NotImplementedException();
         }
 
-        public Task ReadAsync(IDatabaseObject databaseObject)
+        public Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated)
+        public Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated)
         {
             throw new NotImplementedException();
         }

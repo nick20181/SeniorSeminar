@@ -1,0 +1,74 @@
+2020-01-03 08:58:18.465 -06:00 [INF] 
+
+2020-01-03 08:59:45.444 -06:00 [INF] 
+
+2020-01-03 09:02:04.185 -06:00 [INF] 
+
+2020-01-03 09:02:29.487 -06:00 [INF] 
+
+2020-01-03 09:04:30.058 -06:00 [INF] 
+
+2020-01-03 09:04:33.392 -06:00 [INF] 
+
+2020-01-03 09:04:36.129 -06:00 [INF] 
+
+2020-01-03 09:04:36.135 -06:00 [INF] Start of ToJsonTest
+2020-01-03 09:04:36.139 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false,"activeService":false,"organizationName":null,"organizationAddress":null,"phoneNumber":null}
+2020-01-03 09:07:52.803 -06:00 [INF] 
+
+2020-01-03 09:09:17.285 -06:00 [INF] 
+
+2020-01-03 09:09:17.291 -06:00 [INF] Start of ToJsonTest
+2020-01-03 09:09:17.295 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false,"activeService":false,"organizationName":null,"organizationAddress":null,"phoneNumber":null}
+2020-01-03 09:09:28.449 -06:00 [INF] 
+
+2020-01-03 09:09:28.455 -06:00 [INF] Start of ToJsonTest
+2020-01-03 09:09:28.460 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false,"activeService":false,"organizationName":null,"organizationAddress":null,"phoneNumber":null}
+2020-01-03 09:09:28.463 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"activeService":false,"organizationName":"OrganizationName","organizationAddress":"address","phoneNumber":"112233445511"}
+2020-01-03 09:09:28.463 -06:00 [INF] Test Result: False
+2020-01-03 09:10:16.667 -06:00 [INF] 
+
+2020-01-03 09:10:16.673 -06:00 [INF] Start of ToJsonTest
+2020-01-03 09:10:16.677 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false,"activeService":false,"organizationName":null,"organizationAddress":null,"phoneNumber":null}
+2020-01-03 09:10:16.681 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"activeService":false,"organizationName":"OrganizationName","organizationAddress":"address","phoneNumber":"112233445511"}
+2020-01-03 09:10:16.681 -06:00 [INF] Test Result: False
+2020-01-03 09:12:22.159 -06:00 [INF] 
+
+2020-01-03 09:12:56.736 -06:00 [INF] 
+
+2020-01-03 09:29:09.206 -06:00 [INF] 
+
+2020-01-03 09:34:14.819 -06:00 [INF] 
+
+2020-01-03 09:37:23.947 -06:00 [INF] 
+
+2020-01-03 09:41:11.168 -06:00 [INF] 
+
+2020-01-03 09:58:38.016 -06:00 [INF] 
+
+2020-01-03 12:55:01.915 -06:00 [INF] 
+
+2020-01-03 13:02:47.795 -06:00 [INF] 
+
+2020-01-03 13:07:01.384 -06:00 [INF] 
+
+2020-01-03 13:21:24.463 -06:00 [INF] 
+
+2020-01-03 13:21:43.717 -06:00 [INF] 
+
+2020-01-03 13:23:14.070 -06:00 [INF] 
+
+2020-01-03 13:23:28.617 -06:00 [INF] 
+
+2020-01-03 13:23:32.355 -06:00 [INF] 
+
+2020-01-11 14:01:33.408 -06:00 [INF] 
+
+2020-01-11 14:01:33.463 -06:00 [INF] 
+
+2020-01-11 14:01:33.463 -06:00 [INF] Start of ToJsonTest
+2020-01-11 14:01:33.463 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"activeService":false,"organizationName":"OrganizationName","organizationAddress":"address","phoneNumber":"112233445511"}
+2020-01-11 14:01:33.464 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false,"activeService":false,"organizationName":"OrganizationName","organizationAddress":"address","phoneNumber":"112233445511"}
+2020-01-11 14:01:33.464 -06:00 [INF] Test Result: True
+2020-01-11 14:01:33.464 -06:00 [INF] 
+

@@ -1,0 +1,22 @@
+2020-01-18 15:37:42.719 -06:00 [INF] 
+
+2020-01-18 15:41:40.431 -06:00 [INF] 
+
+2020-01-18 15:41:40.437 -06:00 [INF] Start of ToJsonTest
+2020-01-18 15:41:40.442 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false}
+2020-01-18 15:41:56.472 -06:00 [INF] 
+
+2020-01-18 15:41:56.478 -06:00 [INF] Start of ToJsonTest
+2020-01-18 15:41:56.482 -06:00 [INF] Result: {"timeCreated":0,"iD":null,"isDeleted":false}
+2020-01-18 15:41:56.485 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false}
+2020-01-18 15:41:56.485 -06:00 [INF] Test Result: False
+2020-01-18 15:43:11.416 -06:00 [INF] 
+
+2020-01-18 15:43:11.423 -06:00 [INF] Start of ToJsonTest
+2020-01-18 15:43:11.427 -06:00 [INF] Result: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false}
+2020-01-18 15:43:11.429 -06:00 [INF] TestCase: {"timeCreated":636203331300000000,"iD":"ID","isDeleted":false}
+2020-01-18 15:43:11.429 -06:00 [INF] Test Result: True
+2020-01-18 15:43:11.430 -06:00 [INF] 
+
+2020-01-23 15:19:42.027 -06:00 [INF] 
+

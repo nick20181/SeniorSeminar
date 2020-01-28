@@ -1,4 +1,7 @@
-﻿using Custodial.BoilerPlate.Service_Settings.Interfaces;
+﻿using Custodial.BoilerPlate.Convertors;
+using Custodial.BoilerPlate.Service_Settings.Interfaces;
+using Custodial.BoilerPlate.Service_Settings.Utility;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +13,10 @@ namespace Custodial.BoilerPlate.Service_Settings
     {
         public string address { get; set; }
         public string port { get; set; }
-        public List<string> collectionNames { get; set; }
-        public List<string> databaseNames { get; set; }
+
+        [JsonConverter(typeof(ConcreteTypeConverter<List<DatabaseCollection>>))]
+        public List<DatabaseCollection> databaseItems { get; set; }
+        public DatabaseTypes typeOfDatabase { get; set; } = DatabaseTypes.InMemoryDatabase;
+
     }
 }

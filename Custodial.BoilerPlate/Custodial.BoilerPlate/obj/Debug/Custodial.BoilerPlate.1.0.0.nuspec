@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Custodial.BoilerPlate</id>
+    <version>1.0.0</version>
+    <authors>Custodial.BoilerPlate</authors>
+    <owners>Custodial.BoilerPlate</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.AspNet.Mvc" version="5.2.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.NewtonsoftJson" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration.Design" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Bson" version="2.10.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver" version="2.10.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+        <dependency id="ResourceLoader" version="3.1.18322.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.File" version="4.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/appsettings.Development.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/appsettings.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/launchSettings.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/ServiceSettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.runtimeconfig.json" target="lib\netcoreapp3.1\Custodial.BoilerPlate.runtimeconfig.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.dll" target="lib\netcoreapp3.1\Custodial.BoilerPlate.dll" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\appsettings.Development.json" target="contentFiles\any\netcoreapp3.1\appsettings.Development.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\appsettings.json" target="content\appsettings.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\appsettings.json" target="contentFiles\any\netcoreapp3.1\appsettings.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\Properties\launchSettings.json" target="content\Properties\launchSettings.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\Properties\launchSettings.json" target="contentFiles\any\netcoreapp3.1\Properties\launchSettings.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\Properties\ServiceSettings.json" target="content\Properties\ServiceSettings.json" />
+    <file src="F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate\Custodial.BoilerPlate\Properties\ServiceSettings.json" target="contentFiles\any\netcoreapp3.1\Properties\ServiceSettings.json" />
+  </files>
+</package>

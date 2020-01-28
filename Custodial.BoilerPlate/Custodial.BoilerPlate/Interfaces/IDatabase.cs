@@ -9,9 +9,16 @@ namespace Custodial.BoilerPlate
     public interface IDatabase
     {
         IDatabaseSettings settings { get; set; }
-        Task ReadAsync(IDatabaseObject databaseObject);
-        Task UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated);
-        Task CreateAsync(IDatabaseObject databaseObject);
-        Task DeleteAsync(IDatabaseObject databaseObject);
+        Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null);
+        Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated);
+        Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject);
+        Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject);
+    }
+
+    public enum DatabaseTypes
+    {
+        InMemoryDatabase = 0,
+        MongoDatabase = 1,
+        MySqlDatabase = 2
     }
 }

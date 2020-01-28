@@ -1,0 +1,97 @@
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.exe
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfoInputs.cache
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfo.cs
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csproj.CopyComplete
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\ResourceLoader.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.deps.json
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.dev.json
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+C:\Users\nick2\source\repos\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csprojAssemblyReference.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.exe
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.deps.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.dev.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\DnsClient.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\ResourceLoader.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\SharpCompress.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csprojAssemblyReference.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfoInputs.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfo.cs
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csproj.CopyComplete
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.exe
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.deps.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.dev.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\DnsClient.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\ResourceLoader.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\SharpCompress.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csprojAssemblyReference.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfoInputs.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.AssemblyInfo.cs
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.csproj.CopyComplete
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\obj\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
