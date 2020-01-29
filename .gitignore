@@ -1,5 +1,4 @@
 
 *.ide-shm
 *.ide-wal
-*.json
 *.cache

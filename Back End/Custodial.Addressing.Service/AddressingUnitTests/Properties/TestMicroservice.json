@@ -1,0 +1,24 @@
+﻿{
+  "timeCreated": "636203331300000000",
+  "iD": "ID",
+  "isDeleted": false,
+  "serviceName": "TestService",
+  "settings": {
+    "networkSettings": {
+      "addresses": [ "11.0.0.22" ],
+      "ports": [ "1111", "2222" ]
+    },
+    "databaseSettings": {
+      "address": "10.0.0.1",
+      "port": "1111",
+      "databaseItems": [
+        {
+          "databaseName": "",
+          "collectionNames": []
+        }
+      ]
+    }
+  },
+  "discription": "Discription of service",
+  "shortName": "Test"
+}

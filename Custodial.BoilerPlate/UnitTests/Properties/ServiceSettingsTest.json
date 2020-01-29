@@ -1,0 +1,12 @@
+﻿{
+  "networkSettings": {
+    "ports": [ "testport" ],
+    "addresses": [ "testaddress" ]
+  },
+  "databaseSettings": {
+    "address": "testhost",
+    "port": "testport",
+    "collectionNames": [ "testcollection" ],
+    "databaseNames": [ "testing" ]
+  }
+}

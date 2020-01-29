@@ -1,0 +1,17 @@
+{
+  "name": "custodialfrontend",
+  "version": "1.0.0",
+  "description": "front end of seminar",
+  "main": "Website.js",
+  "scripts": {
+    "test": "testfrontend"
+  },
+  "author": "Nick Bohm",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
