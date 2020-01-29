@@ -1,0 +1,14 @@
+﻿{
+  "networkSettings": {
+    "port": "500"
+
+  },
+  "databaseSettings": {
+    "address": "localhost",
+    "port": "27017",
+    "collectionNames": [ "Microservices" ],
+    "databaseName": "ServiceAddressService"
+
+  }
+
+}

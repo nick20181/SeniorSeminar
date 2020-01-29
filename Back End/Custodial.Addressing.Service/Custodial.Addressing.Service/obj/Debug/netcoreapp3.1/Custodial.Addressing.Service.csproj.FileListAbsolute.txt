@@ -1,0 +1,216 @@
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.exe
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.deps.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.runtimeconfig.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.runtimeconfig.dev.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.pdb
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.csprojAssemblyReference.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Addressing.Service.StaticWebAssets.Manifest.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Addressing.Service.StaticWebAssets.xml
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.AssemblyInfoInputs.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.AssemblyInfo.cs
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.RazorTargetAssemblyInfo.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.pdb
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ResourceLoader.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.csproj.CopyComplete
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Properties\ServiceSettings.json
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\DnsClient.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\SharpCompress.dll
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.MvcApplicationPartsAssemblyInfo.cache
+F:\Classwork (Spring Semester)\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Properties\ServiceSettings.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.exe
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.deps.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.runtimeconfig.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.runtimeconfig.dev.json
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Custodial.Addressing.Service.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\DnsClient.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ResourceLoader.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\SharpCompress.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.csprojAssemblyReference.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Addressing.Service.StaticWebAssets.Manifest.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Addressing.Service.StaticWebAssets.xml
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.MvcApplicationPartsAssemblyInfo.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.AssemblyInfoInputs.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.AssemblyInfo.cs
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.RazorTargetAssemblyInfo.cache
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.csproj.CopyComplete
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Back End\Custodial.Addressing.Service\Custodial.Addressing.Service\obj\Debug\netcoreapp3.1\Custodial.Addressing.Service.pdb

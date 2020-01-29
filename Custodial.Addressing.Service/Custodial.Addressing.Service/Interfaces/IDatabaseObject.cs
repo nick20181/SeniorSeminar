@@ -1,18 +1,13 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.IdGenerators;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Custodial.Addressing.Service.Interfaces
+namespace Custodial.Addressing.Service
 {
     public interface IDatabaseObject
     {
-        long timeCreated { get; set; }
-        [BsonId(IdGenerator = typeof(StringObjectIdGenerator))]
-        [BsonRepresentation(BsonType.ObjectId)]
+        DateTime timeCreated { get; set; }
         string iD { get; set; }
         bool isDeleted { get; set; }
         string ToJson();
