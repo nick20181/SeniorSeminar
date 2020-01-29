@@ -1,5 +1,5 @@
-﻿using Custodial.Addressing.Service.Deserialization;
-using Custodial.Addressing.Service.Service_Settings.Interfaces;
+﻿using Custodial.Addressing.Service.Converters;
+using Custodial.Addressing.Service.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
