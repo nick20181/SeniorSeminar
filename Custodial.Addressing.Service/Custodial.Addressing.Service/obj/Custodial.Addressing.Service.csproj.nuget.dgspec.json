@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {}
+    "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {}
   },
   "projects": {
-    "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
+    "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
+        "projectUniqueName": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
         "projectName": "Custodial.Addressing.Service",
-        "projectPath": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
+        "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
         "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
-        "outputPath": "F:\\Classwork (Spring Semester)\\Seminar\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\obj\\",
+        "outputPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Nuget_Libary": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +39,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.0, )"
@@ -49,6 +54,18 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.10.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

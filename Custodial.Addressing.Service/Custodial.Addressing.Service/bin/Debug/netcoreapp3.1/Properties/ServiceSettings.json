@@ -5,9 +5,13 @@
   },
   "databaseSettings": {
     "address": "localhost",
-    "port": "BoilerPlate",
-    "collectionNames": [ "BoilerPlate" ],
-    "databaseNames": [ "BoilerPlate" ],
-    "typeOfDatabase":  "InMemoryDatabase"
+    "port": "27017",
+    "databaseItems": [
+      {
+        "databaseName": "CustodialAddressingService",
+        "collectionNames": [ "Microservice" ]
+      }
+    ],
+    "typeOfDatabase": "MongoDatabase"
   }
 }

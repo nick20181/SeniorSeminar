@@ -1,0 +1,13 @@
+﻿{
+  "networkSettings": {
+    "ports": [ "5000" ],
+    "addresses": [ "" ]
+  },
+  "databaseSettings": {
+    "address": "localhost",
+    "port": "BoilerPlate",
+    "collectionNames": [ "BoilerPlate" ],
+    "databaseNames": [ "BoilerPlate" ],
+    "typeOfDatabase":  "InMemoryDatabase"
+  }
+}
