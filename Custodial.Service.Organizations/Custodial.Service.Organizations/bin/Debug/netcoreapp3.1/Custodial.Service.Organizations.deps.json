@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Custodial.Service.Organizations/1.0.0": {
         "dependencies": {
-          "Custodial.BoilerPlate.Core": "1.1.14",
+          "Custodial.BoilerPlate.Core": "1.2.3",
           "Microsoft.Extensions.Logging.Debug": "3.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.0",
           "Serilog.Sinks.Console": "3.1.1",
@@ -320,7 +320,7 @@
           "Custodial.Service.Organizations.dll": {}
         }
       },
-      "Custodial.BoilerPlate.Core/1.1.14": {
+      "Custodial.BoilerPlate.Core/1.2.3": {
         "dependencies": {
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNetCore.Hosting": "2.2.7",
@@ -335,8 +335,8 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/Custodial.BoilerPlate.Core.dll": {
-            "assemblyVersion": "1.1.14.0",
-            "fileVersion": "1.1.14.0"
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
           }
         },
         "compile": {
@@ -3951,12 +3951,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Custodial.BoilerPlate.Core/1.1.14": {
+    "Custodial.BoilerPlate.Core/1.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-383lCuuz/vbrC++OCtzYJAJokwHYeG2SHyX9eL/RupMvxizRfx1sqeivQwDHPlsmNQE8/VutYgIAoxZkaa0ogg==",
-      "path": "custodial.boilerplate.core/1.1.14",
-      "hashPath": "custodial.boilerplate.core.1.1.14.nupkg.sha512"
+      "sha512": "sha512-JAoBcobr9kpwBfK/SqnsxcoEuLcGxZk9OCAGyaUEEhgfuX7HGS+IGA7TDlIJQFo0nc9jEeGZvoSvQYSr/YCV/g==",
+      "path": "custodial.boilerplate.core/1.2.3",
+      "hashPath": "custodial.boilerplate.core.1.2.3.nupkg.sha512"
     },
     "DnsClient/1.2.0": {
       "type": "package",

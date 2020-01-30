@@ -31,8 +31,7 @@ namespace UnitTests
 
             string embeddedString = resourceLoader.GetEmbeddedResourceString(this.GetType().Assembly, "ServiceSettings.json");
             var testCase = JsonConvert.DeserializeObject<ServiceSettings>(embeddedString);
-            Assert.AreEqual(serviceSettings.databaseSettings.address, testCase.databaseSettings.address);
-            Assert.AreEqual(serviceSettings.databaseSettings.port, testCase.databaseSettings.port);
+            Assert.AreEqual(serviceSettings.databaseSettings.connectionString, testCase.databaseSettings.connectionString);
             Assert.IsTrue(CompareList(serviceSettings.networkSettings.ports, testCase.networkSettings.ports));
             Assert.AreEqual(serviceSettings.databaseSettings.typeOfDatabase, testCase.databaseSettings.typeOfDatabase);
             var addresses = new List<string>();

@@ -10,6 +10,6 @@
       "databaseName": "CustodialAddressingService",
       "collectionNames": ["Microservice"]
                          } ],
-    "typeOfDatabase": "MongoDatabase"
+    "typeOfDatabase": "InMemoryDatabase"
   }
 }

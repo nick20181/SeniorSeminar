@@ -4,14 +4,9 @@
     "addresses": [ "" ]
   },
   "databaseSettings": {
-    "address": "localhost",
-    "port": "27017",
-    "databaseItems": [
-      {
-        "databaseName": "CustodialServiceOrganization",
-        "collectionNames": [ "Organizations" ]
-      }
-    ],
+    "connectionString": "mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "Custodial",
+    "collection": "Testing",
     "typeOfDatabase": "MongoDatabase"
   },
   "casSettings": {

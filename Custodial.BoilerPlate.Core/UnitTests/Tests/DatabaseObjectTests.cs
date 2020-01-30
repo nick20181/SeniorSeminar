@@ -49,9 +49,9 @@ namespace UnitTests
         [TestMethod]
         public async Task UpdateTestAsync()
         {
-            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
-            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
-            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            List<DataBaseObject> listToRemove = new List<DataBaseObject>();
+            Dictionary<DataBaseObject, DataBaseObject> assertItems = new Dictionary<DataBaseObject, DataBaseObject>();
+            Dictionary<DataBaseObject, DataBaseObject> assertOutput = new Dictionary<DataBaseObject, DataBaseObject>();
             //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
@@ -62,9 +62,9 @@ namespace UnitTests
 
                 IDatabaseObject msUpdated = testItems.GetItem();
                 msUpdated.iD = ms.iD;
-                listToRemove.Add(msUpdated);
+                listToRemove.Add((DataBaseObject)msUpdated);
                 ms.database = database;
-                assertOutput.Add(msUpdated, await ms.UpdateAsync(msUpdated));
+                assertOutput.Add((DataBaseObject)msUpdated, (DataBaseObject)await ms.UpdateAsync(msUpdated));
                 listOfExpected.Add(msUpdated);
             }
             //Geting assert items from readAsync
@@ -74,7 +74,7 @@ namespace UnitTests
                 {
                     if (actual.ToJson() == expected.ToJson())
                     {
-                        assertItems.Add(expected, actual);
+                        assertItems.Add((DataBaseObject)expected, (DataBaseObject)actual);
 
                     }
                 }
@@ -87,7 +87,7 @@ namespace UnitTests
                 }
                 else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
                 {
-                    MongoDatabase<IDatabaseObject> db = (MongoDatabase<IDatabaseObject>)database;
+                    MongoDatabase<DataBaseObject> db = (MongoDatabase<DataBaseObject>)database;
                     await db.RemoveAsync(ms);
                 }
                 else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
@@ -97,12 +97,12 @@ namespace UnitTests
             }
             foreach (var expected in listOfExpected)
             {
-                IDatabaseObject actual;
+                DataBaseObject actual;
                 //Testing the item read from the database useing readAsync
-                assertItems.TryGetValue(expected, out actual);
+                assertItems.TryGetValue((DataBaseObject) expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
                 //Testing the item returned from update method
-                assertOutput.TryGetValue(expected, out actual);
+                assertOutput.TryGetValue((DataBaseObject)expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }
@@ -110,9 +110,9 @@ namespace UnitTests
         [TestMethod]
         public async Task DeleteTestAsync()
         {
-            List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
-            Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
-            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            List<DataBaseObject> listToRemove = new List<DataBaseObject>();
+            Dictionary<DataBaseObject, DataBaseObject> assertItems = new Dictionary<DataBaseObject, DataBaseObject>();
+            Dictionary<DataBaseObject, DataBaseObject> assertOutput = new Dictionary<DataBaseObject, DataBaseObject>();
             //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
@@ -120,8 +120,8 @@ namespace UnitTests
                 IDatabaseObject ms = testItems.GetItem();
                 IDatabaseObject msCreated = await database.CreateAsync(ms);
                 ms.iD = msCreated.iD;
-                listToRemove.Add(ms);
-                assertOutput.Add(ms, await msCreated.DeleteAsync(database));
+                listToRemove.Add((DataBaseObject)ms);
+                assertOutput.Add((DataBaseObject)ms, (DataBaseObject) await msCreated.DeleteAsync(database));
                 ms.isDeleted = true;
                 listOfExpected.Add(ms);
             }
@@ -132,7 +132,7 @@ namespace UnitTests
                 {
                     if (actual.ToJson() == expected.ToJson())
                     {
-                        assertItems.Add(expected, actual);
+                        assertItems.Add((DataBaseObject)expected, (DataBaseObject)actual);
 
                     }
                 }
@@ -145,7 +145,7 @@ namespace UnitTests
                 }
                 else if (database.settings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
                 {
-                    MongoDatabase<IDatabaseObject> db = (MongoDatabase<IDatabaseObject>)database;
+                    MongoDatabase<DataBaseObject> db = (MongoDatabase<DataBaseObject>)database;
                     ms.isDeleted = true;
                     await db.RemoveAsync(ms);
                 }
@@ -156,12 +156,12 @@ namespace UnitTests
             }
             foreach (var expected in listOfExpected)
             {
-                IDatabaseObject actual;
+                DataBaseObject actual;
                 //Testing the item read from the database useing readAsync
-                assertItems.TryGetValue(expected, out actual);
+                assertItems.TryGetValue((DataBaseObject)expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
                 //Testing the item returned from update method
-                assertOutput.TryGetValue(expected, out actual);
+                assertOutput.TryGetValue((DataBaseObject)expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }

@@ -9616,19 +9616,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nick2\\.nuget\\packages\\": {}
+    "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
       "projectName": "AddressingUnitTests",
-      "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
-      "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
-      "outputPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\AddressingUnitTests\\obj\\",
+      "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
+      "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9636,14 +9636,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Nuget_Libary": {},
+        "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
-              "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Back End\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj"
+            "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
+              "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj"
             }
           }
         }
@@ -9692,7 +9692,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

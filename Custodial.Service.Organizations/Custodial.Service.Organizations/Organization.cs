@@ -43,7 +43,7 @@ namespace Custodial.Service.Organizations
 
         public static IDatabaseObject NulledObject()
         {
-            return NulledObject();
+            return new Organization();
         }
 
         public string ToJson()
@@ -57,7 +57,7 @@ namespace Custodial.Service.Organizations
             {
                 this.database = database;
             }
-            return await this.database.UpdateAsync(copyIteself(), databaseObjectUpdated); ;
+            return await this.database.UpdateAsync(copyIteself(), databaseObjectUpdated);
 
         }
 

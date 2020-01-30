@@ -1,6 +1,5 @@
 ﻿using Custodial.BoilerPlate.Core.Interfaces;
 using Custodial.BoilerPlate.Core.Service_Settings;
-using Custodial.BoilerPlate.Core.Service_Settings.Utility;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
@@ -15,39 +14,21 @@ namespace Custodial.BoilerPlate.Core.Database
     public partial class MongoDatabase<databaseObjectType> : IDatabase where databaseObjectType : IDatabaseObject
     {
         public IDatabaseSettings settings { get; set; }
+        private IMongoDatabase db = null;
+        private IMongoCollection<BsonDocument> collection = null;
         private MongoClient client;
         private Dictionary<string, IMongoCollection<BsonDocument>> collections = new Dictionary<string, IMongoCollection<BsonDocument>>();
         private Dictionary<string, IMongoDatabase> databaseDictionary = new Dictionary<string, IMongoDatabase>();
-        private Dictionary<string, IDatabaseCollection> databaseCollections = new Dictionary<string, IDatabaseCollection>();
         public IBsonConverter<databaseObjectType> bsonConverter = default(IBsonConverter<databaseObjectType>);
 
         public MongoDatabase(IDatabaseSettings settings, IBsonConverter<databaseObjectType> bsonConverter)
         {
             this.bsonConverter = bsonConverter;
             this.settings = settings;
-            client = new MongoClient($"mongodb://{settings.address}:{settings.port}");
-            foreach (var dbs in settings.databaseItems)
-            {
-                IMongoDatabase db = client.GetDatabase(dbs.databaseName);
-                if (!databaseDictionary.ContainsKey(dbs.databaseName))
-                {
-                    databaseDictionary.Add(dbs.databaseName, db);
-                    List<string> temp = new List<string>();
-                    foreach (var col in dbs.collectionNames)
-                    {
-                        IMongoDatabase database;
-                        databaseDictionary.TryGetValue(dbs.databaseName, out database);
-                        temp.Add(col);
-                        collections.Add(col, database.GetCollection<BsonDocument>(col));
-                    }
-                    databaseCollections.Add(dbs.databaseName, new DatabaseCollection()
-                    {
-                        databaseName = dbs.databaseName,
-                        collectionNames = temp
-                    });
-
-                }
-            }
+            client = new MongoClient(settings.connectionString);
+            //might need something with collections
+            db = client.GetDatabase(settings.database);
+            collection = db.GetCollection<BsonDocument>(settings.collection);
             bool MicroservceMapped = false;
             bool ServiceSettingsMapped = false;
             foreach (var map in BsonClassMap.GetRegisteredClassMaps())
@@ -78,21 +59,14 @@ namespace Custodial.BoilerPlate.Core.Database
                 BsonClassMap.RegisterClassMap<ServiceSettings>();
                 BsonSerializer.RegisterSerializer(typeof(IServiceSettings),
                   BsonSerializer.LookupSerializer<ServiceSettings>());
+                BsonClassMap.RegisterClassMap<CustodialAddressingSettings>();
+                BsonSerializer.RegisterSerializer(typeof(ICustodialAddressingSettings),
+                    BsonSerializer.LookupSerializer<CustodialAddressingSettings>());
             }
         }
 
         public async Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject)
         {
-            IMongoDatabase database;
-            IMongoCollection<BsonDocument> collection = null;
-            foreach (var db in databaseCollections)
-            {
-                databaseDictionary.TryGetValue(db.Value.databaseName, out database);
-                foreach (var colList in db.Value.collectionNames)
-                {
-                    collections.TryGetValue(colList, out collection);
-                }
-            }
             await collection.InsertOneAsync(bsonConverter.convertToBson((databaseObjectType)databaseObject));
             List<IDatabaseObject> returned = await ReadAsync();
             foreach (databaseObjectType mms in returned)
@@ -120,17 +94,7 @@ namespace Custodial.BoilerPlate.Core.Database
         public async Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null)
         {
             List<IDatabaseObject> toReturn = new List<IDatabaseObject>();
-            IMongoDatabase database;
-            IMongoCollection<BsonDocument> collection = null;
 
-            foreach (var db in databaseCollections)
-            {
-                databaseDictionary.TryGetValue(db.Value.databaseName, out database);
-                foreach (var colList in db.Value.collectionNames)
-                {
-                    collections.TryGetValue(colList, out collection);
-                }
-            }
             databaseObjectType microService = (databaseObjectType)databaseObject;
             FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
             {
@@ -154,7 +118,11 @@ namespace Custodial.BoilerPlate.Core.Database
                 {
                     if (microService == null)
                     {
-                        toReturn.Add(BsonSerializer.Deserialize<databaseObjectType>(doc));
+                        var temp = BsonSerializer.Deserialize<databaseObjectType>(doc);
+                        if (!temp.isDeleted)
+                        {
+                            toReturn.Add(temp);
+                        }
                     }
                     else
                     {
@@ -175,19 +143,6 @@ namespace Custodial.BoilerPlate.Core.Database
                 databaseObjectUpdated.iD = service.iD;
                 if (service.ToJson().Equals(databaseObjectOrginal.ToJson()))
                 {
-                    //await RemoveAsync(databaseObjectOrginal);
-                    IMongoDatabase database;
-                    IMongoCollection<BsonDocument> collection = null;
-
-                    foreach (var db in databaseCollections)
-                    {
-                        databaseDictionary.TryGetValue(db.Value.databaseName, out database);
-                        foreach (var colList in db.Value.collectionNames)
-                        {
-                            collections.TryGetValue(colList, out collection);
-                        }
-                    }
-                    //return await CreateAsync(databaseObjectUpdated);
                     var filter = bsonConverter.convertToBson((databaseObjectType)databaseObjectOrginal);
                     var x = await collection.ReplaceOneAsync(filter, bsonConverter.convertToBson((databaseObjectType)databaseObjectUpdated));
                     if (x.IsAcknowledged && x.ModifiedCount > 0)
@@ -205,28 +160,12 @@ namespace Custodial.BoilerPlate.Core.Database
 
         public async Task RemoveAsync(IDatabaseObject databaseObject)
         {
-            IMongoDatabase database;
-            IMongoCollection<BsonDocument> collection = null;
-
-            foreach (var db in databaseCollections)
-            {
-                databaseDictionary.TryGetValue(db.Value.databaseName, out database);
-                foreach (var colList in db.Value.collectionNames)
-                {
-                    collections.TryGetValue(colList, out collection);
-                }
-            }
-            FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
-            {
-                BatchSize = 10,
-                NoCursorTimeout = false
-            };
             var filter = bsonConverter.convertToBson((databaseObjectType)databaseObject);
             foreach (var mms in await ReadAsync(databaseObject))
             {
                 if (mms.ToJson().Equals(databaseObject.ToJson()))
                 {
-                    await collection.DeleteOneAsync(filter);
+                    collection.FindOneAndDelete(filter);
                 }
             }
         }

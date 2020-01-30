@@ -28,7 +28,7 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Release\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" />
-    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Release\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" />
+    <file src="C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Release\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" />
+    <file src="C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Release\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" />
   </files>
 </package>
