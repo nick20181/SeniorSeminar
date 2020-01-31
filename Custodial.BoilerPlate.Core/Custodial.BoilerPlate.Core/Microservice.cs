@@ -33,7 +33,7 @@ namespace Custodial.BoilerPlate.Core
             {
                 this.database = database;
             }
-            return await this.database.DeleteAsync(copyItself());
+            return await this.database.DeleteAsync(iD);
         }
 
         public async Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectUpdated, IDatabase database = null)
@@ -42,7 +42,7 @@ namespace Custodial.BoilerPlate.Core
             {
                 this.database = database;
             }
-            return await this.database.UpdateAsync(copyItself(), databaseObjectUpdated);
+            return await this.database.UpdateAsync(iD, databaseObjectUpdated);
         }
 
         public string ToJson()

@@ -1,4 +1,4 @@
-﻿using Custodial.Addressing.Service.Database;
+﻿using Custodial.Addressing.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

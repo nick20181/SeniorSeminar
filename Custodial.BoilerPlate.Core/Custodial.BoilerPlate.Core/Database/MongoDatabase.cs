@@ -71,9 +71,8 @@ namespace Custodial.BoilerPlate.Core.Database
             List<IDatabaseObject> returned = await ReadAsync();
             foreach (databaseObjectType mms in returned)
             {
-                databaseObjectType orginal = (databaseObjectType)databaseObject;
-                var temp = mms.timeCreated.CompareTo(orginal.timeCreated);
-                if (mms.isDeleted.Equals(orginal.isDeleted) && mms.timeCreated.Equals(orginal.timeCreated))
+                databaseObject.iD = mms.iD;
+                if (databaseObject.ToJson().Equals(mms.ToJson()))
                 {
                     return mms;
                 }
@@ -81,69 +80,73 @@ namespace Custodial.BoilerPlate.Core.Database
             return null;
         }
 
-        public async Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject)
+        public async Task<IDatabaseObject> DeleteAsync(string dataObjectId)
         {
-            databaseObjectType msr = (databaseObjectType)databaseObject;
-            //create custom type here
-
-            databaseObjectType msd = JsonConvert.DeserializeObject<databaseObjectType>(JsonConvert.SerializeObject(msr));
-            msd.isDeleted = true;
-            return await UpdateAsync(msr, msd);
+            foreach ( var dataObject in await ReadAsync("_id", dataObjectId))
+            {
+                databaseObjectType dataObjectUpdated = JsonConvert.DeserializeObject<databaseObjectType>(JsonConvert.SerializeObject(dataObject));
+                dataObjectUpdated.isDeleted = true;
+                return await UpdateAsync(dataObjectId, dataObjectUpdated);
+            }
+            return null;
         }
 
-        public async Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null)
+        public async Task<List<IDatabaseObject>> ReadAsync(string stringFilter = null, string value = null)
         {
             List<IDatabaseObject> toReturn = new List<IDatabaseObject>();
-
-            databaseObjectType microService = (databaseObjectType)databaseObject;
             FindOptions<BsonDocument> options = new FindOptions<BsonDocument>
             {
                 BatchSize = 10,
                 NoCursorTimeout = false
             };
-            BsonDocument filter;
-            if (microService == null)
+            if (String.IsNullOrEmpty(stringFilter))
             {
-                filter = new BsonDocument();
+                var filter = new BsonDocument();
+                IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(filter);
+                while (await cursor.MoveNextAsync())
+                {
+                    IEnumerable<BsonDocument> batch = cursor.Current;
+                    foreach (var doc in batch)
+                    {
+                         var temp = BsonSerializer.Deserialize<databaseObjectType>(doc);
+                         if (!temp.isDeleted)
+                         {
+                                toReturn.Add(temp);
+                         }
+                    }
+                }
             }
             else
             {
-                filter = bsonConverter.convertToBson(microService);
-            }
-            IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(filter);
-            while (await cursor.MoveNextAsync())
-            {
-                IEnumerable<BsonDocument> batch = cursor.Current;
-                foreach (var doc in batch)
+                var filter = FilterDefinition<BsonDocument>.Empty;
+                if (stringFilter.Equals("_id"))
                 {
-                    if (microService == null)
+                    filter = Builders<BsonDocument>.Filter.Eq(stringFilter, ObjectId.Parse(value));
+                } else
+                {
+                    filter = Builders<BsonDocument>.Filter.Eq(stringFilter, value);
+                }
+                IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(filter);
+                while (await cursor.MoveNextAsync())
+                {
+                    IEnumerable<BsonDocument> batch = cursor.Current;
+                    foreach (var doc in batch)
                     {
-                        var temp = BsonSerializer.Deserialize<databaseObjectType>(doc);
-                        if (!temp.isDeleted)
-                        {
-                            toReturn.Add(temp);
-                        }
-                    }
-                    else
-                    {
-                        if (BsonSerializer.Deserialize<databaseObjectType>(doc).iD.Equals(microService.iD))
-                        {
-                            toReturn.Add(BsonSerializer.Deserialize<databaseObjectType>(doc));
-                        }
+                        toReturn.Add(BsonSerializer.Deserialize<databaseObjectType>(doc));
                     }
                 }
             }
             return toReturn;
         }
 
-        public async Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated)
+        public async Task<IDatabaseObject> UpdateAsync(string databaseObjectOrginalId, IDatabaseObject databaseObjectUpdated)
         {
-            foreach (var service in await ReadAsync(databaseObjectOrginal))
+            foreach (var service in await ReadAsync("_id", databaseObjectOrginalId))
             {
                 databaseObjectUpdated.iD = service.iD;
-                if (service.ToJson().Equals(databaseObjectOrginal.ToJson()))
+                if (service.iD.Equals(databaseObjectOrginalId))
                 {
-                    var filter = bsonConverter.convertToBson((databaseObjectType)databaseObjectOrginal);
+                    var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(databaseObjectOrginalId));
                     var x = await collection.ReplaceOneAsync(filter, bsonConverter.convertToBson((databaseObjectType)databaseObjectUpdated));
                     if (x.IsAcknowledged && x.ModifiedCount > 0)
                     {
@@ -151,7 +154,7 @@ namespace Custodial.BoilerPlate.Core.Database
                     }
                     else
                     {
-                        return databaseObjectOrginal;
+                        return null;
                     }
                 }
             }
@@ -161,7 +164,7 @@ namespace Custodial.BoilerPlate.Core.Database
         public async Task RemoveAsync(IDatabaseObject databaseObject)
         {
             var filter = bsonConverter.convertToBson((databaseObjectType)databaseObject);
-            foreach (var mms in await ReadAsync(databaseObject))
+            foreach (var mms in await ReadAsync("_id", databaseObject.iD))
             {
                 if (mms.ToJson().Equals(databaseObject.ToJson()))
                 {

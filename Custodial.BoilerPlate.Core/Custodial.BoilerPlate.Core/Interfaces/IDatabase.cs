@@ -8,10 +8,10 @@ namespace Custodial.BoilerPlate.Core.Interfaces
     public interface IDatabase
     {
         IDatabaseSettings settings { get; set; }
-        Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null);
-        Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated);
+        Task<List<IDatabaseObject>> ReadAsync(string stringFilter = null, string data = null);
+        Task<IDatabaseObject> UpdateAsync(string databaseObjectOrginalId, IDatabaseObject databaseObjectUpdated);
         Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject);
-        Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject);
+        Task<IDatabaseObject> DeleteAsync(string dataObjectId);
     }
 
     public enum DatabaseTypes

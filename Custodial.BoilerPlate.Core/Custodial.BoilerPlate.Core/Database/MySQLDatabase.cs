@@ -15,17 +15,17 @@ namespace Custodial.BoilerPlate.Core.Database
             throw new NotImplementedException();
         }
 
-        public Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject)
+        public Task<IDatabaseObject> DeleteAsync(string dataObjectId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null)
+        public Task<List<IDatabaseObject>> ReadAsync(string stringFilter = null, string data = null)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated)
+        public Task<IDatabaseObject> UpdateAsync(string databaseObjectOrginalId, IDatabaseObject databaseObjectUpdated)
         {
             throw new NotImplementedException();
         }

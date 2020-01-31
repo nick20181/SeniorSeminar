@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Custodial.BoilerPlate.Core/1.2.3": {
+      "Custodial.BoilerPlate.Core/1.2.14": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNet.Mvc": "5.2.7",
@@ -2863,13 +2863,13 @@
     }
   },
   "libraries": {
-    "Custodial.BoilerPlate.Core/1.2.3": {
-      "sha512": "JAoBcobr9kpwBfK/SqnsxcoEuLcGxZk9OCAGyaUEEhgfuX7HGS+IGA7TDlIJQFo0nc9jEeGZvoSvQYSr/YCV/g==",
+    "Custodial.BoilerPlate.Core/1.2.14": {
+      "sha512": "tV/mbkuMh2DH/Xi2SDN0wYC9noZ3OQkE1gaefjPwmxoX7d9Pjc9+/54QHDG0LsjbItk9l8LzYlOBbQR52WqNDA==",
       "type": "package",
-      "path": "custodial.boilerplate.core/1.2.3",
+      "path": "custodial.boilerplate.core/1.2.14",
       "files": [
         ".nupkg.metadata",
-        "custodial.boilerplate.core.1.2.3.nupkg.sha512",
+        "custodial.boilerplate.core.1.2.14.nupkg.sha512",
         "custodial.boilerplate.core.nuspec",
         "lib/netcoreapp3.1/Custodial.BoilerPlate.Core.dll",
         "lib/netcoreapp3.1/Custodial.BoilerPlate.Core.runtimeconfig.json"
@@ -8818,7 +8818,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Custodial.BoilerPlate.Core >= 1.2.3",
+      "Custodial.BoilerPlate.Core >= 1.2.14",
       "Microsoft.Extensions.Logging.Debug >= 3.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.0",
       "Serilog.Sinks.Console >= 3.1.1",
@@ -8827,19 +8827,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\": {}
+    "C:\\Users\\nick2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\Custodial.Service.Organizations.csproj",
+      "projectUniqueName": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\Custodial.Service.Organizations.csproj",
       "projectName": "Custodial.Service.Organizations",
-      "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\Custodial.Service.Organizations.csproj",
-      "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\obj\\",
+      "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\Custodial.Service.Organizations.csproj",
+      "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+      "outputPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Service.Organizations\\Custodial.Service.Organizations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8847,7 +8847,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
+        "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Nuget_Libary": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8866,7 +8866,7 @@
         "dependencies": {
           "Custodial.BoilerPlate.Core": {
             "target": "Package",
-            "version": "[1.2.3, )"
+            "version": "[1.2.14, )"
           },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
@@ -8907,7 +8907,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

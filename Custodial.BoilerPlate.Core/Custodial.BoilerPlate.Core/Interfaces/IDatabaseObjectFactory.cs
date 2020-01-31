@@ -10,6 +10,6 @@ namespace Custodial.BoilerPlate.Core.Interfaces
         IDatabase db { get; set; }
         Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject);
         Task<List<IDatabaseObject>> ReadAllAsync();
-        Task<List<IDatabaseObject>> ReadFilteredAsync(IDatabaseObject databaseObject);
+        Task<List<IDatabaseObject>> ReadFilteredAsync(string dataFilter, string data);
     }
 }

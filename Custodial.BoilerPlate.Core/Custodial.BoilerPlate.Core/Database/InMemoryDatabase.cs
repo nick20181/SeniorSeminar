@@ -28,19 +28,19 @@ namespace Custodial.BoilerPlate.Core.Database
         }
 
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<IDatabaseObject> DeleteAsync(IDatabaseObject databaseObject)
+        public async Task<IDatabaseObject> DeleteAsync(string dataObjectId)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (!databaseObject.Equals(null))
+            if (!string.IsNullOrEmpty(dataObjectId))
             {
-                foreach (var ms in await ReadAsync(databaseObject))
+                foreach (var ms in await ReadAsync($"_id", dataObjectId))
                 {
-                    if (ms.iD.Equals(databaseObject.iD))
+                    if (ms.iD.Equals(dataObjectId))
                     {
-                        databaseObject databaseObjectToAdd = (databaseObject)databaseObject;
+                        databaseObject databaseObjectToAdd = (databaseObject) ms;
                         databaseObjectToAdd.isDeleted = true;
-                        database.Remove(databaseObject.iD);
-                        database.Add(databaseObject.iD, databaseObjectToAdd);
+                        database.Remove(dataObjectId);
+                        database.Add(dataObjectId, databaseObjectToAdd);
                         return databaseObjectToAdd;
                     }
                 }
@@ -49,11 +49,11 @@ namespace Custodial.BoilerPlate.Core.Database
         }
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<List<IDatabaseObject>> ReadAsync(IDatabaseObject databaseObject = null)
+        public async Task<List<IDatabaseObject>> ReadAsync(string stringFilter = null, string data = null)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             List<IDatabaseObject> toReturn = new List<IDatabaseObject>();
-            if (databaseObject == null)
+            if (string.IsNullOrEmpty(stringFilter))
             {
                 foreach (var dataObject in database)
                 {
@@ -65,7 +65,7 @@ namespace Custodial.BoilerPlate.Core.Database
             {
                 foreach (var dataObject in database)
                 {
-                    if (dataObject.Key.Equals(databaseObject.iD))
+                    if (dataObject.Key.Equals(data))
                     {
                         toReturn.Add(dataObject.Value);
                         return toReturn;
@@ -76,20 +76,18 @@ namespace Custodial.BoilerPlate.Core.Database
         }
 
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<IDatabaseObject> UpdateAsync(IDatabaseObject databaseObjectOrginal, IDatabaseObject databaseObjectUpdated)
+        public async Task<IDatabaseObject> UpdateAsync(string databaseObjectOrginalId, IDatabaseObject databaseObjectUpdated)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            databaseObject temp;
-            if (databaseObjectOrginal != null || databaseObjectUpdated != null)
+            if (String.IsNullOrEmpty(databaseObjectOrginalId) || databaseObjectUpdated != null)
             {
-                foreach (var dataObject in await ReadAsync(databaseObjectOrginal))
+                foreach (var dataObject in await ReadAsync("_id", databaseObjectOrginalId))
                 {
-                    if (dataObject.iD.Equals(databaseObjectOrginal.iD))
+                    if (dataObject.iD.Equals(databaseObjectOrginalId))
                     {
-                        temp = (databaseObject)dataObject;
-                        database.Remove(dataObject.iD);
-                        databaseObjectUpdated.iD = temp.iD;
-                        database.Add(temp.iD, databaseObjectUpdated);
+                        database.Remove(databaseObjectOrginalId);
+                        databaseObjectUpdated.iD = databaseObjectOrginalId;
+                        database.Add(databaseObjectOrginalId, databaseObjectUpdated);
                         return databaseObjectUpdated;
                     }
                 }

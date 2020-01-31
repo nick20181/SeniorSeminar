@@ -111,7 +111,6 @@ namespace UnitTests
         public async Task DeleteTestAsync()
         {
             List<DataBaseObject> listToRemove = new List<DataBaseObject>();
-            Dictionary<DataBaseObject, DataBaseObject> assertItems = new Dictionary<DataBaseObject, DataBaseObject>();
             Dictionary<DataBaseObject, DataBaseObject> assertOutput = new Dictionary<DataBaseObject, DataBaseObject>();
             //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
@@ -124,18 +123,6 @@ namespace UnitTests
                 assertOutput.Add((DataBaseObject)ms, (DataBaseObject) await msCreated.DeleteAsync(database));
                 ms.isDeleted = true;
                 listOfExpected.Add(ms);
-            }
-            //Geting assert items from readAsync
-            foreach (IDatabaseObject actual in await database.ReadAsync())
-            {
-                foreach (IDatabaseObject expected in listOfExpected.ToArray())
-                {
-                    if (actual.ToJson() == expected.ToJson())
-                    {
-                        assertItems.Add((DataBaseObject)expected, (DataBaseObject)actual);
-
-                    }
-                }
             }
             //Cleaning up database
             foreach (var ms in listToRemove)
@@ -157,9 +144,6 @@ namespace UnitTests
             foreach (var expected in listOfExpected)
             {
                 DataBaseObject actual;
-                //Testing the item read from the database useing readAsync
-                assertItems.TryGetValue((DataBaseObject)expected, out actual);
-                Assert.AreEqual(expected.ToJson(), actual.ToJson());
                 //Testing the item returned from update method
                 assertOutput.TryGetValue((DataBaseObject)expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());

@@ -27,12 +27,7 @@ namespace UnitTests
             {
                 this.database = database;
             }
-            return await this.database.DeleteAsync(new DataBaseObject()
-            {
-                timeCreated = timeCreated,
-                iD = iD,
-                isDeleted = isDeleted
-            });
+            return await this.database.DeleteAsync(iD);
         }
 
         public IDatabaseObject NullObject()
@@ -56,12 +51,7 @@ namespace UnitTests
             {
                 this.database = database;
             }
-            return await this.database.UpdateAsync(new DataBaseObject()
-            {
-                timeCreated = timeCreated,
-                iD = iD,
-                isDeleted = isDeleted
-            }, databaseObjectUpdated);
+            return await this.database.UpdateAsync(iD, databaseObjectUpdated);
         }
     }
 }

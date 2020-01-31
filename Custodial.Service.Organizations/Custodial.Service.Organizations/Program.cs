@@ -45,9 +45,8 @@ namespace Custodial.Service.Organizations
                 }
             }
             Log.Information($"Connecting on: {connectionString}");
-            CASHttpConnection CasConnection = new CASHttpConnection(settings, Assembly.GetExecutingAssembly(), Log.Logger);
-            Thread CASWorker = new Thread(() => CasConnection.workerThreadAsync("Custodial.Service.Organization", "C.S.O", "Tracks Indiviual Organizational Data"));
-            CASWorker.Start();
+            CASHttpConnection CasConnection = new CASHttpConnection(settings, Assembly.GetExecutingAssembly(), Log.Logger,"Custodial.Service.Organization", "C.S.O", "Tracks Indiviual Organizational Data");
+            CasConnection.Start();
             await new WebHostBuilder()
                .UseKestrel()
                .UseContentRoot(Directory.GetCurrentDirectory())

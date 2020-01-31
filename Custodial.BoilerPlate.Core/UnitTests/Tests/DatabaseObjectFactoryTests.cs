@@ -53,11 +53,12 @@ namespace UnitTests
             List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
             Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
             Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
             {
-                IDatabaseObject ms = testItems.GetItem();
-                IDatabaseObject msCreated = await factory.CreateAsync(ms);
+                IDatabaseObject ms = (DataBaseObject)testItems.GetItem();
+                IDatabaseObject msCreated = (DataBaseObject)await factory.CreateAsync(ms);
                 ms.iD = msCreated.iD;
                 listToRemove.Add(ms);
                 assertOutput.Add(ms, msCreated);
@@ -109,30 +110,31 @@ namespace UnitTests
         {
             List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
             Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
-
+            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
             {
-                IDatabaseObject ms = testItems.GetItem();
-                IDatabaseObject msCreated = await factory.CreateAsync(ms);
+                IDatabaseObject ms = (DataBaseObject)testItems.GetItem();
+                IDatabaseObject msCreated = (DataBaseObject)await database.CreateAsync(ms);
                 ms.iD = msCreated.iD;
-                ms.timeCreated = msCreated.timeCreated;
                 listToRemove.Add(ms);
+                assertOutput.Add(ms, msCreated);
                 listOfExpected.Add(ms);
             }
-
+            //Geting assert items from readAsync
             foreach (IDatabaseObject actual in await factory.ReadAllAsync())
             {
                 foreach (IDatabaseObject expected in listOfExpected.ToArray())
                 {
-                    if (actual.ToJson().Equals(expected.ToJson()))
+                    if (actual.ToJson() == expected.ToJson())
                     {
                         assertItems.Add(expected, actual);
 
                     }
                 }
             }
-
+            //Cleaning up database
             foreach (var ms in listToRemove)
             {
                 if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
@@ -152,7 +154,11 @@ namespace UnitTests
             foreach (var expected in listOfExpected)
             {
                 IDatabaseObject actual;
+                //Testing the item read from the database useing readAsync
                 assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+                //Testing the item returned from update method
+                assertOutput.TryGetValue(expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }
@@ -160,36 +166,32 @@ namespace UnitTests
         [TestMethod]
         public async Task ReadTestAsync()
         {
-
             List<IDatabaseObject> listToRemove = new List<IDatabaseObject>();
             Dictionary<IDatabaseObject, IDatabaseObject> assertItems = new Dictionary<IDatabaseObject, IDatabaseObject>();
-
+            Dictionary<IDatabaseObject, IDatabaseObject> assertOutput = new Dictionary<IDatabaseObject, IDatabaseObject>();
+            //Adding items and updating them
             List<IDatabaseObject> listOfExpected = new List<IDatabaseObject>();
             for (int i = 0; i < 3; i++)
             {
-                IDatabaseObject ms = testItems.GetItem();
-                IDatabaseObject msCreated = await factory.CreateAsync(ms);
+                IDatabaseObject ms = (DataBaseObject)testItems.GetItem();
+                IDatabaseObject msCreated = (DataBaseObject)await database.CreateAsync(ms);
                 ms.iD = msCreated.iD;
-                ms.timeCreated = msCreated.timeCreated;
                 listToRemove.Add(ms);
+                assertOutput.Add(ms, msCreated);
                 listOfExpected.Add(ms);
             }
-
-            foreach (IDatabaseObject toRemove in listToRemove)
+            //Geting assert items from readAsync
+            foreach (var expected in listOfExpected)
             {
-                foreach (IDatabaseObject actual in await factory.ReadFilteredAsync(toRemove))
+                foreach (IDatabaseObject actual in await factory.ReadFilteredAsync("_id", expected.iD))
                 {
-                    foreach (IDatabaseObject expected in listOfExpected.ToArray())
+                    if (actual.ToJson().Equals(expected.ToJson()))
                     {
-                        if (actual.ToJson().Equals(expected.ToJson()))
-                        {
-                            assertItems.Add(expected, actual);
-
-                        }
+                        assertItems.Add(expected, actual);
                     }
                 }
             }
-
+            //Cleaning up database
             foreach (var ms in listToRemove)
             {
                 if (database.settings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
@@ -209,7 +211,11 @@ namespace UnitTests
             foreach (var expected in listOfExpected)
             {
                 IDatabaseObject actual;
+                //Testing the item read from the database useing readAsync
                 assertItems.TryGetValue(expected, out actual);
+                Assert.AreEqual(expected.ToJson(), actual.ToJson());
+                //Testing the item returned from update method
+                assertOutput.TryGetValue(expected, out actual);
                 Assert.AreEqual(expected.ToJson(), actual.ToJson());
             }
         }

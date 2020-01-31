@@ -40,30 +40,35 @@ namespace Custodial.Service.Organizations.Controllers
             {
                 database = new InMemoryDatabase<Organization>(settings.databaseSettings);
             }
-            factory = new DatabaseObjectFactory<Organization>()
+            factory = new DatabaseObjectFactory<Organization>(new DataTypeConverter())
             {
                 db = this.database
             };
         }
 
         [HttpGet]
-        public async Task<string> GetAsync([FromBody] Organization service = default(Organization))
+        [Route("[controller]/{dataType}/{data}")]
+        public async Task<string> GetAsync(string dataType, string data)
         {
-            if (service == null || service.iD == null)
+
+            await factory.ReadFilteredAsync(dataType, data);
+            return "Could Not Get";
+        }
+
+        [HttpGet]
+        [Route("[controller]/all")]
+        public async Task<string> GetAllAsync()
+        {
+            string toReturn = "";
+            foreach (Organization ms in await factory.ReadAllAsync())
             {
-                return JsonConvert.SerializeObject(await factory.ReadAllAsync());
+                toReturn = JsonConvert.SerializeObject(await factory.ReadAllAsync());
             }
-            else
+            if (String.IsNullOrEmpty(toReturn))
             {
-                foreach (Organization ms in await factory.ReadFilteredAsync(service))
-                {
-                    if (ms.iD.Equals(service.iD) && ms.timeCreated.Equals(service.timeCreated))
-                    {
-                        return ms.ToJson();
-                    }
-                }
+                return "Could not find any Orgainzations.";
             }
-            return "";
+            return toReturn;
         }
 
         [HttpPost]
@@ -77,6 +82,7 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpDelete]
+        [Route("[controller]/{organizationId}")]
         public async Task<string> DeleteAsync([FromBody] Organization service)
         {
             if (!(service == null))

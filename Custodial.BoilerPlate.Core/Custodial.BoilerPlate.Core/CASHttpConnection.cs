@@ -18,54 +18,61 @@ namespace Custodial.BoilerPlate.Core
     public class CASHttpConnection
     {
         public IServiceSettings settings;
-        public CASHttpConnection(IServiceSettings settings, Assembly assembly, ILogger log)
+        private string id = "ID";
+        private Microservice service;
+        private bool serviceExists = false;
+        private HttpClient client = new HttpClient();
+        private string url = "";
+    public CASHttpConnection(IServiceSettings settings, Assembly assembly, ILogger log, string serviceName, string shortName, string discription)
         {
             Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.File($"Logs\\LogCASWorker{DateTime.Now.ToString("yyyyMMdd_HHmm")}.txt")
             .CreateLogger();
             this.settings = settings;
+            service = new Microservice()
+            {
+                settings = settings,
+                discription = discription,
+                serviceName = serviceName,
+                shortName = shortName,
+                timeCreated = DateTime.UtcNow.Ticks,
+                isDeleted = false,
+                iD = id
+            };
+            url = $"http://{settings.casSettings.address}:{settings.casSettings.port}/Addressing";
         }
 
-        public async Task workerThreadAsync(string serviceName, string shortName, string discription)
+        public async Task Start()
         {
             Log.Information("Starting CASWorker");
+            Thread thread = new Thread(async () => await this.PostAsync());
             while (true)
             {
-                await PostAsync(serviceName, shortName, discription);
+                await PostAsync();
                 Log.Information("CASWorker Timer started");
                 Thread.Sleep(15000);
                 Log.Information("CASWorker Timer Ended");
             }
         }
 
-        public async Task PostAsync(string serviceName, string shortName, string discription)
+        public async Task PostAsync()
         {
+            string json = JsonConvert.SerializeObject(service);
+            StringContent data;
+            if (!serviceExists)
+            {
+                data = new StringContent(json, Encoding.UTF8, "application/json");
+                var getResponse = client.GetAsync($"url/servicename/{service.serviceName}");
+            }
             Log.Information(settings.casSettings.address + ":" + settings.casSettings.port);
             Log.Information($"http://{settings.casSettings.address}:{settings.casSettings.port}");
-            HttpWebRequest request = (HttpWebRequest)WebRequest.CreateHttp($"http://{settings.casSettings.address}:{settings.casSettings.port}");
-            request.ContentType = "application/json";
-            request.Method = "POST";
-            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
-            {
-                string json = JsonConvert.SerializeObject(new Microservice()
-                {
-                    settings = settings,
-                    discription = discription,
-                    serviceName = serviceName,
-                    shortName = shortName,
-                    timeCreated = DateTime.UtcNow.Ticks,
-                    isDeleted = false
-                });
-                streamWriter.Write(json);
-                streamWriter.Close();
-            }
-                string result;
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                using (var streamReader = new StreamReader(response.GetResponseStream()))
-                {
-                    result = streamReader.ReadToEnd();
-                }
+            Log.Information("Made Request");
+            data = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(url, data);
+            Log.Information($"Request Sent");
+            string result = (await response.Content.ReadAsStringAsync());
+            id = JsonConvert.DeserializeObject<Microservice>(result).iD;
             Log.Information($"{result}");
         }
     }

@@ -10,6 +10,8 @@ namespace Custodial.BoilerPlate.Core
     {
         public IDatabase db { get; set; }
 
+        public DatabaseObjectFactory(){
+        }
         public async Task<IDatabaseObject> CreateAsync(IDatabaseObject databaseObject)
         {
             databaseObject dataObject = (databaseObject)databaseObject;
@@ -21,10 +23,9 @@ namespace Custodial.BoilerPlate.Core
             return await db.ReadAsync();
         }
 
-        public async Task<List<IDatabaseObject>> ReadFilteredAsync(IDatabaseObject databaseObject)
+        public async Task<List<IDatabaseObject>> ReadFilteredAsync(string dataFilter, string data)
         {
-            databaseObject dataObject = (databaseObject)databaseObject;
-            return await db.ReadAsync(dataObject);
+            return await db.ReadAsync(dataFilter, data);
         }
     }
 }
