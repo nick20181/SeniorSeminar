@@ -1,4 +1,5 @@
-﻿using Custodial.BoilerPlate.Core.Interfaces;
+﻿using Custodial.BoilerPlate.Core;
+using Custodial.BoilerPlate.Core.Interfaces;
 using MongoDB.Bson;
 using System;
 using System.Collections.Generic;

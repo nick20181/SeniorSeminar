@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Custodial.BoilerPlate.Core</id>
+    <version>1.3.6</version>
+    <authors>Custodial.BoilerPlate.Core</authors>
+    <owners>Custodial.BoilerPlate.Core</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Revamp Mongo database to make it compatable with cloud hosting</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.AspNet.Mvc" version="5.2.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Hosting" version="2.2.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.NewtonsoftJson" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Bson" version="2.10.1" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver" version="2.10.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+        <dependency id="ResourceLoader" version="3.1.18322.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="2.9.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Console" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.File" version="4.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.runtimeconfig.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.BoilerPlate.Core\Custodial.BoilerPlate.Core\bin\Debug\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" target="lib\netcoreapp3.1\Custodial.BoilerPlate.Core.dll" />
+  </files>
+</package>

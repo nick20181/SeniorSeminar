@@ -31,7 +31,7 @@ namespace Custodial.Service.Organizations
             {
                 this.database = database;
             }
-            return await this.database.DeleteAsync(copyIteself());
+            return await this.database.DeleteAsync(iD);
         }
 
         public IDatabaseObject NullObject()
@@ -57,7 +57,7 @@ namespace Custodial.Service.Organizations
             {
                 this.database = database;
             }
-            return await this.database.UpdateAsync(copyIteself(), databaseObjectUpdated);
+            return await this.database.UpdateAsync(iD, databaseObjectUpdated);
 
         }
 

@@ -1,4 +1,5 @@
-﻿using Custodial.BoilerPlate.Core.Database;
+﻿using Custodial.BoilerPlate.Core;
+using Custodial.BoilerPlate.Core.Database;
 using Custodial.BoilerPlate.Core.Interfaces;
 using Custodial.BoilerPlate.Core.Service_Settings;
 using Serilog;
@@ -64,7 +65,7 @@ namespace Custodial.AddressingServices
                         else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
                         {
                             MongoDatabase<Microservice> db = (MongoDatabase<Microservice>)database;
-                            await db.DeleteAsync(ms);
+                            await db.DeleteAsync(ms.iD);
                         }
                         else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
                         {

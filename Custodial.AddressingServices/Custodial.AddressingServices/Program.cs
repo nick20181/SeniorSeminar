@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Custodial.BoilerPlate.Core;
 using Custodial.BoilerPlate.Core.Interfaces;
 using Custodial.BoilerPlate.Core.Service_Settings;
 using Microsoft.AspNetCore.Hosting;

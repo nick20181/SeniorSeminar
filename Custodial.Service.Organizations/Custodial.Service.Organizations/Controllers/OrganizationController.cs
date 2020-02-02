@@ -40,18 +40,18 @@ namespace Custodial.Service.Organizations.Controllers
             {
                 database = new InMemoryDatabase<Organization>(settings.databaseSettings);
             }
-            factory = new DatabaseObjectFactory<Organization>(new DataTypeConverter())
+            factory = new DatabaseObjectFactory<Organization>()
             {
                 db = this.database
             };
         }
 
         [HttpGet]
-        [Route("[controller]/{dataType}/{data}")]
-        public async Task<string> GetAsync(string dataType, string data)
+        [Route("[controller]/{dataFilter}/{data}")]
+        public async Task<string> GetAsync(string dataFilter, string data)
         {
 
-            await factory.ReadFilteredAsync(dataType, data);
+            await factory.ReadFilteredAsync(dataFilter, data);
             return "Could Not Get";
         }
 
@@ -82,37 +82,34 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpDelete]
-        [Route("[controller]/{organizationId}")]
-        public async Task<string> DeleteAsync([FromBody] Organization service)
+        [Route("[controller]/{id}")]
+        public async Task<string> DeleteAsync([FromRoute] string id)
         {
-            if (!(service == null))
+            if (!string.IsNullOrEmpty(id))
             {
-                foreach (var ms in await factory.ReadFilteredAsync(service))
+                foreach (var ms in await factory.ReadFilteredAsync("_id", id))
                 {
-                    if (ms.ToJson().Equals(service.ToJson()))
+                    if (ms.iD.Equals(id))
                     {
                         return (await ms.DeleteAsync(database)).ToJson();
                     }
                 }
             }
-            return $"Could Not delete {service.ToJson()}";
+            return $"Could Not delete object: {id}";
         }
 
         [HttpPut]
-        public async Task<string> PutAsync([FromBody] List<Organization> serviceList)
+        [Route("[controller]/{id}")]
+        public async Task<string> PutAsync([FromRoute] string orginalId, [FromBody] Organization updatedService)
         {
-            if (serviceList.Count == 2)
+            foreach (var dataObject in await factory.ReadFilteredAsync("_id", orginalId))
             {
-                var service = serviceList.ToArray();
-                foreach (var dataObject in await factory.ReadFilteredAsync(service[0]))
+                if (dataObject.iD.Equals(orginalId))
                 {
-                    if (dataObject.iD.Equals(service[1].iD))
-                    {
-                        return (await dataObject.UpdateAsync(service[1], database)).ToJson();
-                    }
+                    return (await dataObject.UpdateAsync(updatedService, database)).ToJson();
                 }
             }
-            return $"Could Not update {JsonConvert.SerializeObject(serviceList)}";
+            return $"Could Not update data object with id: {orginalId}";
         }
     }
 }
