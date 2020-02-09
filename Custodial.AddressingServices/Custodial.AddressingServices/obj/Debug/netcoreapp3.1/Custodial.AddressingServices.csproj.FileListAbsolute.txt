@@ -238,3 +238,13 @@ F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
