@@ -228,3 +228,13 @@ F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.csproj.CopyComplete
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.dll
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
