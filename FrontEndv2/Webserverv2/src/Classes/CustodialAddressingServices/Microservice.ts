@@ -1,5 +1,9 @@
 import {IMicroservice} from '../../Interfaces/CustodialAddressingServices/IMicroservice';
 import {IServiceSettings} from '../../Interfaces/CustodialAddressingServices/IServiceSettings';
+import { ServiceSettings } from './ServiceSettings';
+import { NetworkSettings } from './NetworkSettings';
+import { DatabaseSettings } from './DatabaseSettings';
+import { CasSetting } from './CasSettings';
 
 export class Microservice implements IMicroservice{
     public timeCreated?: number;
@@ -20,4 +24,11 @@ export class Microservice implements IMicroservice{
             this.discription = discription;
             this.shortName = shortname;
     }
+
+    static NullService() : Microservice{
+        return new Microservice(0, "", true, "", new ServiceSettings(
+            new NetworkSettings([],[]), new DatabaseSettings("","",""),
+             new CasSetting("","")), "", "");
+    }
+
 }
