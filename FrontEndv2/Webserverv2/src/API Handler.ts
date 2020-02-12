@@ -12,7 +12,7 @@ export class APIHandler {
     async refreshServiceDictionary(){
         console.log("starting refresh");
         const options = {
-            uri: this.serviceDictionary?.CustodiualAddressingServicesURI + "/all",
+            uri: this.serviceDictionary.CustodiualAddressingServicesURI + "/all",
             method: 'Get',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ export class APIHandler {
         });  
         console.log(this.serviceDictionary.getCSO().serviceName);
     }
-
+ 
     getCSOService() : Microservice {
         var ms: Microservice = this.serviceDictionary.getCSO();
         return this.serviceDictionary.getCSO();

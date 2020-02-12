@@ -43,16 +43,15 @@ var APIHandler = /** @class */ (function () {
         this.serviceDictionary = serviceDictionary;
     }
     APIHandler.prototype.refreshServiceDictionary = function () {
-        var _a;
         return __awaiter(this, void 0, void 0, function () {
             var options, response, res;
             var _this = this;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
                     case 0:
                         console.log("starting refresh");
                         options = {
-                            uri: ((_a = this.serviceDictionary) === null || _a === void 0 ? void 0 : _a.CustodiualAddressingServicesURI) + "/all",
+                            uri: this.serviceDictionary.CustodiualAddressingServicesURI + "/all",
                             method: 'Get',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -68,7 +67,7 @@ var APIHandler = /** @class */ (function () {
                                 response = "Error: " + err.toString();
                             })];
                     case 1:
-                        _b.sent();
+                        _a.sent();
                         res = JSON.parse(response);
                         res.forEach(function (ms) {
                             console.log("ms: " + ms.shortName + " sd: " + _this.serviceDictionary.getCSO().shortName);

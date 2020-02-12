@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
+var fs_1 = __importDefault(require("fs"));
 var WebServer = /** @class */ (function () {
     function WebServer(apiHandler) {
         var _this = this;
@@ -16,8 +17,13 @@ var WebServer = /** @class */ (function () {
             console.log('server started at http://localhost:' + _this.port);
         });
         this.app.get("/", function (req, response) {
+            var html = fs_1.default.readFileSync('views/index.html', 'utf8');
             apiHandler.refreshServiceDictionary();
-            response.send("Test" + apiHandler.getCSOService().serviceName);
+            console.log(html);
+            html.replace("[CSO]", apiHandler.getCSOService().serviceName);
+            console.log("[CSO]");
+            console.log(html);
+            response.send(html);
         });
     }
     return WebServer;

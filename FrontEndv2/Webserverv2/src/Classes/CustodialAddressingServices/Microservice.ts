@@ -6,13 +6,13 @@ import { DatabaseSettings } from './DatabaseSettings';
 import { CasSetting } from './CasSettings';
 
 export class Microservice implements IMicroservice{
-    public timeCreated?: number;
-    public id?: string;
-    public isDeleted?: boolean;
-    public serviceName?: string;
-    public settings?: IServiceSettings;
-    public discription?: string;
-    public shortName?: string;
+    public timeCreated: number;
+    public id: string;
+    public isDeleted: boolean;
+    public serviceName: string;
+    public settings: IServiceSettings;
+    public discription: string;
+    public shortName: string;
 
     constructor(timeCreated: number, id: string, isDeleted: boolean, serviceName: string,
         settings: IServiceSettings, discription: string, shortname: string){
