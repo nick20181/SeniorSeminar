@@ -16,16 +16,21 @@ export class WebServer {
         this.app.set('view engine', 'ejs');
         
         this.app.listen(this.port, () => {
+            apiHandler.refreshServiceDictionary();
             console.log('server started at http://localhost:' + this.port);
         });
 
-        this.app.get("/", (req, response) => {
+        this.app.get("/", async (req, response) => {
             var html: string = fs.readFileSync('views/index.html', 'utf8');
             apiHandler.refreshServiceDictionary();
+            var htmlReplacer : string = "";
+            await apiHandler.getOrganizationList()
+                .then((response) => {
+                    htmlReplacer = response;
+                })
+                .catch()
+            html = html.replace("[CSO]", "<p>"+htmlReplacer+"</p>");
             console.log(html);
-            html.replace("[CSO]", apiHandler.getCSOService().serviceName);
-            console.log("[CSO]");
-            console.log(html)
             response.send(html);
         });
     }

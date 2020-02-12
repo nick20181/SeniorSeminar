@@ -41,6 +41,7 @@ var APIHandler = /** @class */ (function () {
     function APIHandler(serviceDictionary) {
         this.rp = require('request-promise-native');
         this.serviceDictionary = serviceDictionary;
+        this.refreshServiceDictionary();
     }
     APIHandler.prototype.refreshServiceDictionary = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -49,7 +50,6 @@ var APIHandler = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        console.log("starting refresh");
                         options = {
                             uri: this.serviceDictionary.CustodiualAddressingServicesURI + "/all",
                             method: 'Get',
@@ -70,13 +70,10 @@ var APIHandler = /** @class */ (function () {
                         _a.sent();
                         res = JSON.parse(response);
                         res.forEach(function (ms) {
-                            console.log("ms: " + ms.shortName + " sd: " + _this.serviceDictionary.getCSO().shortName);
                             if (ms.shortName == _this.serviceDictionary.getCSO().shortName) {
-                                console.log(ms.serviceName);
                                 _this.serviceDictionary.setCSO(ms);
                             }
                         });
-                        console.log(this.serviceDictionary.getCSO().serviceName);
                         return [2 /*return*/];
                 }
             });
@@ -85,6 +82,36 @@ var APIHandler = /** @class */ (function () {
     APIHandler.prototype.getCSOService = function () {
         var ms = this.serviceDictionary.getCSO();
         return this.serviceDictionary.getCSO();
+    };
+    APIHandler.prototype.getOrganizationList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var options, response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        options = {
+                            uri: "http://" + this.serviceDictionary.getCSO().settings.networkSettings.addresses[1] + ":" +
+                                this.serviceDictionary.getCSO().settings.networkSettings.ports[0] + "/organization/all",
+                            method: 'Get',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        };
+                        response = "";
+                        return [4 /*yield*/, request.get(options)
+                                .then(function (body) {
+                                response = body;
+                            })
+                                .catch(function (err) {
+                                console.log(err);
+                                response = "Error: " + err.toString();
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, response];
+                }
+            });
+        });
     };
     return APIHandler;
 }());

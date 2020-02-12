@@ -47,7 +47,7 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpGet]
-        [Route("[controller]/{dataFilter}/{data}")]
+        [Route("{dataFilter}/{data}")]
         public async Task<string> GetAsync(string dataFilter, string data)
         {
 
@@ -56,7 +56,7 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpGet]
-        [Route("[controller]/all")]
+        [Route("all")]
         public async Task<string> GetAllAsync()
         {
             string toReturn = "";
@@ -82,7 +82,7 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpDelete]
-        [Route("[controller]/{id}")]
+        [Route("{id}")]
         public async Task<string> DeleteAsync([FromRoute] string id)
         {
             if (!string.IsNullOrEmpty(id))
@@ -99,7 +99,7 @@ namespace Custodial.Service.Organizations.Controllers
         }
 
         [HttpPut]
-        [Route("[controller]/{id}")]
+        [Route("{id}")]
         public async Task<string> PutAsync([FromRoute] string orginalId, [FromBody] Organization updatedService)
         {
             foreach (var dataObject in await factory.ReadFilteredAsync("_id", orginalId))
