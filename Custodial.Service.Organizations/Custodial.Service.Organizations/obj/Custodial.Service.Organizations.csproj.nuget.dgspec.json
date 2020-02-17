@@ -41,7 +41,7 @@
           "dependencies": {
             "Custodial.BoilerPlate.Core": {
               "target": "Package",
-              "version": "[1.3.11, )"
+              "version": "[1.3.13, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

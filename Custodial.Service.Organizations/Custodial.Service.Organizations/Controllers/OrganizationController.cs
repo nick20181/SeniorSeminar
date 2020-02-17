@@ -50,8 +50,21 @@ namespace Custodial.Service.Organizations.Controllers
         [Route("{dataFilter}/{data}")]
         public async Task<string> GetAsync(string dataFilter, string data)
         {
+            string toReturn = "[";
+            var x = await factory.ReadFilteredAsync(dataFilter, data);
+            if (x.Count != 0)
+            {
+                for (int i = 0; i < x.Count - 1; i++)
+                {
+                    toReturn = toReturn + x[i].ToJson() + ",";
+                }
+                toReturn = toReturn + x.Last().ToJson() + "]";
 
-            await factory.ReadFilteredAsync(dataFilter, data);
+                if (!toReturn.Equals("[]"))
+                {
+                    return toReturn;
+                }
+            }
             return "Could Not Get";
         }
 

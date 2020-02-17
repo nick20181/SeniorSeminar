@@ -1,3 +1,0 @@
-2020-02-12 08:15:31.760 -06:00 [INF] Starting Custodial.Addressing.Services
-2020-02-12 08:15:32.647 -06:00 [INF] Connecting on: http://localhost:5000;http://10.154.6.21:5000
-2020-02-12 08:15:32.647 -06:00 [INF] Starting Database Worker Thread

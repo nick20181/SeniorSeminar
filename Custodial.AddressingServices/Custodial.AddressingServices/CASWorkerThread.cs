@@ -47,33 +47,39 @@ namespace Custodial.AddressingServices
 
         public async Task MainWorkerThreadAsync(long timeout)
         {
-            while (running)
+            try
             {
-                Log.Information("Checking services");
-                foreach (var ms in await database.ReadAsync())
+                while (running)
                 {
-                    Log.Information($"Checking {ms.ToJson()}");
-                    long now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                    Log.Information($"{now}:{ms.timeCreated}");
-                    Log.Information($"{((Microservice)ms).serviceName} is at {now - ms.timeCreated} out of {timeout}");
-                    if (now - ms.timeCreated > timeout)
+                    Log.Information("Checking services");
+                    foreach (var ms in await database.ReadAsync())
                     {
-                        Log.Information("Timed out");
-                        if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
+                        Log.Information($"Checking {ms.ToJson()}");
+                        long now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                        Log.Information($"{now}:{ms.timeCreated}");
+                        Log.Information($"{((Microservice)ms).serviceName} is at {now - ms.timeCreated} out of {timeout}");
+                        if (now - ms.timeCreated > timeout)
                         {
+                            Log.Information("Timed out");
+                            if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.InMemoryDatabase))
+                            {
+                            }
+                            else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
+                            {
+                                MongoDatabase<Microservice> db = (MongoDatabase<Microservice>)database;
+                                await db.DeleteAsync(ms.iD);
+                            }
+                            else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
+                            {
+                            }
                         }
-                        else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MongoDatabase))
-                        {
-                            MongoDatabase<Microservice> db = (MongoDatabase<Microservice>)database;
-                            await db.DeleteAsync(ms.iD);
-                        }
-                        else if (settings.databaseSettings.typeOfDatabase.Equals(DatabaseTypes.MySqlDatabase))
-                        {
-                        }
+                        Log.Information("\n");
                     }
-                    Log.Information("\n");
+                    Thread.Sleep((int)timeout);
                 }
-                Thread.Sleep((int)timeout);
+            } catch (Exception e)
+            {
+                Log.Information(e.Message);
             }
         }
     }

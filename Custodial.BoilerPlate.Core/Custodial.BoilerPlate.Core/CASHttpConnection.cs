@@ -131,29 +131,41 @@ namespace Custodial.BoilerPlate.Core
 
         public async Task GetAsync()
         {
-            Log.Logger.Information($"Getting service from Addressing: {service.serviceName}");
-            var getReponse = await client.GetAsync($"{url}/serviceName/{service.serviceName}");
-            string responseContent = await getReponse.Content.ReadAsStringAsync();
-            Log.Logger.Information($"Received content: {responseContent}");
-            if (String.IsNullOrEmpty(responseContent) || !responseContent.Contains("{"))
+            try
             {
-                Log.Logger.Information($"Service Does not exist in addressing.");
-                serviceExists = false;
-            } else
-            {
-                Microservice getService = JsonConvert.DeserializeObject<Microservice>(responseContent);
-                if (service.serviceName.Equals(getService.serviceName))
+                Log.Logger.Information($"Getting service from Addressing: {service.serviceName}");
+                var getReponse = await client.GetAsync($"{url}/serviceName/{service.serviceName}");
+                string responseContent = await getReponse.Content.ReadAsStringAsync();
+                Log.Logger.Information($"Received content: {responseContent}");
+                if (String.IsNullOrEmpty(responseContent) || !responseContent.Contains("{"))
                 {
-                    service.iD = getService.iD;
-                    Log.Logger.Information($"Service Exists in Addressing.");
-                    serviceExists = true;
-                    isDeleted = getService.isDeleted;
-                } else
-                {
-                    Log.Logger.Information($"Service Does not exist in addressing. Failed to Identify Service received.");
+                    Log.Logger.Information($"Service Does not exist in addressing.");
                     serviceExists = false;
-                    isDeleted = getService.isDeleted;
                 }
+                else
+                {
+                    Microservice[] getService = JsonConvert.DeserializeObject<Microservice[]>(responseContent);
+                    foreach (Microservice ms in getService)
+                    {
+                        if (service.serviceName.Equals(ms.serviceName))
+                        {
+                            service.iD = ms.iD;
+                            Log.Logger.Information($"Service Exists in Addressing.");
+                            serviceExists = true;
+                            isDeleted = ms.isDeleted;
+                        }
+                        else
+                        {
+                            Log.Logger.Information($"Service Does not exist in addressing. Failed to Identify Service received.");
+                            serviceExists = false;
+                            isDeleted = ms.isDeleted;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Logger.Information(e.Message);
             }
         }
     }

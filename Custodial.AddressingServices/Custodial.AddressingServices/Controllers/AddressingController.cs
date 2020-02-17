@@ -65,11 +65,19 @@ namespace Custodial.AddressingServices.Controllers
         [Route("{dataFilter}/{data}")]
         public async Task<string> GetAsync([FromRoute]string dataFilter, [FromRoute]string data)
         {
-            foreach (var ms in await factory.ReadFilteredAsync(dataFilter, data))
+            string toReturn = "[";
+            var x = await factory.ReadFilteredAsync(dataFilter, data);
+            if (x.Count != 0)
             {
-                if (ms.ToJson().Contains(data))
+                for (int i = 0; i < x.Count - 1; i++)
                 {
-                    return ms.ToJson();
+                    toReturn = toReturn + x[i].ToJson() + ",";
+                }
+                toReturn = toReturn + x.Last().ToJson() + "]";
+
+                if (!toReturn.Equals("[]"))
+                {
+                    return toReturn;
                 }
             }
             return "Could Not Get";

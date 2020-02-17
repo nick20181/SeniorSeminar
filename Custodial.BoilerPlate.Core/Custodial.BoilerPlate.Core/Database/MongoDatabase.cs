@@ -108,18 +108,18 @@ namespace Custodial.BoilerPlate.Core.Database
                     IEnumerable<BsonDocument> batch = cursor.Current;
                     foreach (var doc in batch)
                     {
-                         var temp = BsonSerializer.Deserialize<databaseObjectType>(doc);
-                         if (!temp.isDeleted)
-                         {
-                                toReturn.Add(temp);
-                         }
+                        var temp = BsonSerializer.Deserialize<databaseObjectType>(doc);
+                        if (!temp.isDeleted)
+                        {
+                            toReturn.Add(temp);
+                        }
                     }
                 }
             }
             else
             {
                 var filter = FilterDefinition<BsonDocument>.Empty;
-                if (stringFilter.Equals("_id"))
+                if (stringFilter.Equals("_id") || stringFilter.Equals("id") || stringFilter.Equals("ID"))
                 {
                     filter = Builders<BsonDocument>.Filter.Eq(stringFilter, ObjectId.Parse(value));
                 } else

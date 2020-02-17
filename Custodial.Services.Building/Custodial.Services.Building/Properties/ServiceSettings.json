@@ -1,0 +1,16 @@
+﻿{
+  "networkSettings": {
+    "ports": [ "5004" ],
+    "addresses": [ "" ]
+  },
+  "databaseSettings": {
+    "connectionString": "mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "Custodial",
+    "collection": "TestingBuilding",
+    "typeOfDatabase": "MongoDatabase"
+  },
+  "casSettings": {
+    "address": "localhost",
+    "port": "5000"
+  }
+}

@@ -1,2 +1,0 @@
-2020-02-11 19:00:12.186 -06:00 [INF] Starting CASWorker
-2020-02-11 19:00:12.188 -06:00 [INF] Getting service from Addressing: Custodial.Service.Organization
