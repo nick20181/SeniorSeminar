@@ -1,0 +1,11 @@
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\obj\Debug\netcoreapp3.1\Custodial.Services.Utility.csprojAssemblyReference.cache
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\obj\Debug\netcoreapp3.1\Custodial.Services.Utility.AssemblyInfoInputs.cache
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\obj\Debug\netcoreapp3.1\Custodial.Services.Utility.AssemblyInfo.cs
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.exe
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.deps.json
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.runtimeconfig.json
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.runtimeconfig.dev.json
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.pdb
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\obj\Debug\netcoreapp3.1\Custodial.Services.Utility.dll
+C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.Services.Utility\Custodial.Services.Utility\obj\Debug\netcoreapp3.1\Custodial.Services.Utility.pdb

@@ -1,5 +1,6 @@
 ﻿using Custodial.BoilerPlate.Core;
 using Custodial.BoilerPlate.Core.Interfaces;
+using Custodial.Services.Utility;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
@@ -23,10 +24,13 @@ namespace Custodial.Service.Chemical
         public bool isDeleted { get; set; }
         public string organizationId { get; set; }
         public string chemicalName { get; set; }
-        [JsonConverter(typeof(ConcreteTypeConverter<string[]>))]
-        public string[] chemcialIngredients { get; set; }
-        public string chemicalStoringInformation { get; set; }
+        public Manufactor chemicalManufactor { get; set; }
+        public ContactDetails saftyContactInformation { get; set; }
+        public string chemicalWarning { get; set; }
+        public bool disinfectant { get; set; }
+        public bool sanitizer { get; set; }
         public bool ventilationNeeded { get; set; }
+        public ChemicalDetails usesAndPrep { get; set; }
 
 
         public async Task<IDatabaseObject> DeleteAsync(IDatabase database = null)
@@ -74,8 +78,6 @@ namespace Custodial.Service.Chemical
                 timeCreated = timeCreated,
                 organizationId = organizationId,
                 chemicalName = chemicalName,
-                chemcialIngredients = chemcialIngredients,
-                chemicalStoringInformation = chemicalStoringInformation,
                 ventilationNeeded = ventilationNeeded
             };
         }

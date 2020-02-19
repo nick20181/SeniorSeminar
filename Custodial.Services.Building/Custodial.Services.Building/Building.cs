@@ -14,6 +14,9 @@ namespace Custodial.Services.Building
         public string iD { get; set; }
         public bool isDeleted { get; set; }
         public string organizationId { get; set; }
+        public string buildingName { get; set; }
+        public int ammountOfFloors { get; set; }
+
 
         public async Task<IDatabaseObject> DeleteAsync(IDatabase database = null)
         {

@@ -26,6 +26,54 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Custodial.Service.Chemical/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Custodial.BoilerPlate.Core": "1.3.13",
+          "Custodial.Services.Utility": "1.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Custodial.Service.Chemical.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Custodial.Service.Chemical.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "contentFiles": {
+          "contentFiles/any/netcoreapp3.1/Properties/ServiceSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp3.1/Properties/launchSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp3.1/appsettings.Development.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netcoreapp3.1/appsettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Custodial.Services.Utility/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Custodial.Services.Utility.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Custodial.Services.Utility.dll": {}
+        }
+      },
       "DnsClient/1.2.0": {
         "type": "package",
         "dependencies": {
@@ -2859,6 +2907,38 @@
         "custodial.boilerplate.core.nuspec",
         "lib/netcoreapp3.1/Custodial.BoilerPlate.Core.dll",
         "lib/netcoreapp3.1/Custodial.BoilerPlate.Core.runtimeconfig.json"
+      ]
+    },
+    "Custodial.Service.Chemical/1.0.0": {
+      "sha512": "2IuQoPr3Zyd76CKVN9BnC+g6eKLTwoYXzcuvIyeHU+m9Uo6RV/ArDa2sIhQSiD6hITp9paYgVnaYtaAxGSBlzA==",
+      "type": "package",
+      "path": "custodial.service.chemical/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "content/Properties/ServiceSettings.json",
+        "content/Properties/launchSettings.json",
+        "content/appsettings.Development.json",
+        "content/appsettings.json",
+        "contentFiles/any/netcoreapp3.1/Properties/ServiceSettings.json",
+        "contentFiles/any/netcoreapp3.1/Properties/launchSettings.json",
+        "contentFiles/any/netcoreapp3.1/appsettings.Development.json",
+        "contentFiles/any/netcoreapp3.1/appsettings.json",
+        "custodial.service.chemical.1.0.0.nupkg.sha512",
+        "custodial.service.chemical.nuspec",
+        "lib/netcoreapp3.1/Custodial.Service.Chemical.dll",
+        "lib/netcoreapp3.1/Custodial.Service.Chemical.runtimeconfig.json"
+      ]
+    },
+    "Custodial.Services.Utility/1.0.0": {
+      "sha512": "jz1otdaA50xgRiE0Czr4O6ZWxoS+9QUFgyYpHKRN6UVRVybxoJTf4mlAArhm/4V4kElxMsEIl34rplyL8sFiMw==",
+      "type": "package",
+      "path": "custodial.services.utility/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "custodial.services.utility.1.0.0.nupkg.sha512",
+        "custodial.services.utility.nuspec",
+        "lib/netcoreapp3.1/Custodial.Services.Utility.dll",
+        "lib/netcoreapp3.1/Custodial.Services.Utility.runtimeconfig.json"
       ]
     },
     "DnsClient/1.2.0": {
@@ -8844,23 +8924,25 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Custodial.BoilerPlate.Core >= 1.3.13",
+      "Custodial.Service.Chemical >= 1.0.0",
+      "Custodial.Services.Utility >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nick2\\.nuget\\packages\\": {}
+    "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
+      "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
       "projectName": "Custodial.Services.Building",
-      "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
-      "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
-      "outputPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\obj\\",
+      "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
+      "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8868,7 +8950,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Nuget_Libary": {},
+        "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8888,6 +8970,14 @@
           "Custodial.BoilerPlate.Core": {
             "target": "Package",
             "version": "[1.3.13, )"
+          },
+          "Custodial.Service.Chemical": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "Custodial.Services.Utility": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -8912,7 +9002,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

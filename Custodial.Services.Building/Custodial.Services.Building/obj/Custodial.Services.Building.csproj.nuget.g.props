@@ -5,14 +5,44 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\nick2\.nuget\packages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Nicholas.bohm\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.4.0</NuGetToolVersion>
   </PropertyGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\Properties\ServiceSettings.json" Condition="Exists('$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\Properties\ServiceSettings.json')">
+      <NuGetPackageId>Custodial.Service.Chemical</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>Properties\ServiceSettings.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\Properties\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\Properties\launchSettings.json')">
+      <NuGetPackageId>Custodial.Service.Chemical</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>Properties\launchSettings.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\appsettings.Development.json" Condition="Exists('$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\appsettings.Development.json')">
+      <NuGetPackageId>Custodial.Service.Chemical</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>appsettings.Development.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\appsettings.json" Condition="Exists('$(NuGetPackageRoot)custodial.service.chemical\1.0.0\contentFiles\any\netcoreapp3.1\appsettings.json')">
+      <NuGetPackageId>Custodial.Service.Chemical</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>appsettings.json</Link>
+    </Content>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\nick2\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\Nicholas.bohm\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
   </PropertyGroup>
 </Project>
