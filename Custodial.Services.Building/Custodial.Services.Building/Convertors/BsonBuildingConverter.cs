@@ -15,7 +15,12 @@ namespace Custodial.Services.Building.Convertors
             {
                 {"isDeleted", BsonValue.Create(databaseObject.isDeleted)},
                 {"timeCreated", BsonValue.Create(databaseObject.timeCreated)},
-                {"organizationId", BsonValue.Create(databaseObject.organizationId)}
+                {"organizationId", BsonValue.Create(databaseObject.organizationId)},
+                {"buildingName", BsonValue.Create(databaseObject.buildingName)},
+                {"ammountOfFloors", BsonValue.Create(databaseObject.ammountOfFloors)},
+                {"floors", BsonValue.Create(new BsonDocumentWrapper(databaseObject.floors))},
+                {"buildingInventory", BsonValue.Create(new BsonDocumentWrapper(databaseObject.buildingInventory))},
+
             };
         }
     }

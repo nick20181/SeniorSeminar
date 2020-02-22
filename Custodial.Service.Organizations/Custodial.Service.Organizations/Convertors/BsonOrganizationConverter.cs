@@ -14,11 +14,12 @@ namespace Custodial.Service.Organizations.Convertors
             return new BsonDocument
             {
                 {"activeService", BsonValue.Create(databaseObject.activeService) },
-                {"organizationAddress", BsonValue.Create(databaseObject.organizationAddress)},
+                {"organizationLocations", BsonValue.Create(new BsonDocumentWrapper(databaseObject.organizationLocations))},
                 {"isDeleted", BsonValue.Create(databaseObject.isDeleted)},
                 {"organizationName", BsonValue.Create(databaseObject.organizationName) },
-                {"phoneNumber", BsonValue.Create(databaseObject.phoneNumber)},
-                {"timeCreated", BsonValue.Create(databaseObject.timeCreated)}
+                {"contactDetails", BsonValue.Create(new BsonDocumentWrapper(databaseObject.contactDetails))},
+                {"timeCreated", BsonValue.Create(databaseObject.timeCreated)},
+                {"employeeCount", BsonValue.Create(databaseObject.employeeCount)}
             };
         }
     }

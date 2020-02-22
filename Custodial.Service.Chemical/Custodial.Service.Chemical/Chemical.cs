@@ -28,7 +28,6 @@ namespace Custodial.Service.Chemical
         public ContactDetails saftyContactInformation { get; set; }
         public string chemicalWarning { get; set; }
         public bool disinfectant { get; set; }
-        public bool sanitizer { get; set; }
         public bool ventilationNeeded { get; set; }
         public ChemicalDetails usesAndPrep { get; set; }
 
@@ -78,7 +77,12 @@ namespace Custodial.Service.Chemical
                 timeCreated = timeCreated,
                 organizationId = organizationId,
                 chemicalName = chemicalName,
-                ventilationNeeded = ventilationNeeded
+                chemicalManufactor = chemicalManufactor,
+                saftyContactInformation = saftyContactInformation,
+                chemicalWarning = chemicalWarning,
+                disinfectant = disinfectant,
+                ventilationNeeded = ventilationNeeded,
+                usesAndPrep = usesAndPrep
             };
         }
     }

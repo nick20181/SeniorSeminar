@@ -17,7 +17,12 @@ namespace Custodial.Service.Chemical.Convertors
                 {"timeCreated", BsonValue.Create(databaseObject.timeCreated)},
                 {"organizationId", BsonValue.Create(databaseObject.organizationId)},
                 {"chemicalName", BsonValue.Create(databaseObject.chemicalName)},
-                {"ventilationNeeded", BsonValue.Create(databaseObject.ventilationNeeded)}
+                {"chemicalManufactor", BsonValue.Create(new BsonDocumentWrapper(databaseObject.chemicalManufactor))},
+                {"saftyContactInformation", BsonValue.Create(new BsonDocumentWrapper(databaseObject.saftyContactInformation))},
+                {"chemicalWarning", BsonValue.Create(databaseObject.chemicalWarning)},
+                {"disinfectant", BsonValue.Create(databaseObject.disinfectant)},
+                {"ventilationNeeded", BsonValue.Create(databaseObject.ventilationNeeded)},
+                {"usesAndPrep", BsonValue.Create(new BsonDocumentWrapper(databaseObject.usesAndPrep))}
             };
         }
     }

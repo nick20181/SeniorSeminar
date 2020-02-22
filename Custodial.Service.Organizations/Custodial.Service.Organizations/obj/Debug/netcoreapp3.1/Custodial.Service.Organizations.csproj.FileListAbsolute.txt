@@ -338,11 +338,12 @@ F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizatio
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.csprojAssemblyReference.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Service.Organizations.StaticWebAssets.Manifest.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.Service.Organizations.StaticWebAssets.xml
-F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.MvcApplicationPartsAssemblyInfo.cs
-F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.MvcApplicationPartsAssemblyInfo.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.AssemblyInfoInputs.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.AssemblyInfo.cs
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.RazorTargetAssemblyInfo.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.csproj.CopyComplete
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.dll
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.pdb
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\bin\Debug\netcoreapp3.1\Custodial.Services.Utility.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.MvcApplicationPartsAssemblyInfo.cs
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Organizations\Custodial.Service.Organizations\obj\Debug\netcoreapp3.1\Custodial.Service.Organizations.MvcApplicationPartsAssemblyInfo.cache

@@ -113,16 +113,16 @@ namespace Custodial.Service.Chemical.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<string> PutAsync([FromRoute] string orginalId, [FromBody] Chemical updatedService)
+        public async Task<string> PutAsync([FromRoute] string id, [FromBody] Chemical updatedService)
         {
-            foreach (var dataObject in await factory.ReadFilteredAsync("_id", orginalId))
+            foreach (var dataObject in await factory.ReadFilteredAsync("_id", id))
             {
-                if (dataObject.iD.Equals(orginalId))
+                if (dataObject.iD.Equals(id))
                 {
                     return (await dataObject.UpdateAsync(updatedService, database)).ToJson();
                 }
             }
-            return $"Could Not update data object with id: {orginalId}";
+            return $"Could Not update data object with id: {id}";
         }
     }
 }

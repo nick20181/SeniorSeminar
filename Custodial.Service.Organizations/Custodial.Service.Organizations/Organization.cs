@@ -1,4 +1,5 @@
 ﻿using Custodial.BoilerPlate.Core.Interfaces;
+using Custodial.Services.Utility;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
@@ -22,8 +23,9 @@ namespace Custodial.Service.Organizations
         public bool isDeleted { get; set; }
         public bool activeService { get; set; }
         public string organizationName { get; set; }
-        public string organizationAddress { get; set; }
-        public string phoneNumber { get; set; }
+        public Address[] organizationLocations{ get; set; }
+        public ContactDetails contactDetails { get; set; }
+        public int employeeCount { get; set; }
 
         public async Task<IDatabaseObject> DeleteAsync(IDatabase database = null)
         {
@@ -66,12 +68,13 @@ namespace Custodial.Service.Organizations
             return new Organization()
             {
                 activeService = activeService,
-                organizationAddress = organizationAddress,
+                organizationLocations = organizationLocations,
                 iD = iD,
                 isDeleted = isDeleted,
                 organizationName = organizationName,
-                phoneNumber = phoneNumber,
-                timeCreated = timeCreated
+                contactDetails = contactDetails,
+                timeCreated = timeCreated,
+                employeeCount = employeeCount
             };
         }
     }

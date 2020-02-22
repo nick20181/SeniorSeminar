@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj": {}
+    "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj": {
+    "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
+        "projectUniqueName": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
         "projectName": "Custodial.Services.Building",
-        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
-        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\obj\\",
+        "projectPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\Custodial.Services.Building.csproj",
+        "packagesPath": "C:\\Users\\nick2\\.nuget\\packages\\",
+        "outputPath": "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Custodial.Services.Building\\Custodial.Services.Building\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nick2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
+          "F:\\Classwork_Spring_Semester\\Seminar\\SeniorSeminar\\Nuget_Libary": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
