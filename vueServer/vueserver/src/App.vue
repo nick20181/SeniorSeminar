@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Test v-bind:orgList="orgList" v-bind:apiHandler="apiHandler" v-bind:serviceDict="serviceDict"></Test>
+    <Test :key="testComponetKey" v-bind:message="spiMessage" :from="spiMessage"></Test>
   </div>
 </template>
 
@@ -19,10 +19,25 @@ import { Organization } from './Custodial.Service.Organization/Organization';
   },
 })
 export default class App extends Vue {
-  private orgList!: string;
   public serviceDictionary: ServiceDictionary = new ServiceDictionary();
   public apiHandler: APIHandler = new APIHandler(this.serviceDictionary);
+  private spiMessage: string = "Hello";
+  private testComponetKey: number = 0;
+
   
+  mounted(){
+    this.forceRerender();
+  }
+
+  
+  beforeUpdate(){
+    this.spiMessage = "World";
+  }
+
+  async forceRerender(){
+    await new Promise( resolve => setTimeout(resolve, 5000) );
+    this.testComponetKey += 1;
+  }
 }
 </script>
 

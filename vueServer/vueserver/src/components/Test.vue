@@ -1,56 +1,40 @@
 <template>
   <div class="hello">
       <p>Test</p><ul id="demo">
-        <p>{{message}}</p>
-         {{mess}}
-      <h1>{{orgList}}</h1>
+        <p>Message: {{message}}</p>
 </ul>
   </div>
 </template>
 
 <script lang="ts">
+import VueCompositionApi from "@vue/composition-api";
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Organization } from '../Custodial.Service.Organization/Organization';
 import { APIHandler } from '../API Handler';
 import { ServiceDictionary } from '../ServiceDictionary';
 
+Vue.use(VueCompositionApi);
+import { useAsync, useFetch } from "vue-async-function";
+
 @Component
-export default class HelloWorld extends Vue {
-    @Prop() private orgList!: string;
-    @Prop() private apiHandler!: APIHandler;
-    @Prop() private serviceDict!: ServiceDictionary;
-    private message!: string;
-    private mess!: string;
-  async destroyed(){
-  }
+export default class Test extends Vue {
+    @Prop() private message!: string;
+    
+  destroyed(){}
 
-  async beforeDestroy(){
-      //https://xebia.com/blog/next-generation-async-functions-with-vue-async-function/
-  }
+  beforeDestroy(){}
 
-  async updated(){
-  }
+  updated(){}
 
-  async beforeUpdate(){
-  }
+  beforeUpdate(){}
 
-  async beforeCreate(){
-    await this.apiHandler.refreshServiceDictionary();
-    this.orgList = await this.apiHandler.getOrganizationList();
-  }
+  beforeCreate(){}
 
-  created(){
-    this.message = 'Org Service at: '+this.serviceDict.getCSO().settings.networkSettings.addresses[1] + ':' +this.serviceDict.getCSO().settings.networkSettings.ports[0]
-  }
+  created(){}
 
-  async beforeMounted(){
-    this.orgList = await this.apiHandler.getOrganizationList();
-  }
+  beforeMounted(){}
 
-  async mounted(){
-    this.mess = this.serviceDict.getCSO().serviceName;
-    this.message = 'Org Service at: '+this.serviceDict.getCSO().settings.networkSettings.addresses[1] + this.serviceDict.getCSO().settings.networkSettings.ports[0]
-  }
+  mounted(){}
 }
 </script>
 

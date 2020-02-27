@@ -6,7 +6,6 @@ export class APIHandler {
 
     constructor(serviceDictionary: ServiceDictionary){
         this.serviceDictionary = serviceDictionary;
-        this.refreshServiceDictionary();
     }
 
     async refreshServiceDictionary(){
