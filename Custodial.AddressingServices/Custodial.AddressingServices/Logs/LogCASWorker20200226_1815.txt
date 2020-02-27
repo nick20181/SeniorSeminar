@@ -1,0 +1,481 @@
+2020-02-26 18:15:24.318 -06:00 [INF] Worker Thread Created
+2020-02-26 18:15:24.325 -06:00 [INF] Checking services
+2020-02-26 18:15:26.543 -06:00 [INF] Checking {"timeCreated":1582690441942,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","10.154.3.119"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:15:26.543 -06:00 [INF] 1582762526543:1582690441942
+2020-02-26 18:15:26.543 -06:00 [INF] Custodial.Service.Organization is at 72084601 out of 15000
+2020-02-26 18:15:26.543 -06:00 [INF] Timed out
+2020-02-26 18:15:26.788 -06:00 [INF] 
+
+2020-02-26 18:15:41.790 -06:00 [INF] Checking services
+2020-02-26 18:15:56.952 -06:00 [INF] Checking services
+2020-02-26 18:15:56.982 -06:00 [INF] Checking {"timeCreated":1582762556367,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:15:56.982 -06:00 [INF] 1582762556982:1582762556367
+2020-02-26 18:15:56.982 -06:00 [INF] Custodial.Service.Organization is at 615 out of 15000
+2020-02-26 18:15:56.982 -06:00 [INF] 
+
+2020-02-26 18:16:12.089 -06:00 [INF] Checking services
+2020-02-26 18:16:12.119 -06:00 [INF] Checking {"timeCreated":1582762571796,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:16:12.119 -06:00 [INF] 1582762572119:1582762571796
+2020-02-26 18:16:12.119 -06:00 [INF] Custodial.Service.Organization is at 323 out of 15000
+2020-02-26 18:16:12.119 -06:00 [INF] 
+
+2020-02-26 18:16:27.159 -06:00 [INF] Checking services
+2020-02-26 18:16:27.189 -06:00 [INF] Checking {"timeCreated":1582762586719,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:16:27.189 -06:00 [INF] 1582762587189:1582762586719
+2020-02-26 18:16:27.189 -06:00 [INF] Custodial.Service.Organization is at 470 out of 15000
+2020-02-26 18:16:27.189 -06:00 [INF] 
+
+2020-02-26 18:16:42.463 -06:00 [INF] Checking services
+2020-02-26 18:16:42.492 -06:00 [INF] Checking {"timeCreated":1582762601968,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:16:42.492 -06:00 [INF] 1582762602492:1582762601968
+2020-02-26 18:16:42.492 -06:00 [INF] Custodial.Service.Organization is at 524 out of 15000
+2020-02-26 18:16:42.492 -06:00 [INF] 
+
+2020-02-26 18:16:57.759 -06:00 [INF] Checking services
+2020-02-26 18:16:57.789 -06:00 [INF] Checking {"timeCreated":1582762617514,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:16:57.789 -06:00 [INF] 1582762617789:1582762617514
+2020-02-26 18:16:57.789 -06:00 [INF] Custodial.Service.Organization is at 275 out of 15000
+2020-02-26 18:16:57.789 -06:00 [INF] 
+
+2020-02-26 18:17:13.080 -06:00 [INF] Checking services
+2020-02-26 18:17:13.108 -06:00 [INF] Checking {"timeCreated":1582762632603,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:17:13.109 -06:00 [INF] 1582762633108:1582762632603
+2020-02-26 18:17:13.109 -06:00 [INF] Custodial.Service.Organization is at 505 out of 15000
+2020-02-26 18:17:13.109 -06:00 [INF] 
+
+2020-02-26 18:17:28.372 -06:00 [INF] Checking services
+2020-02-26 18:17:28.401 -06:00 [INF] Checking {"timeCreated":1582762647990,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:17:28.401 -06:00 [INF] 1582762648401:1582762647990
+2020-02-26 18:17:28.401 -06:00 [INF] Custodial.Service.Organization is at 411 out of 15000
+2020-02-26 18:17:28.401 -06:00 [INF] 
+
+2020-02-26 18:17:43.599 -06:00 [INF] Checking services
+2020-02-26 18:17:43.630 -06:00 [INF] Checking {"timeCreated":1582762663173,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:17:43.630 -06:00 [INF] 1582762663630:1582762663173
+2020-02-26 18:17:43.630 -06:00 [INF] Custodial.Service.Organization is at 457 out of 15000
+2020-02-26 18:17:43.630 -06:00 [INF] 
+
+2020-02-26 18:17:58.761 -06:00 [INF] Checking services
+2020-02-26 18:17:58.790 -06:00 [INF] Checking {"timeCreated":1582762678383,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:17:58.790 -06:00 [INF] 1582762678790:1582762678383
+2020-02-26 18:17:58.790 -06:00 [INF] Custodial.Service.Organization is at 407 out of 15000
+2020-02-26 18:17:58.790 -06:00 [INF] 
+
+2020-02-26 18:18:14.096 -06:00 [INF] Checking services
+2020-02-26 18:18:14.125 -06:00 [INF] Checking {"timeCreated":1582762693840,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:18:14.125 -06:00 [INF] 1582762694125:1582762693840
+2020-02-26 18:18:14.125 -06:00 [INF] Custodial.Service.Organization is at 285 out of 15000
+2020-02-26 18:18:14.125 -06:00 [INF] 
+
+2020-02-26 18:18:29.782 -06:00 [INF] Checking services
+2020-02-26 18:18:29.811 -06:00 [INF] Checking {"timeCreated":1582762709475,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:18:29.811 -06:00 [INF] 1582762709811:1582762709475
+2020-02-26 18:18:29.811 -06:00 [INF] Custodial.Service.Organization is at 336 out of 15000
+2020-02-26 18:18:29.811 -06:00 [INF] 
+
+2020-02-26 18:18:44.954 -06:00 [INF] Checking services
+2020-02-26 18:18:44.983 -06:00 [INF] Checking {"timeCreated":1582762724430,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:18:44.984 -06:00 [INF] 1582762724983:1582762724430
+2020-02-26 18:18:44.984 -06:00 [INF] Custodial.Service.Organization is at 553 out of 15000
+2020-02-26 18:18:44.984 -06:00 [INF] 
+
+2020-02-26 18:18:59.991 -06:00 [INF] Checking services
+2020-02-26 18:19:00.026 -06:00 [INF] Checking {"timeCreated":1582762738517,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:19:00.026 -06:00 [INF] 1582762740026:1582762738517
+2020-02-26 18:19:00.026 -06:00 [INF] Custodial.Service.Organization is at 1509 out of 15000
+2020-02-26 18:19:00.026 -06:00 [INF] 
+
+2020-02-26 18:19:15.396 -06:00 [INF] Checking services
+2020-02-26 18:19:15.425 -06:00 [INF] Checking {"timeCreated":1582762755069,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:19:15.425 -06:00 [INF] 1582762755425:1582762755069
+2020-02-26 18:19:15.425 -06:00 [INF] Custodial.Service.Organization is at 356 out of 15000
+2020-02-26 18:19:15.425 -06:00 [INF] 
+
+2020-02-26 18:19:30.571 -06:00 [INF] Checking services
+2020-02-26 18:19:30.600 -06:00 [INF] Checking {"timeCreated":1582762770154,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:19:30.600 -06:00 [INF] 1582762770600:1582762770154
+2020-02-26 18:19:30.600 -06:00 [INF] Custodial.Service.Organization is at 446 out of 15000
+2020-02-26 18:19:30.600 -06:00 [INF] 
+
+2020-02-26 18:19:45.927 -06:00 [INF] Checking services
+2020-02-26 18:19:45.956 -06:00 [INF] Checking {"timeCreated":1582762785514,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:19:45.956 -06:00 [INF] 1582762785956:1582762785514
+2020-02-26 18:19:45.956 -06:00 [INF] Custodial.Service.Organization is at 442 out of 15000
+2020-02-26 18:19:45.956 -06:00 [INF] 
+
+2020-02-26 18:20:01.310 -06:00 [INF] Checking services
+2020-02-26 18:20:01.340 -06:00 [INF] Checking {"timeCreated":1582762800913,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:20:01.340 -06:00 [INF] 1582762801340:1582762800913
+2020-02-26 18:20:01.340 -06:00 [INF] Custodial.Service.Organization is at 427 out of 15000
+2020-02-26 18:20:01.340 -06:00 [INF] 
+
+2020-02-26 18:20:16.518 -06:00 [INF] Checking services
+2020-02-26 18:20:16.549 -06:00 [INF] Checking {"timeCreated":1582762816117,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:20:16.549 -06:00 [INF] 1582762816549:1582762816117
+2020-02-26 18:20:16.549 -06:00 [INF] Custodial.Service.Organization is at 432 out of 15000
+2020-02-26 18:20:16.549 -06:00 [INF] 
+
+2020-02-26 18:20:31.666 -06:00 [INF] Checking services
+2020-02-26 18:20:31.695 -06:00 [INF] Checking {"timeCreated":1582762831475,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:20:31.695 -06:00 [INF] 1582762831695:1582762831475
+2020-02-26 18:20:31.695 -06:00 [INF] Custodial.Service.Organization is at 220 out of 15000
+2020-02-26 18:20:31.695 -06:00 [INF] 
+
+2020-02-26 18:20:47.045 -06:00 [INF] Checking services
+2020-02-26 18:20:47.074 -06:00 [INF] Checking {"timeCreated":1582762846484,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:20:47.074 -06:00 [INF] 1582762847074:1582762846484
+2020-02-26 18:20:47.074 -06:00 [INF] Custodial.Service.Organization is at 590 out of 15000
+2020-02-26 18:20:47.074 -06:00 [INF] 
+
+2020-02-26 18:21:02.316 -06:00 [INF] Checking services
+2020-02-26 18:21:02.346 -06:00 [INF] Checking {"timeCreated":1582762862097,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:21:02.346 -06:00 [INF] 1582762862346:1582762862097
+2020-02-26 18:21:02.346 -06:00 [INF] Custodial.Service.Organization is at 249 out of 15000
+2020-02-26 18:21:02.346 -06:00 [INF] 
+
+2020-02-26 18:21:17.448 -06:00 [INF] Checking services
+2020-02-26 18:21:17.478 -06:00 [INF] Checking {"timeCreated":1582762877177,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:21:17.478 -06:00 [INF] 1582762877478:1582762877177
+2020-02-26 18:21:17.478 -06:00 [INF] Custodial.Service.Organization is at 301 out of 15000
+2020-02-26 18:21:17.478 -06:00 [INF] 
+
+2020-02-26 18:21:32.531 -06:00 [INF] Checking services
+2020-02-26 18:21:32.560 -06:00 [INF] Checking {"timeCreated":1582762892265,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:21:32.560 -06:00 [INF] 1582762892560:1582762892265
+2020-02-26 18:21:32.560 -06:00 [INF] Custodial.Service.Organization is at 295 out of 15000
+2020-02-26 18:21:32.560 -06:00 [INF] 
+
+2020-02-26 18:21:47.866 -06:00 [INF] Checking services
+2020-02-26 18:21:47.896 -06:00 [INF] Checking {"timeCreated":1582762907142,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:21:47.896 -06:00 [INF] 1582762907896:1582762907142
+2020-02-26 18:21:47.896 -06:00 [INF] Custodial.Service.Organization is at 754 out of 15000
+2020-02-26 18:21:47.896 -06:00 [INF] 
+
+2020-02-26 18:22:03.244 -06:00 [INF] Checking services
+2020-02-26 18:22:03.273 -06:00 [INF] Checking {"timeCreated":1582762922866,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:22:03.273 -06:00 [INF] 1582762923273:1582762922866
+2020-02-26 18:22:03.273 -06:00 [INF] Custodial.Service.Organization is at 407 out of 15000
+2020-02-26 18:22:03.273 -06:00 [INF] 
+
+2020-02-26 18:22:18.608 -06:00 [INF] Checking services
+2020-02-26 18:22:18.637 -06:00 [INF] Checking {"timeCreated":1582762938285,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:22:18.638 -06:00 [INF] 1582762938638:1582762938285
+2020-02-26 18:22:18.638 -06:00 [INF] Custodial.Service.Organization is at 353 out of 15000
+2020-02-26 18:22:18.638 -06:00 [INF] 
+
+2020-02-26 18:22:34.524 -06:00 [INF] Checking services
+2020-02-26 18:22:34.554 -06:00 [INF] Checking {"timeCreated":1582762954163,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:22:34.554 -06:00 [INF] 1582762954554:1582762954163
+2020-02-26 18:22:34.554 -06:00 [INF] Custodial.Service.Organization is at 391 out of 15000
+2020-02-26 18:22:34.554 -06:00 [INF] 
+
+2020-02-26 18:22:50.251 -06:00 [INF] Checking services
+2020-02-26 18:22:50.281 -06:00 [INF] Checking {"timeCreated":1582762970015,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:22:50.281 -06:00 [INF] 1582762970281:1582762970015
+2020-02-26 18:22:50.281 -06:00 [INF] Custodial.Service.Organization is at 266 out of 15000
+2020-02-26 18:22:50.281 -06:00 [INF] 
+
+2020-02-26 18:23:06.328 -06:00 [INF] Checking services
+2020-02-26 18:23:06.358 -06:00 [INF] Checking {"timeCreated":1582762985109,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:23:06.358 -06:00 [INF] 1582762986358:1582762985109
+2020-02-26 18:23:06.358 -06:00 [INF] Custodial.Service.Organization is at 1249 out of 15000
+2020-02-26 18:23:06.358 -06:00 [INF] 
+
+2020-02-26 18:23:22.706 -06:00 [INF] Checking services
+2020-02-26 18:23:22.734 -06:00 [INF] Checking {"timeCreated":1582763002252,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:23:22.734 -06:00 [INF] 1582763002734:1582763002252
+2020-02-26 18:23:22.734 -06:00 [INF] Custodial.Service.Organization is at 482 out of 15000
+2020-02-26 18:23:22.734 -06:00 [INF] 
+
+2020-02-26 18:23:38.047 -06:00 [INF] Checking services
+2020-02-26 18:23:38.077 -06:00 [INF] Checking {"timeCreated":1582763017615,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:23:38.077 -06:00 [INF] 1582763018077:1582763017615
+2020-02-26 18:23:38.077 -06:00 [INF] Custodial.Service.Organization is at 462 out of 15000
+2020-02-26 18:23:38.077 -06:00 [INF] 
+
+2020-02-26 18:23:53.377 -06:00 [INF] Checking services
+2020-02-26 18:23:53.406 -06:00 [INF] Checking {"timeCreated":1582763033083,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:23:53.406 -06:00 [INF] 1582763033406:1582763033083
+2020-02-26 18:23:53.406 -06:00 [INF] Custodial.Service.Organization is at 323 out of 15000
+2020-02-26 18:23:53.406 -06:00 [INF] 
+
+2020-02-26 18:24:08.746 -06:00 [INF] Checking services
+2020-02-26 18:24:08.775 -06:00 [INF] Checking {"timeCreated":1582763048407,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:24:08.775 -06:00 [INF] 1582763048775:1582763048407
+2020-02-26 18:24:08.775 -06:00 [INF] Custodial.Service.Organization is at 368 out of 15000
+2020-02-26 18:24:08.775 -06:00 [INF] 
+
+2020-02-26 18:24:24.095 -06:00 [INF] Checking services
+2020-02-26 18:24:24.125 -06:00 [INF] Checking {"timeCreated":1582763063831,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:24:24.125 -06:00 [INF] 1582763064125:1582763063831
+2020-02-26 18:24:24.125 -06:00 [INF] Custodial.Service.Organization is at 294 out of 15000
+2020-02-26 18:24:24.125 -06:00 [INF] 
+
+2020-02-26 18:24:39.492 -06:00 [INF] Checking services
+2020-02-26 18:24:39.521 -06:00 [INF] Checking {"timeCreated":1582763079148,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:24:39.521 -06:00 [INF] 1582763079521:1582763079148
+2020-02-26 18:24:39.521 -06:00 [INF] Custodial.Service.Organization is at 373 out of 15000
+2020-02-26 18:24:39.521 -06:00 [INF] 
+
+2020-02-26 18:24:54.878 -06:00 [INF] Checking services
+2020-02-26 18:24:54.908 -06:00 [INF] Checking {"timeCreated":1582763094519,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:24:54.908 -06:00 [INF] 1582763094908:1582763094519
+2020-02-26 18:24:54.908 -06:00 [INF] Custodial.Service.Organization is at 389 out of 15000
+2020-02-26 18:24:54.908 -06:00 [INF] 
+
+2020-02-26 18:25:10.255 -06:00 [INF] Checking services
+2020-02-26 18:25:10.285 -06:00 [INF] Checking {"timeCreated":1582763110058,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:25:10.285 -06:00 [INF] 1582763110285:1582763110058
+2020-02-26 18:25:10.285 -06:00 [INF] Custodial.Service.Organization is at 227 out of 15000
+2020-02-26 18:25:10.285 -06:00 [INF] 
+
+2020-02-26 18:25:25.315 -06:00 [INF] Checking services
+2020-02-26 18:25:25.344 -06:00 [INF] Checking {"timeCreated":1582763124999,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:25:25.344 -06:00 [INF] 1582763125344:1582763124999
+2020-02-26 18:25:25.344 -06:00 [INF] Custodial.Service.Organization is at 345 out of 15000
+2020-02-26 18:25:25.344 -06:00 [INF] 
+
+2020-02-26 18:25:40.796 -06:00 [INF] Checking services
+2020-02-26 18:25:40.829 -06:00 [INF] Checking {"timeCreated":1582763140309,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:25:40.829 -06:00 [INF] 1582763140829:1582763140309
+2020-02-26 18:25:40.829 -06:00 [INF] Custodial.Service.Organization is at 520 out of 15000
+2020-02-26 18:25:40.829 -06:00 [INF] 
+
+2020-02-26 18:25:56.072 -06:00 [INF] Checking services
+2020-02-26 18:25:56.101 -06:00 [INF] Checking {"timeCreated":1582763155773,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:25:56.101 -06:00 [INF] 1582763156101:1582763155773
+2020-02-26 18:25:56.101 -06:00 [INF] Custodial.Service.Organization is at 328 out of 15000
+2020-02-26 18:25:56.101 -06:00 [INF] 
+
+2020-02-26 18:26:11.371 -06:00 [INF] Checking services
+2020-02-26 18:26:11.400 -06:00 [INF] Checking {"timeCreated":1582763171085,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:26:11.400 -06:00 [INF] 1582763171400:1582763171085
+2020-02-26 18:26:11.400 -06:00 [INF] Custodial.Service.Organization is at 315 out of 15000
+2020-02-26 18:26:11.400 -06:00 [INF] 
+
+2020-02-26 18:26:26.740 -06:00 [INF] Checking services
+2020-02-26 18:26:26.769 -06:00 [INF] Checking {"timeCreated":1582763186379,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:26:26.769 -06:00 [INF] 1582763186769:1582763186379
+2020-02-26 18:26:26.769 -06:00 [INF] Custodial.Service.Organization is at 390 out of 15000
+2020-02-26 18:26:26.769 -06:00 [INF] 
+
+2020-02-26 18:26:42.095 -06:00 [INF] Checking services
+2020-02-26 18:26:42.124 -06:00 [INF] Checking {"timeCreated":1582763201870,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:26:42.124 -06:00 [INF] 1582763202124:1582763201870
+2020-02-26 18:26:42.124 -06:00 [INF] Custodial.Service.Organization is at 254 out of 15000
+2020-02-26 18:26:42.124 -06:00 [INF] 
+
+2020-02-26 18:26:57.499 -06:00 [INF] Checking services
+2020-02-26 18:26:57.529 -06:00 [INF] Checking {"timeCreated":1582763217302,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:26:57.529 -06:00 [INF] 1582763217529:1582763217302
+2020-02-26 18:26:57.529 -06:00 [INF] Custodial.Service.Organization is at 227 out of 15000
+2020-02-26 18:26:57.529 -06:00 [INF] 
+
+2020-02-26 18:27:12.859 -06:00 [INF] Checking services
+2020-02-26 18:27:12.888 -06:00 [INF] Checking {"timeCreated":1582763232553,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:27:12.888 -06:00 [INF] 1582763232888:1582763232553
+2020-02-26 18:27:12.888 -06:00 [INF] Custodial.Service.Organization is at 335 out of 15000
+2020-02-26 18:27:12.888 -06:00 [INF] 
+
+2020-02-26 18:27:28.213 -06:00 [INF] Checking services
+2020-02-26 18:27:28.242 -06:00 [INF] Checking {"timeCreated":1582763247857,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:27:28.242 -06:00 [INF] 1582763248242:1582763247857
+2020-02-26 18:27:28.242 -06:00 [INF] Custodial.Service.Organization is at 385 out of 15000
+2020-02-26 18:27:28.242 -06:00 [INF] 
+
+2020-02-26 18:27:43.569 -06:00 [INF] Checking services
+2020-02-26 18:27:43.598 -06:00 [INF] Checking {"timeCreated":1582763263152,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:27:43.598 -06:00 [INF] 1582763263598:1582763263152
+2020-02-26 18:27:43.598 -06:00 [INF] Custodial.Service.Organization is at 446 out of 15000
+2020-02-26 18:27:43.598 -06:00 [INF] 
+
+2020-02-26 18:27:59.554 -06:00 [INF] Checking services
+2020-02-26 18:27:59.584 -06:00 [INF] Checking {"timeCreated":1582763279170,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:27:59.584 -06:00 [INF] 1582763279584:1582763279170
+2020-02-26 18:27:59.584 -06:00 [INF] Custodial.Service.Organization is at 414 out of 15000
+2020-02-26 18:27:59.584 -06:00 [INF] 
+
+2020-02-26 18:28:14.917 -06:00 [INF] Checking services
+2020-02-26 18:28:14.946 -06:00 [INF] Checking {"timeCreated":1582763294670,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:28:14.946 -06:00 [INF] 1582763294946:1582763294670
+2020-02-26 18:28:14.946 -06:00 [INF] Custodial.Service.Organization is at 276 out of 15000
+2020-02-26 18:28:14.946 -06:00 [INF] 
+
+2020-02-26 18:28:30.292 -06:00 [INF] Checking services
+2020-02-26 18:28:30.321 -06:00 [INF] Checking {"timeCreated":1582763309810,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:28:30.321 -06:00 [INF] 1582763310321:1582763309810
+2020-02-26 18:28:30.321 -06:00 [INF] Custodial.Service.Organization is at 511 out of 15000
+2020-02-26 18:28:30.321 -06:00 [INF] 
+
+2020-02-26 18:28:45.655 -06:00 [INF] Checking services
+2020-02-26 18:28:45.685 -06:00 [INF] Checking {"timeCreated":1582763325199,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:28:45.685 -06:00 [INF] 1582763325685:1582763325199
+2020-02-26 18:28:45.685 -06:00 [INF] Custodial.Service.Organization is at 486 out of 15000
+2020-02-26 18:28:45.685 -06:00 [INF] 
+
+2020-02-26 18:29:00.992 -06:00 [INF] Checking services
+2020-02-26 18:29:01.022 -06:00 [INF] Checking {"timeCreated":1582763340503,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:29:01.022 -06:00 [INF] 1582763341022:1582763340503
+2020-02-26 18:29:01.022 -06:00 [INF] Custodial.Service.Organization is at 519 out of 15000
+2020-02-26 18:29:01.022 -06:00 [INF] 
+
+2020-02-26 18:29:17.150 -06:00 [INF] Checking services
+2020-02-26 18:29:17.181 -06:00 [INF] Checking {"timeCreated":1582763356676,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:29:17.181 -06:00 [INF] 1582763357181:1582763356676
+2020-02-26 18:29:17.181 -06:00 [INF] Custodial.Service.Organization is at 505 out of 15000
+2020-02-26 18:29:17.181 -06:00 [INF] 
+
+2020-02-26 18:29:32.939 -06:00 [INF] Checking services
+2020-02-26 18:29:32.968 -06:00 [INF] Checking {"timeCreated":1582763372529,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:29:32.968 -06:00 [INF] 1582763372968:1582763372529
+2020-02-26 18:29:32.968 -06:00 [INF] Custodial.Service.Organization is at 439 out of 15000
+2020-02-26 18:29:32.968 -06:00 [INF] 
+
+2020-02-26 18:29:48.314 -06:00 [INF] Checking services
+2020-02-26 18:29:49.095 -06:00 [INF] Checking {"timeCreated":1582763387741,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:29:49.095 -06:00 [INF] 1582763389095:1582763387741
+2020-02-26 18:29:49.096 -06:00 [INF] Custodial.Service.Organization is at 1354 out of 15000
+2020-02-26 18:29:49.096 -06:00 [INF] 
+
+2020-02-26 18:30:05.191 -06:00 [INF] Checking services
+2020-02-26 18:30:05.220 -06:00 [INF] Checking {"timeCreated":1582763404689,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:30:05.220 -06:00 [INF] 1582763405220:1582763404689
+2020-02-26 18:30:05.220 -06:00 [INF] Custodial.Service.Organization is at 531 out of 15000
+2020-02-26 18:30:05.220 -06:00 [INF] 
+
+2020-02-26 18:30:20.745 -06:00 [INF] Checking services
+2020-02-26 18:30:20.774 -06:00 [INF] Checking {"timeCreated":1582763420398,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:30:20.774 -06:00 [INF] 1582763420774:1582763420398
+2020-02-26 18:30:20.774 -06:00 [INF] Custodial.Service.Organization is at 376 out of 15000
+2020-02-26 18:30:20.774 -06:00 [INF] 
+
+2020-02-26 18:30:37.586 -06:00 [INF] Checking services
+2020-02-26 18:30:37.618 -06:00 [INF] Checking {"timeCreated":1582763437270,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:30:37.618 -06:00 [INF] 1582763437618:1582763437270
+2020-02-26 18:30:37.618 -06:00 [INF] Custodial.Service.Organization is at 348 out of 15000
+2020-02-26 18:30:37.618 -06:00 [INF] 
+
+2020-02-26 18:30:54.175 -06:00 [INF] Checking services
+2020-02-26 18:30:54.205 -06:00 [INF] Checking {"timeCreated":1582763453889,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:30:54.205 -06:00 [INF] 1582763454205:1582763453889
+2020-02-26 18:30:54.205 -06:00 [INF] Custodial.Service.Organization is at 316 out of 15000
+2020-02-26 18:30:54.205 -06:00 [INF] 
+
+2020-02-26 18:31:09.755 -06:00 [INF] Checking services
+2020-02-26 18:31:09.796 -06:00 [INF] Checking {"timeCreated":1582763469513,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:31:09.796 -06:00 [INF] 1582763469796:1582763469513
+2020-02-26 18:31:09.796 -06:00 [INF] Custodial.Service.Organization is at 283 out of 15000
+2020-02-26 18:31:09.796 -06:00 [INF] 
+
+2020-02-26 18:31:26.685 -06:00 [INF] Checking services
+2020-02-26 18:31:26.715 -06:00 [INF] Checking {"timeCreated":1582763485532,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:31:26.715 -06:00 [INF] 1582763486715:1582763485532
+2020-02-26 18:31:26.715 -06:00 [INF] Custodial.Service.Organization is at 1183 out of 15000
+2020-02-26 18:31:26.715 -06:00 [INF] 
+
+2020-02-26 18:31:44.055 -06:00 [INF] Checking services
+2020-02-26 18:31:44.085 -06:00 [INF] Checking {"timeCreated":1582763503861,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:31:44.085 -06:00 [INF] 1582763504085:1582763503861
+2020-02-26 18:31:44.085 -06:00 [INF] Custodial.Service.Organization is at 224 out of 15000
+2020-02-26 18:31:44.085 -06:00 [INF] 
+
+2020-02-26 18:31:59.482 -06:00 [INF] Checking services
+2020-02-26 18:31:59.512 -06:00 [INF] Checking {"timeCreated":1582763519257,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:31:59.512 -06:00 [INF] 1582763519512:1582763519257
+2020-02-26 18:31:59.512 -06:00 [INF] Custodial.Service.Organization is at 255 out of 15000
+2020-02-26 18:31:59.512 -06:00 [INF] 
+
+2020-02-26 18:32:16.175 -06:00 [INF] Checking services
+2020-02-26 18:32:16.203 -06:00 [INF] Checking {"timeCreated":1582763535766,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:32:16.203 -06:00 [INF] 1582763536203:1582763535766
+2020-02-26 18:32:16.203 -06:00 [INF] Custodial.Service.Organization is at 437 out of 15000
+2020-02-26 18:32:16.203 -06:00 [INF] 
+
+2020-02-26 18:32:31.778 -06:00 [INF] Checking services
+2020-02-26 18:32:31.807 -06:00 [INF] Checking {"timeCreated":1582763551434,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:32:31.807 -06:00 [INF] 1582763551807:1582763551434
+2020-02-26 18:32:31.807 -06:00 [INF] Custodial.Service.Organization is at 373 out of 15000
+2020-02-26 18:32:31.807 -06:00 [INF] 
+
+2020-02-26 18:32:46.926 -06:00 [INF] Checking services
+2020-02-26 18:32:46.955 -06:00 [INF] Checking {"timeCreated":1582763566454,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:32:46.955 -06:00 [INF] 1582763566955:1582763566454
+2020-02-26 18:32:46.955 -06:00 [INF] Custodial.Service.Organization is at 501 out of 15000
+2020-02-26 18:32:46.955 -06:00 [INF] 
+
+2020-02-26 18:33:03.615 -06:00 [INF] Checking services
+2020-02-26 18:33:03.643 -06:00 [INF] Checking {"timeCreated":1582763583329,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:33:03.643 -06:00 [INF] 1582763583643:1582763583329
+2020-02-26 18:33:03.644 -06:00 [INF] Custodial.Service.Organization is at 314 out of 15000
+2020-02-26 18:33:03.644 -06:00 [INF] 
+
+2020-02-26 18:33:18.975 -06:00 [INF] Checking services
+2020-02-26 18:33:19.004 -06:00 [INF] Checking {"timeCreated":1582763598625,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:33:19.004 -06:00 [INF] 1582763599004:1582763598625
+2020-02-26 18:33:19.004 -06:00 [INF] Custodial.Service.Organization is at 379 out of 15000
+2020-02-26 18:33:19.004 -06:00 [INF] 
+
+2020-02-26 18:33:34.057 -06:00 [INF] Checking services
+2020-02-26 18:33:34.086 -06:00 [INF] Checking {"timeCreated":1582763613713,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:33:34.086 -06:00 [INF] 1582763614086:1582763613713
+2020-02-26 18:33:34.086 -06:00 [INF] Custodial.Service.Organization is at 373 out of 15000
+2020-02-26 18:33:34.086 -06:00 [INF] 
+
+2020-02-26 18:33:49.411 -06:00 [INF] Checking services
+2020-02-26 18:33:49.440 -06:00 [INF] Checking {"timeCreated":1582763629056,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:33:49.440 -06:00 [INF] 1582763629440:1582763629056
+2020-02-26 18:33:49.440 -06:00 [INF] Custodial.Service.Organization is at 384 out of 15000
+2020-02-26 18:33:49.440 -06:00 [INF] 
+
+2020-02-26 18:34:04.693 -06:00 [INF] Checking services
+2020-02-26 18:34:04.723 -06:00 [INF] Checking {"timeCreated":1582763644488,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:34:04.723 -06:00 [INF] 1582763644723:1582763644488
+2020-02-26 18:34:04.723 -06:00 [INF] Custodial.Service.Organization is at 235 out of 15000
+2020-02-26 18:34:04.723 -06:00 [INF] 
+
+2020-02-26 18:34:19.938 -06:00 [INF] Checking services
+2020-02-26 18:34:19.967 -06:00 [INF] Checking {"timeCreated":1582763659519,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:34:19.968 -06:00 [INF] 1582763659968:1582763659519
+2020-02-26 18:34:19.968 -06:00 [INF] Custodial.Service.Organization is at 449 out of 15000
+2020-02-26 18:34:19.968 -06:00 [INF] 
+
+2020-02-26 18:34:35.287 -06:00 [INF] Checking services
+2020-02-26 18:34:35.317 -06:00 [INF] Checking {"timeCreated":1582763675075,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:34:35.317 -06:00 [INF] 1582763675317:1582763675075
+2020-02-26 18:34:35.317 -06:00 [INF] Custodial.Service.Organization is at 242 out of 15000
+2020-02-26 18:34:35.317 -06:00 [INF] 
+
+2020-02-26 18:34:50.644 -06:00 [INF] Checking services
+2020-02-26 18:34:50.673 -06:00 [INF] Checking {"timeCreated":1582763690237,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:34:50.673 -06:00 [INF] 1582763690673:1582763690237
+2020-02-26 18:34:50.673 -06:00 [INF] Custodial.Service.Organization is at 436 out of 15000
+2020-02-26 18:34:50.673 -06:00 [INF] 
+
+2020-02-26 18:35:06.020 -06:00 [INF] Checking services
+2020-02-26 18:35:06.050 -06:00 [INF] Checking {"timeCreated":1582763705646,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:35:06.050 -06:00 [INF] 1582763706050:1582763705646
+2020-02-26 18:35:06.050 -06:00 [INF] Custodial.Service.Organization is at 404 out of 15000
+2020-02-26 18:35:06.050 -06:00 [INF] 
+
+2020-02-26 18:35:21.430 -06:00 [INF] Checking services
+2020-02-26 18:35:21.459 -06:00 [INF] Checking {"timeCreated":1582763721100,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:35:21.459 -06:00 [INF] 1582763721459:1582763721100
+2020-02-26 18:35:21.459 -06:00 [INF] Custodial.Service.Organization is at 359 out of 15000
+2020-02-26 18:35:21.459 -06:00 [INF] 
+
+2020-02-26 18:35:36.616 -06:00 [INF] Checking services
+2020-02-26 18:35:36.645 -06:00 [INF] Checking {"timeCreated":1582763736194,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:35:36.645 -06:00 [INF] 1582763736645:1582763736194
+2020-02-26 18:35:36.645 -06:00 [INF] Custodial.Service.Organization is at 451 out of 15000
+2020-02-26 18:35:36.645 -06:00 [INF] 
+
+2020-02-26 18:40:35.037 -06:00 [INF] Checking services
+2020-02-26 18:40:38.569 -06:00 [INF] Checking {"timeCreated":1582763739826,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-02-26 18:40:38.570 -06:00 [INF] 1582764038570:1582763739826
+2020-02-26 18:40:38.570 -06:00 [INF] Custodial.Service.Organization is at 298744 out of 15000
+2020-02-26 18:40:38.571 -06:00 [INF] Timed out
+2020-02-26 18:40:44.735 -06:00 [INF] 
+
+2020-02-26 18:40:59.741 -06:00 [INF] Checking services
+2020-02-26 18:41:14.941 -06:00 [INF] Checking services
+2020-02-26 18:41:38.400 -06:00 [INF] Checking services
