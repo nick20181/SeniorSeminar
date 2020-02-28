@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <Test :key="testComponetKey" v-bind:message="spiMessage" :from="spiMessage"></Test>
+    <div v-if="orgUpdated === true">
+      <Test :key="testComponetKey" v-bind:org="org"></Test>
+    </div>
+    <div v-else>
+      <h1>Loading...</h1>
+    </div>
+    {{msg}}
   </div>
 </template>
 
@@ -11,7 +17,8 @@ import { APIHandler } from './API Handler';
 import { ServiceDictionary } from './ServiceDictionary';
 import { Microservice } from './Custodial.Addressing.Service/Microservice';
 import { Organization } from './Custodial.Service.Organization/Organization';
-
+import { Address } from './Custodial.Service.Utility/Address';
+import { ContactDetails } from './Custodial.Service.Utility/ContactDetails';
 
 @Component({
   components: {
@@ -20,22 +27,31 @@ import { Organization } from './Custodial.Service.Organization/Organization';
 })
 export default class App extends Vue {
   public serviceDictionary: ServiceDictionary = new ServiceDictionary();
-  public apiHandler: APIHandler = new APIHandler(this.serviceDictionary);
+  public apiHandler!: APIHandler;
   private spiMessage: string = "Hello";
   private testComponetKey: number = 0;
+  private orgUpdated: boolean = false;
+  private org!: Organization;
+  private msg!: string;
 
-  
-  mounted(){
-    this.forceRerender();
+  async created(){
+    this.apiHandler = new APIHandler(this.serviceDictionary);
+    this.msg = "Last: " + this.apiHandler.lastError;
   }
 
-  
-  beforeUpdate(){
-    this.spiMessage = "World";
+  async mounted(){
+    //var loca: Address[] = [new Address(1,1,"city", 1111, "street", false)];
+    //var contact: ContactDetails[] = [new ContactDetails("emal", "number")];
+    //this.org = new Organization(0, "id", false, true, "orgName", loca, contact, 1);
+    var response!: string;
+    response = await this.apiHandler.getOrganizationList();
+    var orgList: Organization[] = JSON.parse(response)
+    this.org = orgList[0];
+    this.forceRerender();
+    this.orgUpdated = true;
   }
 
   async forceRerender(){
-    await new Promise( resolve => setTimeout(resolve, 5000) );
     this.testComponetKey += 1;
   }
 }

@@ -1,14 +1,17 @@
 import { ServiceDictionary } from "./ServiceDictionary";
 import { Microservice } from "./Custodial.Addressing.Service/Microservice";
+import fs from 'fs';
 export class APIHandler {
     public serviceDictionary : ServiceDictionary;
     public rp = require('request-promise-native');
+    public lastError: string = "No Error";
 
     constructor(serviceDictionary: ServiceDictionary){
         this.serviceDictionary = serviceDictionary;
     }
 
     async refreshServiceDictionary(){
+    try{
         const options = {
             uri: this.serviceDictionary.CustodiualAddressingServicesURI + "/all",
             method: 'Get',
@@ -22,15 +25,17 @@ export class APIHandler {
                 response = body;
             })
             .catch((err: { toString: () => string; }) => {
-                console.log(err);
-                response = "Error: " + err.toString();
+                this.lastError = "Error: " + err.toString();
             });
         let res : Microservice[] = JSON.parse(response);
         res.forEach((ms) => {
             if(ms.shortName == this.serviceDictionary.getCSO().shortName){
                 this.serviceDictionary.setCSO(ms);
             }
-        });  
+        });
+    } catch(error){
+        this.lastError = error;
+    }
     }
  
     getCSOService() : Microservice {
@@ -39,6 +44,7 @@ export class APIHandler {
     }
 
     async getOrganizationList(): Promise<string>{
+    try{
         const options = {
             uri: "http://" + this.serviceDictionary.getCSO().settings.networkSettings.addresses[1] + ":" + 
             this.serviceDictionary.getCSO().settings.networkSettings.ports[0] + "/organization/all",
@@ -57,6 +63,10 @@ export class APIHandler {
                 response = "Error: " + err.toString();
             });
         return response;
+    }catch(error){
+        this.lastError = error;
+        return error;
+    }
     }
 
 }

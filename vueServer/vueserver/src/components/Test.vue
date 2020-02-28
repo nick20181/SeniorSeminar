@@ -2,6 +2,7 @@
   <div class="hello">
       <p>Test</p><ul id="demo">
         <p>Message: {{message}}</p>
+        <p>{{org.organizationName}}</p>
 </ul>
   </div>
 </template>
@@ -10,8 +11,6 @@
 import VueCompositionApi from "@vue/composition-api";
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Organization } from '../Custodial.Service.Organization/Organization';
-import { APIHandler } from '../API Handler';
-import { ServiceDictionary } from '../ServiceDictionary';
 
 Vue.use(VueCompositionApi);
 import { useAsync, useFetch } from "vue-async-function";
@@ -19,6 +18,7 @@ import { useAsync, useFetch } from "vue-async-function";
 @Component
 export default class Test extends Vue {
     @Prop() private message!: string;
+    @Prop() private org!: Organization;
     
   destroyed(){}
 
