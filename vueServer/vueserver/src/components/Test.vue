@@ -1,8 +1,12 @@
 <template>
-  <div class="hello">
+  <div class="test">
       <p>Test</p><ul id="demo">
-        <p>Message: {{message}}</p>
-        <p>{{org.organizationName}}</p>
+        <div v-if="message === undefined">
+          <h1>Loading...</h1>
+        </div>
+        <div v-else>
+          <h1>{{message}}</h1>
+        </div>
 </ul>
   </div>
 </template>
@@ -11,6 +15,7 @@
 import VueCompositionApi from "@vue/composition-api";
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Organization } from '../Custodial.Service.Organization/Organization';
+import axios from 'axios'
 
 Vue.use(VueCompositionApi);
 import { useAsync, useFetch } from "vue-async-function";
@@ -18,7 +23,6 @@ import { useAsync, useFetch } from "vue-async-function";
 @Component
 export default class Test extends Vue {
     @Prop() private message!: string;
-    @Prop() private org!: Organization;
     
   destroyed(){}
 
@@ -34,7 +38,8 @@ export default class Test extends Vue {
 
   beforeMounted(){}
 
-  mounted(){}
+  mounted(){
+  }
 }
 </script>
 

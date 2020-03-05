@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="orgUpdated === true">
-      <Test :key="testComponetKey" v-bind:org="org"></Test>
-    </div>
-    <div v-else>
-      <h1>Loading...</h1>
-    </div>
-    {{msg}}
+    <test :key='testComponetKey' :message='msg'> </test>
   </div>
 </template>
 
@@ -19,7 +13,7 @@ import { Microservice } from './Custodial.Addressing.Service/Microservice';
 import { Organization } from './Custodial.Service.Organization/Organization';
 import { Address } from './Custodial.Service.Utility/Address';
 import { ContactDetails } from './Custodial.Service.Utility/ContactDetails';
-
+import axios, { AxiosInstance } from 'axios';
 @Component({
   components: {
     Test,
@@ -33,22 +27,40 @@ export default class App extends Vue {
   private orgUpdated: boolean = false;
   private org!: Organization;
   private msg!: string;
+  private instance!: AxiosInstance;
 
-  async created(){
+  beforeCreate() {
+    this.instance = axios.create({
+      baseURL: 'http://localhost:5000/Addressing',
+      timeout: 10000,
+      headers: {"Content-Type": "application/json"}
+    });
     this.apiHandler = new APIHandler(this.serviceDictionary);
-    this.msg = "Last: " + this.apiHandler.lastError;
   }
 
-  async mounted(){
+  created(){ 
+  }
+//https://www.telerik.com/fiddler
+  beforeMount(){
+  }
+
+  mounted(){
+    this.instance.get('/all').then(res => {
+      this.msg = res.data;
+      this.forceRerender();
+    }).catch(e => {
+      this.msg = e+ ": "+e.message;
+      this.forceRerender();
+    })
     //var loca: Address[] = [new Address(1,1,"city", 1111, "street", false)];
     //var contact: ContactDetails[] = [new ContactDetails("emal", "number")];
     //this.org = new Organization(0, "id", false, true, "orgName", loca, contact, 1);
-    var response!: string;
-    response = await this.apiHandler.getOrganizationList();
-    var orgList: Organization[] = JSON.parse(response)
-    this.org = orgList[0];
-    this.forceRerender();
-    this.orgUpdated = true;
+    //var response!: string;
+    //response = await this.apiHandler.getOrganizationList();
+    //var orgList: Organization[] = JSON.parse(response)
+    //this.org = orgList[0];
+    //this.forceRerender();
+    //this.orgUpdated = true;
   }
 
   async forceRerender(){

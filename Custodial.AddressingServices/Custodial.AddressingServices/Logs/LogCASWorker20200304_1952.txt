@@ -1,0 +1,51 @@
+2020-03-04 19:52:19.339 -06:00 [INF] Worker Thread Created
+2020-03-04 19:52:19.400 -06:00 [INF] Checking services
+2020-03-04 19:52:21.970 -06:00 [INF] Checking {"timeCreated":1583373128737,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-03-04 19:52:21.971 -06:00 [INF] 1583373141971:1583373128737
+2020-03-04 19:52:21.971 -06:00 [INF] Custodial.Service.Organization is at 13234 out of 15000
+2020-03-04 19:52:21.971 -06:00 [INF] 
+
+2020-03-04 19:52:36.974 -06:00 [INF] Checking services
+2020-03-04 19:52:37.022 -06:00 [INF] Checking {"timeCreated":1583373128737,"iD":"5e49ffb76ec3c469dcacbefc","isDeleted":false,"serviceName":"Custodial.Service.Organization","settings":{"networkSettings":{"addresses":["","localhost","192.168.56.1","10.100.128.135"],"ports":["5001"]},"databaseSettings":{"connectionString":"mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority","typeOfDatabase":1,"database":"Custodial","collection":"TestingOrganization"},"casSettings":{"address":"localhost","port":"5000"}},"discription":"Tracks Indiviual Organizational Data","shortName":"C.S.O"}
+2020-03-04 19:52:37.023 -06:00 [INF] 1583373157023:1583373128737
+2020-03-04 19:52:37.024 -06:00 [INF] Custodial.Service.Organization is at 28286 out of 15000
+2020-03-04 19:52:37.024 -06:00 [INF] Timed out
+2020-03-04 19:52:37.259 -06:00 [INF] 
+
+2020-03-04 19:52:52.264 -06:00 [INF] Checking services
+2020-03-04 19:53:07.296 -06:00 [INF] Checking services
+2020-03-04 19:53:22.333 -06:00 [INF] Checking services
+2020-03-04 19:53:37.376 -06:00 [INF] Checking services
+2020-03-04 19:53:52.413 -06:00 [INF] Checking services
+2020-03-04 19:54:07.478 -06:00 [INF] Checking services
+2020-03-04 19:54:22.511 -06:00 [INF] Checking services
+2020-03-04 19:54:37.556 -06:00 [INF] Checking services
+2020-03-04 19:54:52.601 -06:00 [INF] Checking services
+2020-03-04 19:55:07.636 -06:00 [INF] Checking services
+2020-03-04 19:55:22.747 -06:00 [INF] Checking services
+2020-03-04 19:55:37.781 -06:00 [INF] Checking services
+2020-03-04 19:55:52.825 -06:00 [INF] Checking services
+2020-03-04 19:56:07.855 -06:00 [INF] Checking services
+2020-03-04 19:56:22.887 -06:00 [INF] Checking services
+2020-03-04 19:56:37.921 -06:00 [INF] Checking services
+2020-03-04 19:56:52.957 -06:00 [INF] Checking services
+2020-03-04 19:57:07.993 -06:00 [INF] Checking services
+2020-03-04 19:57:23.028 -06:00 [INF] Checking services
+2020-03-04 19:57:38.064 -06:00 [INF] Checking services
+2020-03-04 19:57:53.102 -06:00 [INF] Checking services
+2020-03-04 19:58:08.147 -06:00 [INF] Checking services
+2020-03-04 19:58:23.191 -06:00 [INF] Checking services
+2020-03-04 19:58:38.230 -06:00 [INF] Checking services
+2020-03-04 19:58:53.270 -06:00 [INF] Checking services
+2020-03-04 19:59:08.303 -06:00 [INF] Checking services
+2020-03-04 19:59:23.344 -06:00 [INF] Checking services
+2020-03-04 19:59:38.375 -06:00 [INF] Checking services
+2020-03-04 19:59:53.408 -06:00 [INF] Checking services
+2020-03-04 20:00:08.444 -06:00 [INF] Checking services
+2020-03-04 20:00:23.482 -06:00 [INF] Checking services
+2020-03-04 20:00:38.516 -06:00 [INF] Checking services
+2020-03-04 20:00:53.558 -06:00 [INF] Checking services
+2020-03-04 20:01:08.594 -06:00 [INF] Checking services
+2020-03-04 20:01:23.634 -06:00 [INF] Checking services
+2020-03-04 20:01:38.667 -06:00 [INF] Checking services
+2020-03-04 20:01:53.699 -06:00 [INF] Checking services
