@@ -220,8 +220,6 @@ F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.csprojAssemblyReference.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.AddressingServices.StaticWebAssets.Manifest.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\staticwebassets\Custodial.AddressingServices.StaticWebAssets.xml
-F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.MvcApplicationPartsAssemblyInfo.cs
-F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.MvcApplicationPartsAssemblyInfo.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.AssemblyInfoInputs.cache
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.AssemblyInfo.cs
 F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.RazorTargetAssemblyInfo.cache
@@ -248,3 +246,5 @@ C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServic
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\Nicholas.bohm\Documents\GitHub\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.MvcApplicationPartsAssemblyInfo.cs
+F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.AddressingServices\Custodial.AddressingServices\obj\Debug\netcoreapp3.1\Custodial.AddressingServices.MvcApplicationPartsAssemblyInfo.cache

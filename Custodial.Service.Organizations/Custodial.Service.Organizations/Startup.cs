@@ -1,15 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Net.Http.Headers;
 
-namespace Custodial.Service.Organizations
+namespace Custodial.AddressingServices
 {
     public class Startup
     {
@@ -25,7 +21,11 @@ namespace Custodial.Service.Organizations
         {
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllers();
-
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
+            services.AddRouting(r => r.SuppressCheckForUnhandledSecurityMetadata = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +35,14 @@ namespace Custodial.Service.Organizations
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(options => options.AllowAnyOrigin());
+
+            app.Use((context, next) =>
+            {
+                context.Items["__CorsMiddlewareInvoked"] = true;
+                return next();
+            });
 
             app.UseRouting();
 

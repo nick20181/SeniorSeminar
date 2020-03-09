@@ -14,6 +14,7 @@ namespace Custodial.Service.Organizations.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowOrigin")]
     public class OrganizationController : ControllerBase
     {
         public IDatabase database { get; set; }

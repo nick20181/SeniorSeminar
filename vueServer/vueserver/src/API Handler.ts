@@ -1,6 +1,5 @@
 import { ServiceDictionary } from "./ServiceDictionary";
 import { Microservice } from "./Custodial.Addressing.Service/Microservice";
-import fs from 'fs';
 export class APIHandler {
     public serviceDictionary : ServiceDictionary;
     public rp = require('request-promise-native');

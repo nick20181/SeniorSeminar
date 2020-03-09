@@ -14,6 +14,7 @@ namespace Custodial.Service.Chemical.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowOrigin")]
     public class ChemicalController : Controller
     {
         public IDatabase database { get; set; }

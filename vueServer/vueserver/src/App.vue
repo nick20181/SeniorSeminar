@@ -48,8 +48,8 @@ export default class App extends Vue {
     this.instance.get('/all').then(res => {
       this.msg = res.data;
       this.forceRerender();
-    }).catch(e => {
-      this.msg = e+ ": "+e.message;
+    }).catch(e => { 
+      this.msg = e+ ": " ;
       this.forceRerender();
     })
     //var loca: Address[] = [new Address(1,1,"city", 1111, "street", false)];

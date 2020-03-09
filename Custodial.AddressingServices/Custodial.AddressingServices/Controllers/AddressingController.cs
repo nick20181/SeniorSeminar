@@ -8,11 +8,13 @@ using Custodial.BoilerPlate.Core;
 using Custodial.BoilerPlate.Core.Database;
 using Custodial.BoilerPlate.Core.Service_Settings;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Cors;
 
 namespace Custodial.AddressingServices.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowOrigin")]
     public class AddressingController : ControllerBase
     {
         public IDatabase database { get; set; }
@@ -52,7 +54,7 @@ namespace Custodial.AddressingServices.Controllers
             string toReturn = "";
             foreach (Microservice ms in await factory.ReadAllAsync())
             {
-                toReturn = JsonConvert.SerializeObject(await factory.ReadAllAsync());
+                toReturn = JsonConvert.SerializeObjects(await factory.ReadAllAsync());
             }
             if (String.IsNullOrEmpty(toReturn))
             {

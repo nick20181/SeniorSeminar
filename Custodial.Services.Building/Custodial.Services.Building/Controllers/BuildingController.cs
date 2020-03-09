@@ -14,6 +14,7 @@ namespace Custodial.Services.Building.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowOrigin")]
     public class BuildingController : Controller
     {
         public IDatabase database { get; set; }
