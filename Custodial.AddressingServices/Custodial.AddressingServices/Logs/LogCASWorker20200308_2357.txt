@@ -1,5 +1,0 @@
-2020-03-08 23:57:25.217 -05:00 [INF] Worker Thread Created
-2020-03-08 23:57:25.237 -05:00 [INF] Checking services
-2020-03-08 23:57:40.625 -05:00 [INF] Checking services
-2020-03-08 23:57:55.630 -05:00 [INF] Checking services
-2020-03-08 23:58:10.634 -05:00 [INF] Checking services

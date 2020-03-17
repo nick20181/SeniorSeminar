@@ -54,7 +54,7 @@ namespace Custodial.AddressingServices.Controllers
             string toReturn = "";
             foreach (Microservice ms in await factory.ReadAllAsync())
             {
-                toReturn = JsonConvert.SerializeObjects(await factory.ReadAllAsync());
+                toReturn = JsonConvert.SerializeObject(await factory.ReadAllAsync());
             }
             if (String.IsNullOrEmpty(toReturn))
             {

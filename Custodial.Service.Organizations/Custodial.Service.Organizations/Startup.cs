@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
 
-namespace Custodial.AddressingServices
+namespace Custodial.Service.Organizations
 {
     public class Startup
     {

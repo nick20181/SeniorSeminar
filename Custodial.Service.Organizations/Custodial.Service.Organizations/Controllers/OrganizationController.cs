@@ -7,6 +7,7 @@ using Custodial.BoilerPlate.Core.Database;
 using Custodial.BoilerPlate.Core.Interfaces;
 using Custodial.BoilerPlate.Core.Service_Settings;
 using Custodial.Service.Organizations.Convertors;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

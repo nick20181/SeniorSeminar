@@ -4,7 +4,8 @@
     "addresses": [ "" ]
   },
   "databaseSettings": {
-    "connectionString": "mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority",
+    //"connectionString": "mongodb+srv://SeminarAcess:Seminar@201cluster-xycli.mongodb.net/test?retryWrites=true&w=majority",
+    "connectionString": "mongodb://localhost:27017",
     "database": "Custodial",
     "collection": "TestingOrganization",
     "typeOfDatabase": "MongoDatabase"

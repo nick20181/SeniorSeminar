@@ -1,2 +1,0 @@
-2020-02-22 15:34:12.184 -06:00 [INF] Starting Custodial.Services.Organization.
-2020-02-22 15:34:12.543 -06:00 [INF] Connecting on: http://localhost:5001;http://10.154.3.119:5001

@@ -1,4 +1,0 @@
-2020-02-22 13:53:59.834 -06:00 [INF] Starting CASWorker
-2020-02-22 13:53:59.835 -06:00 [INF] Getting service from Addressing: Custodial.Service.Chemical
-2020-02-22 13:54:04.035 -06:00 [INF] No connection could be made because the target machine actively refused it.
-2020-02-22 13:54:04.036 -06:00 [INF] Posting Service

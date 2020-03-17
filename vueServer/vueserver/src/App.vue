@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <test :key='testComponetKey' :message='msg'> </test>
+    <p>Custodial Services</p>
+    <organizationSelection :CSOLocation='getCSOLocation()' :key="testComponetKey"></organizationSelection>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import OrganizationSelection from "./components/OrganizationSelection.vue";
 import Test from './components/Test.vue';
 import { APIHandler } from './API Handler';
 import { ServiceDictionary } from './ServiceDictionary';
@@ -17,17 +19,17 @@ import axios, { AxiosInstance } from 'axios';
 @Component({
   components: {
     Test,
+    OrganizationSelection,
   },
 })
 export default class App extends Vue {
-  public serviceDictionary: ServiceDictionary = new ServiceDictionary();
-  public apiHandler!: APIHandler;
   private spiMessage: string = "Hello";
   private testComponetKey: number = 0;
   private orgUpdated: boolean = false;
   private org!: Organization;
   private msg!: string;
   private instance!: AxiosInstance;
+  private CSOService!: Microservice;
 
   beforeCreate() {
     this.instance = axios.create({
@@ -35,18 +37,22 @@ export default class App extends Vue {
       timeout: 10000,
       headers: {"Content-Type": "application/json"}
     });
-    this.apiHandler = new APIHandler(this.serviceDictionary);
   }
 
   created(){ 
   }
-//https://www.telerik.com/fiddler
+
   beforeMount(){
   }
 
   mounted(){
     this.instance.get('/all').then(res => {
-      this.msg = res.data;
+      var serviceList: Array<Microservice> = res.data;
+      serviceList.forEach(service => {
+        if(service.serviceName == "Custodial.Service.Organization"){
+          this.CSOService = service
+        }
+      });
       this.forceRerender();
     }).catch(e => { 
       this.msg = e+ ": " ;
@@ -65,6 +71,11 @@ export default class App extends Vue {
 
   async forceRerender(){
     this.testComponetKey += 1;
+  }
+
+  getCSOLocation() : string {
+    return "http://" + this.CSOService.settings.networkSettings.addresses[1] + ":" + this.CSOService.settings.networkSettings.ports[0]
+    + "/organization";
   }
 }
 </script>
