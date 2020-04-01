@@ -8,6 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import OrganizationSelection from "./components/OrganizationSelection.vue";
+import ChemicalView from "./components/ChemicalView.vue";
 import Test from './components/Test.vue';
 import { APIHandler } from './API Handler';
 import { ServiceDictionary } from './ServiceDictionary';
@@ -18,8 +19,8 @@ import { ContactDetails } from './Custodial.Service.Utility/ContactDetails';
 import axios, { AxiosInstance } from 'axios';
 @Component({
   components: {
-    Test,
     OrganizationSelection,
+    ChemicalView
   },
 })
 export default class App extends Vue {

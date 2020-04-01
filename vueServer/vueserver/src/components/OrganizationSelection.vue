@@ -11,21 +11,24 @@
     </div>
     <div v-show="orgSelectedBool" :key="update">
         <p :key="orgSelected">Organization Selected: {{orgSelectedName}}</p>
-        
+         <ChemicalView></ChemicalView>
         <button v-on:click="back()">Back</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+//<ChemicalView></ChemicalView>
 import VueCompositionApi from "@vue/composition-api";
+//import ChemicalView from "./components/ChemicalView.vue";
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Organization } from '../Custodial.Service.Organization/Organization';
 import axios, { AxiosInstance } from 'axios';
 Vue.use(VueCompositionApi);
-import { useAsync, useFetch } from "vue-async-function";
-
-@Component
+@Component({
+  components: {
+  },
+})
 export default class OrganizationSelection extends Vue {
     @Prop() private CSOLocation!: string;
   private instance!: AxiosInstance;
