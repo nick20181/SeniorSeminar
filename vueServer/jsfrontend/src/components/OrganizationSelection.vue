@@ -14,8 +14,25 @@
     </div>
     <div v-show="orgSelectedBool" :key="update">
         <p :key="orgSelected">Organization Selected: {{orgSelected.organizationName}}</p>
-         <ChemicalView></ChemicalView>
+          <ul v-show="!chemicalList && !buildingList">
+            <li>
+              <button v-on:click="chemicalListSleceted()">Chemicals</button>
+            </li>
+            <li>
+              <button v-on:click="buildingListSleceted()">Buildings</button>
+            </li>
+          </ul>
+          <ChemicalList 
+            @toggleReturnToOrg="toggleReturnToOrg()" 
+            v-show="chemicalList" :Organization="orgSelected" 
+            :CSCLocation="CSCLocation"
+            :states='states'
+            :countries='countries'
+            ></ChemicalList>
+          <button v-show="showReturnToOrg"  v-on:click="returnFromChemicalOrBuilding()">Return to Organiztion</button>
+      <div v-show="!chemicalList && !buildingList" >
         <button v-on:click="back()">Back</button>
+      </div>
     </div>
   </div>
 </template>
@@ -23,15 +40,20 @@
 <script >
 //Componet
 import Organization from "./Organization"
+import ChemicalList from "./ChemicalList"
 import axios from 'axios';
 
 export default {
   name: 'organizationSelection',
   components:{
-      Organization
+      Organization,
+      ChemicalList
   },
   props:{
-      CSOLocation: String
+      CSOLocation: String,
+      CSCLocation: String,
+      countries: undefined,
+      states: undefined
   },
   data(){
       return{
@@ -43,6 +65,9 @@ export default {
         orgList: [],
         errMsg: "No Error Yet",
         update: 0,
+        chemicalList: false,
+        buildingList: false,
+        showReturnToOrg: true
       }
   },
   methods:{
@@ -56,6 +81,26 @@ export default {
     },
     back(){
           this.$emit('back')
+    },
+    chemicalListSleceted(){
+      this.chemicalList = true
+      this.buildingList = false
+      this.showReturnToOrg = true
+      this.update++
+    },
+    buildingListSleceted(){
+      this.chemicalList = false
+      this.buildingList = true
+      this.showReturnToOrg = true
+      this.update++
+    },
+    returnFromChemicalOrBuilding(){
+      this.chemicalList = false
+      this.buildingList = false
+      this.update++
+    },
+    toggleReturnToOrg(){
+      this.showReturnToOrg = !this.showReturnToOrg;
     }
   },
   beforeUpdate(){

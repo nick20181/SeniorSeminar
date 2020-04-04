@@ -3,8 +3,11 @@
     <p>Custodial Services</p>
     <OrganizationSelection 
             @back="forceRerender()"
-            :CSOLocation='getCSOLocation()' 
+            :CSOLocation='getServiceLocation(CSOService)'
+            :CSCLocation='getServiceLocation(CSCService)'
             :key="testComponetKey"
+            :states='states'
+            :countries='countries'
             ></OrganizationSelection>
   </div>
 </template>
@@ -28,17 +31,26 @@ export default {
         headers: {"Content-Type": "application/json"}
       }),
       CSOService: undefined,
+      CSCService: undefined,
       msg: "Default",
-      testComponetKey: 0
+      testComponetKey: 0,
+      countries:["United States of America"],
+      states: Object.freeze(["Illionis"])
+
     }
   },
   methods: {
     forceRerender(){
       this.testComponetKey += 1;
     },
-    getCSOLocation() {
-      return "http://" + this.CSOService.settings.networkSettings.addresses[1] + ":" + this.CSOService.settings.networkSettings.ports[0]
-      + "/organization";
+    getServiceLocation(service){
+      let location = "http://" + service.settings.networkSettings.addresses[1] + ":" + service.settings.networkSettings.ports[0];
+      if(service.serviceName == "Custodial.Service.Organization"){
+          location = location + "/Organization"
+        } else if(service.serviceName == "Custodial.Service.Chemical"){
+          location = location + "/chemical"
+        }
+      return location
     }
   },
   mounted(){
@@ -47,6 +59,8 @@ export default {
       serviceList.forEach(service => {
         if(service.serviceName == "Custodial.Service.Organization"){
           this.CSOService = service
+        } else if(service.serviceName == "Custodial.Service.Chemical"){
+          this.CSCService = service
         }
       });
       this.forceRerender();

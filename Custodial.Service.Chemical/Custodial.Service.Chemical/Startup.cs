@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
 
-namespace Custodial.AddressingServices
+namespace Custodial.Service.Chemical
 {
     public class Startup
     {
