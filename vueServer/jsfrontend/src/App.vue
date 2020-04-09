@@ -26,16 +26,54 @@ export default {
   data(){
     return {
       instance: axios.create({
-        baseURL: 'http://localhost:5000/Addressing',
+        baseURL: 'http://192.168.0.149:5000/Addressing',
         timeout: 10000,
         headers: {"Content-Type": "application/json"}
       }),
-      CSOService: undefined,
-      CSCService: undefined,
+      CSOService: {
+        timeCreated:"",
+        iD:"",
+        isDeleted:false,
+        serviceName:"",
+        settings:{
+          networkSettings:{
+            addresses:[],
+            ports:[]
+          },
+          databaseSettings:{
+            address:"",
+            port:"",
+            collectionNames:[],
+            databaseNames:[]
+          }
+        },
+        discription:"",
+        shortName:""
+      },
+      CSCService: {
+        timeCreated:"",
+        iD:"",
+        isDeleted:false,
+        serviceName:"",
+        settings:{
+          networkSettings:{
+            addresses:[],
+            ports:[]
+          },
+          databaseSettings:{
+            address:"",
+            port:"",
+            collectionNames:[],
+            databaseNames:[]
+          }
+        },
+        discription:"",
+        shortName:""
+      },
       msg: "Default",
       testComponetKey: 0,
       countries:["United States of America"],
-      states: Object.freeze(["Illionis"])
+      states: ["Illionis"]
 
     }
   },
@@ -44,7 +82,7 @@ export default {
       this.testComponetKey += 1;
     },
     getServiceLocation(service){
-      let location = "http://" + service.settings.networkSettings.addresses[1] + ":" + service.settings.networkSettings.ports[0];
+      let location = "http://" + service.settings.networkSettings.addresses[2] + ":" + service.settings.networkSettings.ports[0];
       if(service.serviceName == "Custodial.Service.Organization"){
           location = location + "/Organization"
         } else if(service.serviceName == "Custodial.Service.Chemical"){

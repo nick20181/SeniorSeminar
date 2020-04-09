@@ -21,9 +21,37 @@ export default {
       Manufactor
   },
   props:{
-      Chemical: undefined,
-      countries: undefined,
-      states: undefined
+      Chemical: {
+          timeCreated: "",
+          iD: "",
+          isDeleted: "",
+          organizationId: "",
+          chemicalName: "",
+          chemicalManufactor: {
+            manufactorName: "",
+            manufactorAddress: {
+              country: "",
+              state: "",
+              city: "",
+              zip: "",
+              street: "",
+              mainAddress: ""
+            }
+          },
+          saftyContactInformation: {
+            email: "",
+            phoneNumber: ""
+          },
+          chemicalWarning: "",
+          disinfectant: "",
+          ventilationNeeded: "",
+          usesAndPrep: {
+            chemicalPrepAmmount: "",
+            waterPrepAmmount: ""
+          }
+        },
+      countries: Array,
+      states: Array
   },
   data(){
       return{

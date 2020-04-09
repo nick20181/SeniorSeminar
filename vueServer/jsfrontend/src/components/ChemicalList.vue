@@ -6,16 +6,19 @@
         <button v-show="!showingChemical" v-on:click="selectChemical(chemical)">{{chemical.chemicalName}}</button>
       </div>
       <div v-show="showingChemical && selectedChemical != undefined">
-        <ChemicalDetail 
+          <ChemicalDetail 
           :Chemical="selectedChemical"
           :states='states'
           :countries='countries'
-          ></ChemicalDetail>
+          ></ChemicalDetail> 
         <button v-on:click="back()">Back</button>
       </div>
     </div>
       <div v-show="showToAdd">
-        <ChemicalToAdd
+         <ChemicalToAdd
+          @ChemicalAdded="addChemical()"
+          :CSCLocation='CSCLocation'
+          :organization='Organization'
           :states='states'
           :country='countries'
           ></ChemicalToAdd>
@@ -36,17 +39,64 @@ export default {
     ChemicalToAdd
   },
   props:{
-      Organization: undefined,
+      Organization: {
+        timeCreated: "",
+        iD: "",
+        isDeleted: "",
+        activeService: "",
+        organizationName: "",
+        organizationLocations:	[{
+          country: "",
+          state: "",
+          city: "",
+          zip: "",
+          street: "",
+          mainAddress: ""
+        }],
+        contactDetails:  {
+          email: "",
+          phoneNumber: ""
+        },
+        emplyeeCount: ""
+      },
       CSCLocation: String,
-      countries: undefined,
-      states: undefined
+      countries: Array,
+      states: Array
   },
   data(){
       return{
         chemicalList: [],
         update: 0,
         showingChemical: false,
-        selectedChemical: undefined,
+        selectedChemical: {
+          timeCreated: "",
+          iD: "",
+          isDeleted: "",
+          organizationId: "",
+          chemicalName: "",
+          chemicalManufactor: {
+            manufactorName: "",
+            manufactorAddress: {
+              country: "",
+              state: "",
+              city: "",
+              zip: "",
+              street: "",
+              mainAddress: ""
+            }
+          },
+          saftyContactInformation: {
+            email: "",
+            phoneNumber: ""
+          },
+          chemicalWarning: "",
+          disinfectant: "",
+          ventilationNeeded: "",
+          usesAndPrep: {
+            chemicalPrepAmmount: "",
+            waterPrepAmmount: ""
+          }
+        },
         showToAdd: false
       }
   },
@@ -57,13 +107,52 @@ export default {
       this.$emit('toggleReturnToOrg')
     },
     back(){
-      this.selectedChemical = undefined
+      this.selectedChemical = {
+          timeCreated: "",
+          iD: "",
+          isDeleted: "",
+          organizationId: "",
+          chemicalName: "",
+          chemicalManufactor: {
+            manufactorName: "",
+            manufactorAddress: {
+              country: "",
+              state: "",
+              city: "",
+              zip: "",
+              street: "",
+              mainAddress: ""
+            }
+          },
+          saftyContactInformation: {
+            email: "",
+            phoneNumber: ""
+          },
+          chemicalWarning: "",
+          disinfectant: "",
+          ventilationNeeded: "",
+          usesAndPrep: {
+            chemicalPrepAmmount: "",
+            waterPrepAmmount: ""
+          }
+        }
       this.showingChemical = false
       this.$emit('toggleReturnToOrg')
+      this.update++
     },
     addChemical(){
       this.showToAdd = !this.showToAdd
     }
+  },
+  beforeUpdate(){
+    this.instance.get('/organizationId/'+ this.Organization.iD).then(res => {
+      //if(this.chemicalList == res.data){
+      this.chemicalList = res.data;
+      this.update++;
+      //}
+    }).catch(e => { 
+      this.errMsg = e+ ": " ;
+    })
   },
   mounted(){
       this.instance = axios.create({

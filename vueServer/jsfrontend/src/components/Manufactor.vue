@@ -1,6 +1,6 @@
 <template>
   <div class="Manufactor">
-      <p>Manufactor:<button v-show="!displayChemical" v-on:click="showDataButton(showData)">{{Manufactor.manufactorName}}</button></p>
+      <p><button v-on:click="showDataButton()">Manufactor: {{Manufactor.manufactorName}}</button></p>
       <p v-show="showData">{{Manufactor.manufactorName}} is located at {{Manufactor.manufactorAddress.city}}, {{country(Manufactor.manufactorAddress.country)}}, {{Manufactor.manufactorAddress.zip}} at {{Manufactor.manufactorAddress.street}}, {{state(Manufactor.manufactorAddress.state)}}<span v-show="Manufactor.manufactorAddress.mainAddress"> and is the main address</span>.</p>
   </div>
 </template>
@@ -12,9 +12,19 @@ export default {
   components:{
   },
   props:{
-      Manufactor: undefined,
-      countries: undefined,
-      states: undefined
+      Manufactor: {
+        manufactorName: "",
+        manufactorAddress: {
+          country: "",
+          state: "",
+          city: "",
+          zip: "",
+          street: "",
+          mainAddress: ""
+        }
+      },
+      countries: Array,
+      states: Array
   },
   data(){
       return{
@@ -22,8 +32,8 @@ export default {
       }
   },
   methods:{
-      showDataButton(show){
-          this.showData = !show
+      showDataButton(){
+          this.showData = !this.showData
       },
       country(country){
         return this.countries[country-1]

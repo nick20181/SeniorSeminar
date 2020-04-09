@@ -1,19 +1,18 @@
 <template>
-  <div class="orgSelect" v-bind:key="update">
-    <div v-if="!orgSelectedBool" :key="update">
+  <div class="orgSelect" :key="update">
+    <div v-if="!orgSelectedBool">
         <p>Please Choose a organization</p>
         <div 
         v-for="Org in orgList" 
-        v-bind:key="Org.id">
+        v-bind:key="Org.Id">
             <Organization 
             @clicked="orgSelected"
-            :Organization="Org" 
-            :key="Org.id"
+            :Organization="Org"
             ></Organization>
         </div>
     </div>
-    <div v-show="orgSelectedBool" :key="update">
-        <p :key="orgSelected">Organization Selected: {{orgSelected.organizationName}}</p>
+    <div v-show="orgSelectedBool">
+        <p>Organization Selected: {{orgSelected.organizationName}}</p>
           <ul v-show="!chemicalList && !buildingList">
             <li>
               <button v-on:click="chemicalListSleceted()">Chemicals</button>
@@ -22,7 +21,7 @@
               <button v-on:click="buildingListSleceted()">Buildings</button>
             </li>
           </ul>
-          <ChemicalList 
+        <ChemicalList 
             @toggleReturnToOrg="toggleReturnToOrg()" 
             v-show="chemicalList" :Organization="orgSelected" 
             :CSCLocation="CSCLocation"
@@ -52,8 +51,8 @@ export default {
   props:{
       CSOLocation: String,
       CSCLocation: String,
-      countries: undefined,
-      states: undefined
+      countries: Array,
+      states: Array
   },
   data(){
       return{
@@ -67,7 +66,9 @@ export default {
         update: 0,
         chemicalList: false,
         buildingList: false,
-        showReturnToOrg: true
+        showReturnToOrg: true,
+        orgSelectedBool: false
+
       }
   },
   methods:{
@@ -105,7 +106,9 @@ export default {
   },
   beforeUpdate(){
     this.instance.get('/all').then(res => {
-      this.orgList = res.data;
+      if(this.orgList == res.data){
+        this.orgList = res.data;
+      }
     }).catch(e => { 
       this.errMsg = e+ ": " ;
     })
@@ -116,7 +119,6 @@ export default {
       timeout: 10000,
       headers: {"Content-Type": "application/json"}
       });
-      this.update++;
       this.instance.get('/all').then(res => {
       this.orgList = res.data;
       this.update++;
