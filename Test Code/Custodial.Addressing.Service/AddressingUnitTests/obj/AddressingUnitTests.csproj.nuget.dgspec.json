@@ -1,0 +1,188 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
+        "projectName": "AddressingUnitTests",
+        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\AddressingUnitTests.csproj",
+        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\AddressingUnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
+                "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
+        "projectName": "Custodial.Addressing.Service",
+        "projectPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\Custodial.Addressing.Service.csproj",
+        "packagesPath": "C:\\Users\\Nicholas.bohm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Custodial.Addressing.Service\\Custodial.Addressing.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nicholas.bohm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Nicholas.bohm\\Documents\\GitHub\\SeniorSeminar\\Nuget_Libary": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "ResourceLoader": {
+              "target": "Package",
+              "version": "[3.1.18322.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

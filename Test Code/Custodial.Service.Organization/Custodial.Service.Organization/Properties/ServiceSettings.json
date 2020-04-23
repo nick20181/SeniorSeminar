@@ -1,0 +1,17 @@
+﻿{
+  "networkSettings": {
+    "ports": [ "5001" ],
+    "addresses": [ "" ]
+  },
+  "databaseSettings": {
+    "address": "localhost",
+    "port": "27017",
+    "databaseItems": [
+      {
+        "databaseName": "CustodialServiceOrganization",
+        "collectionNames": [ "Organizations" ]
+      }
+    ],
+    "typeOfDatabase": "MongoDatabase"
+  }
+}

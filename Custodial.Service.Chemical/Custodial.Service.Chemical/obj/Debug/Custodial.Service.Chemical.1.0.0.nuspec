@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Custodial.Service.Chemical</id>
+    <version>1.0.0</version>
+    <authors>Custodial.Service.Chemical</authors>
+    <owners>Custodial.Service.Chemical</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Custodial.BoilerPlate.Core" version="1.3.13" exclude="Build,Analyzers" />
+        <dependency id="Custodial.Services.Utility" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration.Design" version="3.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/appsettings.Development.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/appsettings.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/launchSettings.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/ServiceSettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\bin\Debug\netcoreapp3.1\Custodial.Service.Chemical.runtimeconfig.json" target="lib\netcoreapp3.1\Custodial.Service.Chemical.runtimeconfig.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\bin\Debug\netcoreapp3.1\Custodial.Service.Chemical.dll" target="lib\netcoreapp3.1\Custodial.Service.Chemical.dll" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\appsettings.Development.json" target="contentFiles\any\netcoreapp3.1\appsettings.Development.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\appsettings.json" target="content\appsettings.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\appsettings.json" target="contentFiles\any\netcoreapp3.1\appsettings.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\Properties\launchSettings.json" target="content\Properties\launchSettings.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\Properties\launchSettings.json" target="contentFiles\any\netcoreapp3.1\Properties\launchSettings.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\Properties\ServiceSettings.json" target="content\Properties\ServiceSettings.json" />
+    <file src="F:\Classwork_Spring_Semester\Seminar\SeniorSeminar\Custodial.Service.Chemical\Custodial.Service.Chemical\Properties\ServiceSettings.json" target="contentFiles\any\netcoreapp3.1\Properties\ServiceSettings.json" />
+  </files>
+</package>

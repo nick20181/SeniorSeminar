@@ -1,0 +1,15 @@
+﻿{
+  "networkSettings": {
+    "ports": [ "testport" ],
+    "addresses": [ "testaddress" ]
+  },
+  "databaseSettings": {
+    "address": "localhost",
+    "port": "27017",
+    "databaseItems": [ {
+      "databaseName": "CustodialAddressingService",
+      "collectionNames": ["Microservice"]
+                         } ],
+    "typeOfDatabase": "InMemoryDatabase"
+  }
+}
