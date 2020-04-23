@@ -28,6 +28,16 @@
             :states='states'
             :countries='countries'
             ></ChemicalList>
+
+        <BuildingList
+            @toggleReturnToOrg="toggleReturnToOrg()" 
+            v-show="buildingList" 
+            :Organization="orgSelected" 
+            :CSBLocation="CSBLocation"
+            :CSCLocation="CSCLocation"
+            :states='states'
+            :countries='countries'
+          ></BuildingList>
           <button v-show="showReturnToOrg"  v-on:click="returnFromChemicalOrBuilding()">Return to Organiztion</button>
       <div v-show="!chemicalList && !buildingList" >
         <button v-on:click="back()">Back</button>
@@ -39,18 +49,21 @@
 <script >
 //Componet
 import Organization from "./Organization"
-import ChemicalList from "./ChemicalList"
+import ChemicalList from "./Chemical/ChemicalList"
+import BuildingList from "./Building/BuildingList"
 import axios from 'axios';
 
 export default {
   name: 'organizationSelection',
   components:{
       Organization,
-      ChemicalList
+      ChemicalList,
+      BuildingList
   },
   props:{
       CSOLocation: String,
       CSCLocation: String,
+      CSBLocation: String,
       countries: Array,
       states: Array
   },

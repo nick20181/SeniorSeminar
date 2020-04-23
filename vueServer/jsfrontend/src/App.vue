@@ -5,6 +5,7 @@
             @back="forceRerender()"
             :CSOLocation='getServiceLocation(CSOService)'
             :CSCLocation='getServiceLocation(CSCService)'
+            :CSBLocation='getServiceLocation(CSBService)'
             :key="testComponetKey"
             :states='states'
             :countries='countries'
@@ -70,6 +71,26 @@ export default {
         discription:"",
         shortName:""
       },
+      CSBService:{
+        timeCreated:"",
+        iD:"",
+        isDeleted:false,
+        serviceName:"",
+        settings:{
+          networkSettings:{
+            addresses:[],
+            ports:[]
+          },
+          databaseSettings:{
+            address:"",
+            port:"",
+            collectionNames:[],
+            databaseNames:[]
+          }
+        },
+        discription:"",
+        shortName:""
+      },
       msg: "Default",
       testComponetKey: 0,
       countries:["United States of America"],
@@ -87,6 +108,8 @@ export default {
           location = location + "/Organization"
         } else if(service.serviceName == "Custodial.Service.Chemical"){
           location = location + "/chemical"
+        } else if(service.serviceName == "Custodial.Service.Building"){
+          location = location + "/building"
         }
       return location
     }
@@ -99,6 +122,8 @@ export default {
           this.CSOService = service
         } else if(service.serviceName == "Custodial.Service.Chemical"){
           this.CSCService = service
+        } else if(service.serviceName == "Custodial.Service.Building"){
+          this.CSBService = service
         }
       });
       this.forceRerender();
